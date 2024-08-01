@@ -1,12 +1,14 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/helpers/classnames';
-import { IoMdMenu } from 'react-icons/io';
+import { IoMdMenu, IoMdClose } from 'react-icons/io';
+import Drawer from '../drawer/drawer';
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [headerStyle, setHeaderStyle] = useState('');
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,29 +39,39 @@ const Header = () => {
     };
   }, [lastScrollTop, isMobile]);
 
+  const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
+  console.log(isDrawerOpen);
   return (
-    <header
-      className={cn(
-        'bg-teal-700',
-        [
-          isMobile,
-          'fixed top-0 z-50 w-full',
-          'fixed top-0 z-50 w-full transition-transform duration-300',
-        ],
-        [!isMobile, headerStyle],
-      )}
-    >
-      <div
+    <>
+      <header
         className={cn(
-          'flex items-center justify-between',
-          'h-[80px]',
-          'container',
+          'bg-teal-700 text-white',
+          [
+            isMobile,
+            'fixed top-0 z-40 w-full transition-transform duration-300',
+            'lg:relative lg:translate-y-0', // Ensures header is static on large screens
+          ],
+          [!isMobile, headerStyle],
         )}
       >
-        <h1>Arkitekt</h1>
-        <IoMdMenu size={40} />
-      </div>
-    </header>
+        <div
+          className={cn(
+            'flex items-center justify-between',
+            'h-[80px]',
+            'container mx-auto',
+          )}
+        >
+          <h1>Arkitekt</h1>
+
+          {isDrawerOpen ? (
+            <IoMdClose size={30} onClick={toggleDrawer} />
+          ) : (
+            <IoMdMenu size={30} onClick={toggleDrawer} />
+          )}
+        </div>
+      </header>
+      <Drawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
+    </>
   );
 };
 
