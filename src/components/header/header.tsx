@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/helpers/classnames';
-import { IoMdMenu, IoMdClose } from 'react-icons/io';
 import Drawer from '../drawer/drawer';
+import HamburgerButton from '../hamburger-button/hamburger-button';
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -16,9 +16,9 @@ const Header = () => {
     };
 
     const handleScroll = () => {
+      const currentScrollTop =
+        window.scrollY || document.documentElement.scrollTop;
       if (!isMobile) {
-        const currentScrollTop =
-          window.scrollY || document.documentElement.scrollTop;
         if (currentScrollTop > lastScrollTop && currentScrollTop > 80) {
           // Scrolling down on desktop
           setHeaderStyle('-translate-y-full');
@@ -40,34 +40,18 @@ const Header = () => {
   }, [lastScrollTop, isMobile]);
 
   const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
-  console.log(isDrawerOpen);
+
   return (
     <>
       <header
         className={cn(
-          'bg-teal-700 text-white',
-          [
-            isMobile,
-            'fixed top-0 z-40 w-full transition-transform duration-300',
-            'lg:relative lg:translate-y-0', // Ensures header is static on large screens
-          ],
-          [!isMobile, headerStyle],
+          'bg-teal-700 text-white fixed top-0 z-40 w-full transition-transform duration-300',
+          [isMobile, 'translate-y-0', headerStyle],
         )}
       >
-        <div
-          className={cn(
-            'flex items-center justify-between',
-            'h-[80px]',
-            'container mx-auto',
-          )}
-        >
+        <div className="flex items-center justify-between h-20 container mx-auto">
           <h1>Arkitekt</h1>
-
-          {isDrawerOpen ? (
-            <IoMdClose size={30} onClick={toggleDrawer} />
-          ) : (
-            <IoMdMenu size={30} onClick={toggleDrawer} />
-          )}
+          <HamburgerButton isDrawerOpen={isDrawerOpen} onClick={toggleDrawer} />
         </div>
       </header>
       <Drawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
