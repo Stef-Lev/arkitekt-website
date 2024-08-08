@@ -7,9 +7,9 @@ interface Props {
 
 const HamburgerButton = ({ isDrawerOpen, onClick }: Props) => {
   return (
-    <button
+    <div
       onClick={onClick}
-      className="flex flex-col justify-center items-center"
+      className="flex flex-col justify-center items-center h-full"
     >
       <span
         className={cn(
@@ -35,7 +35,7 @@ const HamburgerButton = ({ isDrawerOpen, onClick }: Props) => {
           [isDrawerOpen, '-rotate-45 -translate-y-1', 'translate-y-0.5'],
         )}
       ></span>
-    </button>
+    </div>
   );
 };
 
