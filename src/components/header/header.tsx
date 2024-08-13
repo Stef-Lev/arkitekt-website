@@ -1,11 +1,13 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { cn } from '@/helpers/classnames';
 import Drawer from '../drawer/drawer';
 import HamburgerButton from '../hamburger-button/hamburger-button';
+import content from '@/content/content';
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [headerStyle, setHeaderStyle] = useState('');
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -51,10 +53,33 @@ const Header = () => {
       >
         <div className="flex items-center justify-between h-20 container mx-auto">
           <h1>Arkitekt</h1>
-          <HamburgerButton isDrawerOpen={isDrawerOpen} onClick={toggleDrawer} />
+          {isMobile ? (
+            <HamburgerButton
+              isDrawerOpen={isDrawerOpen}
+              onClick={toggleDrawer}
+            />
+          ) : (
+            <div className="flex">
+              {content.navbar.items.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block py-2 px-4"
+                >
+                  {item.value}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </header>
-      <Drawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
+      {isMobile && (
+        <Drawer
+          isDrawerOpen={isDrawerOpen}
+          toggleDrawer={toggleDrawer}
+          items={content.navbar.items}
+        />
+      )}
     </>
   );
 };

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen">
+      <main className="flex min-h-screen mt-[80px]">
         <Container>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.

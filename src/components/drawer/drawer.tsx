@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
 import { cn } from '@/helpers/classnames';
+import Link from 'next/link';
 
 interface Props {
   isDrawerOpen: boolean;
+  items: Array<Record<string, string>>;
   toggleDrawer: () => void;
 }
 
 const Drawer = (props: Props) => {
-  const { isDrawerOpen, toggleDrawer } = props;
+  const { isDrawerOpen, toggleDrawer, items } = props;
 
   useEffect(() => {
     if (isDrawerOpen) {
@@ -25,7 +27,6 @@ const Drawer = (props: Props) => {
         [isDrawerOpen, 'translate-x-0', '-translate-x-full'],
       )}
     >
-      {/* Drawer Content */}
       <div className="bg-gray-800 text-white w-full h-full">
         <div className="flex items-center justify-start h-20 px-[16px]">
           <h1>Arkitekt</h1>
@@ -33,26 +34,13 @@ const Drawer = (props: Props) => {
         <div className="p-4">
           <nav>
             <ul>
-              <li>
-                <a href="#" className="block py-2 px-4">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block py-2 px-4">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block py-2 px-4">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block py-2 px-4">
-                  Contact
-                </a>
-              </li>
+              {items.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="block py-2 px-4">
+                    {item.value}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
