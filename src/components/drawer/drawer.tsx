@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { cn } from '@/helpers/classnames';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   isDrawerOpen: boolean;
@@ -10,6 +10,7 @@ interface Props {
 
 const Drawer = (props: Props) => {
   const { isDrawerOpen, toggleDrawer, items } = props;
+  const router = useRouter();
 
   useEffect(() => {
     if (isDrawerOpen) {
@@ -18,6 +19,11 @@ const Drawer = (props: Props) => {
       document.body.classList.remove('overflow-hidden');
     }
   }, [isDrawerOpen]);
+
+  const handleClick = (href: string) => {
+    router.push(href);
+    toggleDrawer();
+  };
   return (
     <div
       className={cn(
@@ -36,9 +42,12 @@ const Drawer = (props: Props) => {
             <ul>
               {items.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="block py-2 px-4">
+                  <div
+                    className="block py-2 px-4 hover:cursor-pointer"
+                    onClick={() => handleClick(item.href)}
+                  >
                     {item.value}
-                  </Link>
+                  </div>
                 </li>
               ))}
             </ul>
