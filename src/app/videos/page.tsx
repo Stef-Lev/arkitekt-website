@@ -1,21 +1,20 @@
 import YoutubeIframe from '@/components/youtube-iframe/youtube-iframe';
 import TitleHeader from '@/components/title-header/title-header';
+import content from '@/content/content';
 
 const VideosPage = () => {
+  const title = content.videosPage.title;
+  const videoIds = content.videosPage.videoIds;
   return (
     <div>
-      <TitleHeader title="Videos" />
-      <div className="relative top-[200px] flex flex-wrap gap-4 justify-center">
-        <div className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3">
-          <YoutubeIframe url="https://www.youtube.com/embed/qpsJCFcK0CA?si=DXqbVs2baZ3Ydsml" />
-        </div>
-        <div className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3">
-          <YoutubeIframe url="https://www.youtube.com/embed/qpsJCFcK0CA?si=DXqbVs2baZ3Ydsml" />
-        </div>
-        <div className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3">
-          <YoutubeIframe url="https://www.youtube.com/embed/qpsJCFcK0CA?si=DXqbVs2baZ3Ydsml" />
-        </div>
-        {/* Add more <YoutubeIframe /> components as needed */}
+      <TitleHeader title={title} />
+      <div className="relative top-[200px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        {videoIds.map((id) => (
+          <YoutubeIframe
+            key={id}
+            url={`https://www.youtube.com/embed/${id}?si=DXqbVs2baZ3Ydsml`}
+          />
+        ))}
       </div>
     </div>
   );

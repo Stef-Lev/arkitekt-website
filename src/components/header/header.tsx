@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { cn } from '@/helpers/classnames';
 import Drawer from '../drawer/drawer';
 import HamburgerButton from '../hamburger-button/hamburger-button';
@@ -11,6 +13,7 @@ const Header = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [headerStyle, setHeaderStyle] = useState('');
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,16 +23,15 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollTop =
         window.scrollY || document.documentElement.scrollTop;
-      if (!isMobile) {
-        if (currentScrollTop > lastScrollTop && currentScrollTop > 80) {
-          // Scrolling down on desktop
-          setHeaderStyle('-translate-y-full');
-        } else {
-          // Scrolling up on desktop
-          setHeaderStyle('translate-y-0');
-        }
-        setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // For Mobile or negative scrolling
+
+      if (currentScrollTop > lastScrollTop && currentScrollTop > 80) {
+        // Scrolling down on both desktop and mobile
+        setHeaderStyle('-translate-y-full');
+      } else {
+        // Scrolling up on both desktop and mobile
+        setHeaderStyle('translate-y-0');
       }
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // For Mobile or negative scrolling
     };
 
     window.addEventListener('resize', handleResize);
@@ -39,7 +41,7 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollTop, isMobile]);
+  }, [lastScrollTop]);
 
   const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
 
@@ -47,12 +49,19 @@ const Header = () => {
     <>
       <header
         className={cn(
-          'bg-teal-700 text-white fixed top-0 z-40 w-full transition-transform duration-300',
-          [isMobile, 'translate-y-0', headerStyle],
+          'bg-[#0a0a0a] text-white fixed top-0 z-40 w-full transition-transform duration-300',
+          headerStyle,
         )}
       >
         <div className="flex items-center justify-between h-20 container mx-auto">
-          <h1>Arkitekt</h1>
+          <Image
+            src="/website-logo.png"
+            alt="arkitekt logo"
+            className="aspect-[256/110] hover:cursor-pointer"
+            width={180}
+            height={110}
+            onClick={() => router.push('/')}
+          />
           {isMobile ? (
             <HamburgerButton
               isDrawerOpen={isDrawerOpen}

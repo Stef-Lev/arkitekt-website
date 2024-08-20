@@ -15,7 +15,9 @@ const TitleHeader = ({ title }: Props) => {
         objectPosition="center"
         className="z-0 opacity-40"
       />
-      <h1 className="z-1 text-white text-[50px]">{title}</h1>
+      <h2 className="z-1 text-white text-[50px] absolute top-[60px] left-[20px]">
+        {title}
+      </h2>
     </div>
   );
 };

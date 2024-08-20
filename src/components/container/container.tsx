@@ -5,9 +5,7 @@ interface Props extends PropsWithChildren {
 }
 
 const Container = ({ children, className }: Props) => {
-  return (
-    <div className={`container bg-pink-700 py-3 ${className}`}>{children}</div>
-  );
+  return <div className={`container py-3 ${className}`}>{children}</div>;
 };
 
 export default Container;

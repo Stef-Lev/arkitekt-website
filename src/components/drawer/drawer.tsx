@@ -33,8 +33,8 @@ const Drawer = (props: Props) => {
         [isDrawerOpen, 'translate-x-0', '-translate-x-full'],
       )}
     >
-      <div className="bg-gray-800 text-white w-full h-full">
-        <div className="flex items-center justify-start h-20 px-[16px]">
+      <div className="bg-[#171717] text-white w-full h-full">
+        <div className="fle0x items-center justify-start h-20 px-[16px]">
           <h1>Arkitekt</h1>
         </div>
         <div className="p-4">
