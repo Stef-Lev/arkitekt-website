@@ -41,5 +41,18 @@ const content = {
       'yVAmurZHhUk',
     ],
   },
+  musicPage: {
+    title: 'Music',
+    albums: 'Albums',
+    singles: 'Singles',
+    images: [
+      'amnesia',
+      'black_cat',
+      'cocky',
+      'blessed',
+      'doha_flow',
+      'tonight',
+    ],
+  },
 };
 export default content;
