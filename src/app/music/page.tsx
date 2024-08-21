@@ -6,13 +6,12 @@ const MusicPage = () => {
   const title = content.musicPage.title;
   const images = content.musicPage.images;
   return (
-    <div>
+    <>
       <TitleHeader title={title} />
-
-      <div className="relative top-[200px]">
+      <div className="relative top-[220px]">
         <MusicCovers images={images} />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ const VideosPage = () => {
   return (
     <div>
       <TitleHeader title={title} />
-      <div className="relative top-[200px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="h-max relative top-[220px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {videoIds.map((id) => (
           <YoutubeIframe
             key={id}

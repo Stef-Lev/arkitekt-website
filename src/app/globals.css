@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   background: #141414;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
