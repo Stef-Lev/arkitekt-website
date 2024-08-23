@@ -14,7 +14,7 @@ const YoutubeIframe = ({ url }: Props) => {
 
   return (
     <div className="relative">
-      {loading && <Loader />}
+      {loading && <Loader size={80} />}
       <iframe
         className="aspect-video w-full rounded-xl"
         src={url}

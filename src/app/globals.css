@@ -15,8 +15,6 @@ body {
 }
 
 .loader {
-  width: 100px;
-  height: 100px;
   background-image: url('/arkitekt-loader.png');
   background-size: contain;
   background-repeat: no-repeat;
