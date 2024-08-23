@@ -3,8 +3,8 @@ import TitleHeader from '@/components/title-header/title-header';
 import content from '@/content/content';
 
 const VideosPage = () => {
-  const title = content.videosPage.title;
-  const videoIds = content.videosPage.videoIds;
+  const { title, videoIds } = content.videosPage;
+
   return (
     <div>
       <TitleHeader title={title} />

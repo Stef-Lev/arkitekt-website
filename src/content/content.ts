@@ -45,10 +45,33 @@ const content = {
     title: 'Music',
     albums: 'Albums',
     singles: 'Singles',
+    spotify: {
+      image: '/Spotify_logo_with_text.svg.png',
+      url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=C0o3rTbITEqNGAjHAbxqXQ&nd=1&dlsi=3c61c56a858347f5',
+    },
+    platforms: [
+      {
+        image: '/apple-logo.svg',
+        url: 'https://music.apple.com/us/browse',
+      },
+      {
+        image: '/amazon-logo.svg',
+        url: 'https://music.amazon.com/',
+      },
+      {
+        image: '/tidal-logo.svg',
+        url: 'https://www.tidal.com/',
+      },
+      {
+        image: '/deezer-logo.svg',
+        url: 'https://www.deezer.com/',
+      },
+    ],
     images: [
       'amnesia',
       'black_cat',
       'cocky',
+      'crying',
       'blessed',
       'doha_flow',
       'tonight',

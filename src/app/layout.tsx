@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Header from '@/components/header/header';
 import Container from '@/components/container/container';
 import Footer from '@/components/footer/footer';
-import { Inter } from 'next/font/google';
+import { Roboto_Condensed } from 'next/font/google';
 import './globals.css';
 import TitleHeader from '@/components/title-header/title-header';
 import PathFinder from '@/components/path-finder/path-finder';
 import { headers } from 'next/headers';
 
-const inter = Inter({ subsets: ['latin'] });
+const robotoCon = Roboto_Condensed({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Arkitekt - Official Page',
@@ -28,7 +28,7 @@ export default function RootLayout({
   // console.log(pathname);
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={robotoCon.className}>
         <Header />
         <Container className="mt-[80px] h-max">{children}</Container>
         <Footer />

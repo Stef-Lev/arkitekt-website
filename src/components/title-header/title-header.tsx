@@ -18,7 +18,7 @@ const TitleHeader = ({ title }: Props) => {
       />
 
       <Container className="z-1 text-white text-[50px] relative flex items-center justify-center h-full">
-        <h2 className="">{title}</h2>
+        <h2>{title}</h2>
       </Container>
     </div>
   );
