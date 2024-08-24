@@ -65,7 +65,7 @@ const Header = () => {
             src="/website-logo.png"
             alt="arkitekt logo"
             className="aspect-[256/110] hover:cursor-pointer"
-            width={180}
+            width={120}
             height={110}
             onClick={() => router.push('/')}
           />
@@ -80,7 +80,12 @@ const Header = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block py-2 px-4"
+                  className={cn(
+                    'py-2 px-4',
+                    'block',
+                    'hover:text-blue-600',
+                    'hover:underline hover:underline-offset-4',
+                  )}
                 >
                   {item.value}
                 </Link>

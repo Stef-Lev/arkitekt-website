@@ -7,6 +7,7 @@ import './globals.css';
 import TitleHeader from '@/components/title-header/title-header';
 import PathFinder from '@/components/path-finder/path-finder';
 import { headers } from 'next/headers';
+import ScrollTopButton from '@/components/scroll-top-button/scroll-top-button';
 
 const robotoCon = Roboto_Condensed({ subsets: ['latin'] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Header />
         <Container className="mt-[80px] h-max">{children}</Container>
         {/* <Footer /> */}
+        <ScrollTopButton />
       </body>
     </html>
   );

@@ -78,5 +78,28 @@ const content = {
       },
     ],
   },
+  contactPage: {
+    formFields: [
+      { label: 'Name', field: 'name', placeholder: 'Full Name', type: 'text' },
+      {
+        label: 'Email Address',
+        field: 'email',
+        placeholder: 'example@domain.com',
+        type: 'email',
+      },
+      {
+        label: 'Subject',
+        field: 'subject',
+        placeholder: 'Subject',
+        type: 'text',
+      },
+      {
+        label: 'Message',
+        field: 'message',
+        placeholder: 'Type your message',
+        type: 'text',
+      },
+    ],
+  },
 };
 export default content;

@@ -48,24 +48,24 @@ const Drawer = (props: Props) => {
       )}
     >
       <div className={cn('w-full h-full', 'bg-[#171717] text-white')}>
-        <div className="h-20 px-[1rem]">
+        <div className="flex items-center h-20 px-[1rem]">
           <Image
             src="/website-logo.png"
             alt="arkitekt logo"
             className="aspect-[256/110] hover:cursor-pointer"
-            width={180}
+            width={120}
             height={110}
             onClick={() => handleClick('/')}
           />
         </div>
 
-        <div className="p-4 text-[36px]">
+        <div className="p-4 text-[30px]">
           <nav>
             <ul>
               {items.map((item) => (
                 <li key={item.href}>
                   <div
-                    className="block py-2 hover:cursor-pointer hover:text-blue-700"
+                    className="block py-2 hover:cursor-pointer hover:text-blue-600"
                     onClick={() => handleClick(item.href)}
                   >
                     {item.value}
@@ -77,7 +77,7 @@ const Drawer = (props: Props) => {
         </div>
         <div
           className={cn(
-            'absolute',
+            'absolute bottom-0',
             'flex justify-center items-center gap-4',
             'h-[100px] w-full',
             'p-6',
@@ -86,6 +86,7 @@ const Drawer = (props: Props) => {
           {['spotify', 'instagram', 'youtube', 'facebook'].map((item) => (
             <div
               key={item}
+              className="hover:text-blue-600 hover:cursor-pointer"
               onClick={() =>
                 handleClick(socialUrls[item as keyof typeof socialUrls])
               }
