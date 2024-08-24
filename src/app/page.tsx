@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div>
+    <div className="flex justify-center">
       <iframe
         className="w-full md:w-[600px] lg:w-[60vw]"
         src="https://open.spotify.com/embed/artist/4K9zGLF4CT5HYDNQ9pT3Y8?utm_source=generator&theme=0"

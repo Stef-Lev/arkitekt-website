@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Container from '@/components/container/container';
 
 interface Props {
@@ -12,11 +12,8 @@ const TitleHeader = ({ title }: Props) => {
         src={`/${title.toLowerCase()}-background.jpg`}
         alt={`${title} page`}
         layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        className="z-0 opacity-40"
+        className="z-0 opacity-40 object-center object-cover"
       />
-
       <Container className="z-1 text-white text-[50px] relative flex items-center justify-center h-full">
         <h2>{title}</h2>
       </Container>

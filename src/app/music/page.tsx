@@ -1,9 +1,12 @@
 import TitleHeader from '@/components/title-header/title-header';
 import content from '@/content/content';
 import MusicCovers from '@/components/music-covers/music-covers';
+import { getImages } from '@/helpers/getImages';
 
 const MusicPage = () => {
-  const { title, images, spotify, platforms } = content.musicPage;
+  const { title, spotify, platforms } = content.musicPage;
+
+  const images = { singles: getImages('singles'), albums: getImages('albums') };
 
   return (
     <>

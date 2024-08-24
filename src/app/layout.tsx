@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className={robotoCon.className}>
         <Header />
         <Container className="mt-[80px] h-max">{children}</Container>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

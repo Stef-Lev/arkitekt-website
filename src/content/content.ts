@@ -13,9 +13,10 @@ const content = {
     videoIds: [
       '-oAWpeiwy7g',
       'HTualFAdKEU',
-      'qpsJCFcK0CA',
-      'LYBIE7ipVj0',
       'kjZxn1bg-zI',
+      'LYBIE7ipVj0',
+      'nNOMUKs-ptM',
+      'qpsJCFcK0CA',
       'sIu1hAUibNc',
       'VH-F3YbUJ4g',
       'mhjiBJ0JrZA',
@@ -66,15 +67,6 @@ const content = {
         image: '/deezer-logo.svg',
         url: 'https://www.deezer.com/',
       },
-    ],
-    images: [
-      'amnesia',
-      'black_cat',
-      'cocky',
-      'crying',
-      'blessed',
-      'doha_flow',
-      'tonight',
     ],
   },
 };

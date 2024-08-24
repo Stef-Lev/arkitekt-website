@@ -1,14 +1,20 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import ImagesContainer from './images-container';
 
 interface Platform {
   image: string;
   url: string;
 }
+
+interface Images {
+  singles: string[];
+  albums: string[];
+}
 interface Props {
   spotify: Platform;
-  images: string[];
+  images: Images;
   platforms: Platform[];
 }
 
@@ -27,21 +33,11 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
           onClick={() => router.push(spotify.url)}
         />
       </div>
-      <div className="flex gap-4 flex-wrap justify-center items-center">
-        {images.map((single) => (
-          <Image
-            key={single}
-            className="hover:cursor-pointer rounded-lg"
-            src={`/musicPage/singles/${single}.jpg`}
-            width={300}
-            height={300}
-            alt={`${single} cover`}
-          />
-        ))}
-      </div>
-      <div className="flex flex-col items-center mt-8">
-        <h4 className="text-[18px] mb-8 md:mb-2">Also available on</h4>
-        <div className="flex flex-col md:flex-row gap-8 md:gap-5 items-center">
+      <ImagesContainer title="Singles" images={images.singles} />
+      <ImagesContainer title="Albums" images={images.albums} />
+      <div className="flex flex-col items-center my-20">
+        <h5 className="text-[18px] mb-8 md:mb-2">Also available on</h5>
+        <div className="flex flex-col md:flex-row gap-8 md:gap-5 items-center ">
           {platforms.length > 0 &&
             platforms.map((item) => (
               <Image
