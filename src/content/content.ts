@@ -1,4 +1,13 @@
 const content = {
+  drawer: {
+    socialUrls: {
+      spotify:
+        'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=9LW-qf4LTFWW0gHruxKvEA',
+      instagram: 'https://www.instagram.com/stefanos_levendis',
+      youtube: 'https://www.youtube.com/@theArkitektBeats',
+      facebook: 'https://www.facebook.com/share/E5n8kQHE5aGn9nGp',
+    },
+  },
   navbar: {
     items: [
       { value: 'Home', href: '/' },
