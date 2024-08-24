@@ -47,7 +47,7 @@ const Drawer = (props: Props) => {
         [isDrawerOpen, 'translate-x-0', '-translate-x-full'],
       )}
     >
-      <div className="bg-[#171717] text-white w-full h-full">
+      <div className={cn('w-full h-full', 'bg-[#171717] text-white')}>
         <div className="h-20 px-[1rem]">
           <Image
             src="/website-logo.png"
@@ -75,7 +75,14 @@ const Drawer = (props: Props) => {
             </ul>
           </nav>
         </div>
-        <div className="absolute bottom-0 p-6 flex justify-center items-center gap-4 h-[100px] w-full">
+        <div
+          className={cn(
+            'absolute',
+            'flex justify-center items-center gap-4',
+            'h-[100px] w-full',
+            'p-6',
+          )}
+        >
           {['spotify', 'instagram', 'youtube', 'facebook'].map((item) => (
             <div
               key={item}

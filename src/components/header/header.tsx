@@ -25,13 +25,11 @@ const Header = () => {
         window.scrollY || document.documentElement.scrollTop;
 
       if (currentScrollTop > lastScrollTop && currentScrollTop > 80) {
-        // Scrolling down on both desktop and mobile
         setHeaderStyle('-translate-y-full');
       } else {
-        // Scrolling up on both desktop and mobile
         setHeaderStyle('translate-y-0');
       }
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // For Mobile or negative scrolling
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
     };
 
     window.addEventListener('resize', handleResize);
@@ -49,11 +47,20 @@ const Header = () => {
     <>
       <header
         className={cn(
-          'bg-[#0a0a0a] text-white fixed top-0 z-40 w-full transition-transform duration-300',
+          'fixed top-0',
+          'bg-[#0a0a0a] text-white',
+          'w-full z-40',
+          'transition-transform duration-300',
           headerStyle,
         )}
       >
-        <div className="flex items-center justify-between h-20 container mx-auto">
+        <div
+          className={cn(
+            'container',
+            'flex items-center justify-between',
+            'h-20 mx-auto',
+          )}
+        >
           <Image
             src="/website-logo.png"
             alt="arkitekt logo"

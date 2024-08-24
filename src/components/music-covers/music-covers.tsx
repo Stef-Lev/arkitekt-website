@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import ImagesContainer from './images-container';
+import { cn } from '@/helpers/classnames';
 
 interface Platform {
   image: string;
@@ -37,7 +38,13 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
       <ImagesContainer title="Albums" images={images.albums} />
       <div className="flex flex-col items-center my-20">
         <h5 className="text-[18px] mb-8 md:mb-2">Also available on</h5>
-        <div className="flex flex-col md:flex-row gap-8 md:gap-5 items-center ">
+        <div
+          className={cn(
+            'flex items-center',
+            'flex-col md:flex-row',
+            'gap-8 md:gap-5',
+          )}
+        >
           {platforms.length > 0 &&
             platforms.map((item) => (
               <Image
