@@ -19,13 +19,20 @@ const TitleHeader = ({ title }: Props) => {
         src={`/${title.toLowerCase()}-background.jpg`}
         alt={`${title} page`}
         layout="fill"
-        className="z-0 opacity-40 object-center object-cover"
+        className="z-0 opacity-60 object-center object-cover"
+      />
+      <div
+        className={cn(
+          'absolute inset-0 z-10',
+          'bg-blue-700',
+          'mix-blend-multiply',
+        )}
       />
       <Container
         className={cn(
           'flex items-center justify-center',
           'text-white text-[50px]',
-          'h-full relative z-1',
+          'h-full relative z-20',
         )}
       >
         <h2>{title}</h2>

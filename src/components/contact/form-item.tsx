@@ -26,7 +26,7 @@ const FormItem = ({ label, placeholder, field, type, registerFn }: Props) => {
             'border border-gray-800 outline-none',
             'bg-gray-800 placeholder-gray-700',
             'focus:border-blue-700 focus:shadow-md',
-            'h-[200px] resize-none',
+            'h-[150px] resize-none',
             'align-top',
           )}
           {...registerFn(field, { required: true })}

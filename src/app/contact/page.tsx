@@ -1,14 +1,16 @@
 import Contact from '@/components/contact/contact';
+import TitleHeader from '@/components/title-header/title-header';
 
 const ContactPage = () => {
   return (
-    // <main className="flex min-h-screen flex-col items-center justify-center p-10">
-    <div className="">
-      <div>item 1</div>
-      <Contact />
-    </div>
-
-    // </main>
+    <>
+      <TitleHeader title="Contact" />
+      <div className="relative top-[220px] flex justify-center w-full">
+        <div className="w-full md:w-[678px]">
+          <Contact />
+        </div>
+      </div>
+    </>
   );
 };
 

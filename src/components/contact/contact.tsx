@@ -38,12 +38,13 @@ const Contact = () => {
           registerFn={register}
         />
       ))}
-      <div>
+      <div className="w-full mt-[30px]">
         <button
           className={cn(
             'text-white text-base font-semibold',
             'py-3 px-8',
             'rounded-md outline-none',
+            'w-full',
             'bg-blue-700 hover:shadow-form',
           )}
         >
