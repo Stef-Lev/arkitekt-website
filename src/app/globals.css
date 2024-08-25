@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset !important;
+  box-shadow: 0 0 0px 1000px #1f2937 inset !important;
+  -webkit-text-fill-color: #e5e7eb !important;
+  text-fill-color: #e5e7eb !important;
+  border-radius: 6px !important;
+}
+
 * {
   box-sizing: border-box;
 }

@@ -1,26 +1,51 @@
 import { FormData } from './contact';
-import { useForm } from 'react-hook-form';
+import { cn } from '@/helpers/classnames';
+import { UseFormRegister } from 'react-hook-form';
 
 interface Props {
   label: string;
   placeholder: string;
   field: 'name' | 'email' | 'subject' | 'message';
   type: string;
+  registerFn: UseFormRegister<FormData>;
 }
 
-const FormItem = ({ label, placeholder, field, type }: Props) => {
-  const { register } = useForm<FormData>();
+const FormItem = ({ label, placeholder, field, type, registerFn }: Props) => {
   return (
     <div className="mb-5">
       <label htmlFor={field} className="mb-3 block text-base font-medium">
         {label}
       </label>
-      <input
-        type={type}
-        placeholder={placeholder}
-        className="w-full rounded-md border border-[] bg-gray-800 py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
-        {...register(field, { required: true })}
-      />
+      {type === 'textarea' ? (
+        <textarea
+          placeholder={placeholder}
+          className={cn(
+            'w-full rounded-md',
+            'py-3 px-6',
+            'text-base text-gray-300 font-medium',
+            'border border-gray-800 outline-none',
+            'bg-gray-800 placeholder-gray-700',
+            'focus:border-blue-700 focus:shadow-md',
+            'h-[200px] resize-none',
+            'align-top',
+          )}
+          {...registerFn(field, { required: true })}
+        />
+      ) : (
+        <input
+          type={type}
+          placeholder={placeholder}
+          className={cn(
+            'w-full rounded-md',
+            'py-3 px-6',
+            'text-base text-gray-300 font-medium',
+            'border border-gray-800 outline-none',
+            'bg-gray-800 placeholder-gray-700',
+            'focus:border-blue-700 focus:shadow-md',
+          )}
+          {...registerFn(field, { required: true })}
+        />
+      )}
     </div>
   );
 };

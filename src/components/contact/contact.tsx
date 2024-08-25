@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { sendEmail } from '@/helpers/send-email';
 import FormItem from './form-item';
 import content from '@/content/content';
+import { cn } from '@/helpers/classnames';
 
 export type FormData = {
   name: string;
@@ -13,10 +14,16 @@ export type FormData = {
 };
 
 const Contact = () => {
-  const { handleSubmit } = useForm<FormData>();
+  const { handleSubmit, register, reset } = useForm<FormData>();
 
   function onSubmit(data: FormData) {
-    sendEmail(data);
+    console.log(data);
+    sendEmail(data)
+      .then(() => {
+        console.log('sent');
+        reset();
+      })
+      .catch((err) => console.error(err));
   }
 
   return (
@@ -28,10 +35,18 @@ const Contact = () => {
           placeholder={form.placeholder}
           field={form.field}
           type={form.type}
+          registerFn={register}
         />
       ))}
       <div>
-        <button className="hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none">
+        <button
+          className={cn(
+            'text-white text-base font-semibold',
+            'py-3 px-8',
+            'rounded-md outline-none',
+            'bg-blue-700 hover:shadow-form',
+          )}
+        >
           Submit
         </button>
       </div>

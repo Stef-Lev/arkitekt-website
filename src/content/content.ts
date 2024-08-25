@@ -98,7 +98,7 @@ const content: Content = {
         label: 'Message',
         field: 'message',
         placeholder: 'Type your message',
-        type: 'text',
+        type: 'textarea',
       },
     ],
   },
