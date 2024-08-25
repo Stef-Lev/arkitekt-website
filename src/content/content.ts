@@ -1,4 +1,5 @@
-const content = {
+import { Content } from './types';
+const content: Content = {
   drawer: {
     socialUrls: {
       spotify:
