@@ -30,7 +30,6 @@ const Contact = () => {
         }),
       );
   }
-  window.show = () => showMessage('Sent');
 
   return (
     <form className="text-white" onSubmit={handleSubmit(onSubmit)}>
