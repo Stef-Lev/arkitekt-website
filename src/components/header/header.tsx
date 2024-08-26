@@ -9,7 +9,7 @@ import HamburgerButton from '../hamburger-button/hamburger-button';
 import content from '@/content/content';
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [headerStyle, setHeaderStyle] = useState('');
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);

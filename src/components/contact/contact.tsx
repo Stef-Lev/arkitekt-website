@@ -5,6 +5,7 @@ import { sendEmail } from '@/helpers/send-email';
 import FormItem from './form-item';
 import content from '@/content/content';
 import { cn } from '@/helpers/classnames';
+import showMessage from '@/helpers/showMessage';
 
 export type FormData = {
   name: string;
@@ -20,11 +21,16 @@ const Contact = () => {
     console.log(data);
     sendEmail(data)
       .then(() => {
-        console.log('sent');
+        showMessage('Message was sent to Arkitekt', { type: 'info' });
         reset();
       })
-      .catch((err) => console.error(err));
+      .catch(() =>
+        showMessage('Something went wrong. Message was not sent', {
+          type: 'error',
+        }),
+      );
   }
+  window.show = () => showMessage('Sent');
 
   return (
     <form className="text-white" onSubmit={handleSubmit(onSubmit)}>
