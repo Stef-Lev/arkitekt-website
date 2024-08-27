@@ -4,8 +4,8 @@ import { FiArrowUp } from 'react-icons/fi';
 
 const ScrollTopButton: React.FC = () => {
   const [opacity, setOpacity] = useState<number>(0);
-  const ScrollStart = 200;
-  const ScrollEnd = 300;
+  const ScrollStart = 700;
+  const ScrollEnd = 900;
 
   const handleScrollTop = () => {
     const scrollDuration = 500;

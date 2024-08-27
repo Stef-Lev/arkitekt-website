@@ -2,11 +2,9 @@ import { useEffect } from 'react';
 import { cn } from '@/helpers/classnames';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { FaSpotify } from 'react-icons/fa';
-import { FaYoutube } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa';
-import { FaFacebook } from 'react-icons/fa';
 import content from '@/content/content';
+// import mediaComponents from '@/helpers/media-components';
+import SocialMedia from '@/components/social-media/social-media';
 
 interface Props {
   isDrawerOpen: boolean;
@@ -18,13 +16,6 @@ const Drawer = (props: Props) => {
   const { isDrawerOpen, toggleDrawer, items } = props;
   const router = useRouter();
   const socialUrls = content.drawer.socialUrls;
-
-  const mediaComponents: Record<string, JSX.Element> = {
-    spotify: <FaSpotify size={32} />,
-    youtube: <FaYoutube size={32} />,
-    instagram: <FaInstagram size={32} />,
-    facebook: <FaFacebook size={32} />,
-  };
 
   useEffect(() => {
     if (isDrawerOpen) {
@@ -75,26 +66,7 @@ const Drawer = (props: Props) => {
             </ul>
           </nav>
         </div>
-        <div
-          className={cn(
-            'absolute bottom-0',
-            'flex justify-center items-center gap-4',
-            'h-[100px] w-full',
-            'p-6',
-          )}
-        >
-          {['spotify', 'instagram', 'youtube', 'facebook'].map((item) => (
-            <div
-              key={item}
-              className="hover:text-mainBlue hover:cursor-pointer"
-              onClick={() =>
-                handleClick(socialUrls[item as keyof typeof socialUrls])
-              }
-            >
-              {mediaComponents[item]}
-            </div>
-          ))}
-        </div>
+        <SocialMedia onClick={handleClick} />
       </div>
     </div>
   );
