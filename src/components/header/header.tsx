@@ -82,7 +82,7 @@ const Header = () => {
                   className={cn(
                     'py-2 px-4',
                     'block',
-                    'hover:text-blue-600',
+                    'hover:text-mainBlue',
                     'hover:underline hover:underline-offset-4',
                   )}
                 >

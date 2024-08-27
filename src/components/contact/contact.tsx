@@ -18,7 +18,6 @@ const Contact = () => {
   const { handleSubmit, register, reset } = useForm<FormData>();
 
   function onSubmit(data: FormData) {
-    console.log(data);
     sendEmail(data)
       .then(() => {
         showMessage('Message was sent to Arkitekt', { type: 'info' });
@@ -50,7 +49,7 @@ const Contact = () => {
             'py-3 px-8',
             'rounded-md outline-none',
             'w-full',
-            'bg-blue-700 hover:shadow-form',
+            'bg-mainBlue hover:shadow-form',
           )}
         >
           Submit

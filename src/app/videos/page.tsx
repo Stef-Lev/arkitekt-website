@@ -10,7 +10,7 @@ const VideosPage = () => {
   return (
     <div>
       <TitleHeader title={title} />
-      <Container>
+      <Container className="min-h-screen">
         <div
           className={cn(
             'relative py-6',

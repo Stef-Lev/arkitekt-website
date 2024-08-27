@@ -65,7 +65,7 @@ const Drawer = (props: Props) => {
               {items.map((item) => (
                 <li key={item.href}>
                   <div
-                    className="block py-2 hover:cursor-pointer hover:text-blue-600"
+                    className="block py-2 hover:cursor-pointer hover:text-mainBlue"
                     onClick={() => handleClick(item.href)}
                   >
                     {item.value}
@@ -86,7 +86,7 @@ const Drawer = (props: Props) => {
           {['spotify', 'instagram', 'youtube', 'facebook'].map((item) => (
             <div
               key={item}
-              className="hover:text-blue-600 hover:cursor-pointer"
+              className="hover:text-mainBlue hover:cursor-pointer"
               onClick={() =>
                 handleClick(socialUrls[item as keyof typeof socialUrls])
               }

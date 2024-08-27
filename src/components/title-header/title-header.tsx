@@ -13,12 +13,12 @@ const TitleHeader = ({ title }: Props) => {
         src={`/${title.toLowerCase()}-background.jpg`}
         alt={`${title} page`}
         layout="fill"
-        className="z-0 opacity-60 object-center object-cover"
+        className="z-0 opacity-60 object-center object-cover grayscale"
       />
       <div
         className={cn(
           'absolute inset-0 z-10',
-          'bg-blue-700',
+          'bg-mainBlue',
           'mix-blend-multiply',
         )}
       />

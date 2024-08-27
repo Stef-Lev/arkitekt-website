@@ -25,7 +25,7 @@ const FormItem = ({ label, placeholder, field, type, registerFn }: Props) => {
             'text-base text-gray-300 font-medium',
             'border border-gray-800 outline-none',
             'bg-gray-800 placeholder-gray-700',
-            'focus:border-blue-700 focus:shadow-md',
+            'focus:border-mainBlue focus:shadow-md',
             'h-[150px] resize-none',
             'align-top',
           )}
@@ -41,7 +41,7 @@ const FormItem = ({ label, placeholder, field, type, registerFn }: Props) => {
             'text-base text-gray-300 font-medium',
             'border border-gray-800 outline-none',
             'bg-gray-800 placeholder-gray-700',
-            'focus:border-blue-700 focus:shadow-md',
+            'focus:border-mainBlue focus:shadow-md',
           )}
           {...registerFn(field, { required: true })}
         />
