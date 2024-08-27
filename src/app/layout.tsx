@@ -31,9 +31,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={robotoCon.className}>
         <Header />
-        <Container className="mt-[80px] h-max">{children}</Container>
-        {/* <Footer /> */}
+        {children}
         <ScrollTopButton />
+        <Footer />
       </body>
     </html>
   );

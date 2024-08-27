@@ -5,8 +5,8 @@ const ContactPage = () => {
   return (
     <>
       <TitleHeader title="Contact" />
-      <div className="relative top-[220px] flex justify-center w-full">
-        <div className="w-full md:w-[678px]">
+      <div className="relative flex justify-center w-full py-8">
+        <div className="w-[90%] md:w-[678px]">
           <Contact />
         </div>
       </div>

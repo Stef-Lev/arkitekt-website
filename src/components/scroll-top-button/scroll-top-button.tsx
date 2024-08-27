@@ -25,7 +25,6 @@ const ScrollTopButton: React.FC = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      // Calculate opacity based on scroll position
       if (scrollY <= ScrollStart) {
         setOpacity(0);
       } else if (scrollY >= ScrollEnd) {
@@ -46,7 +45,7 @@ const ScrollTopButton: React.FC = () => {
 
   return (
     <div
-      className={`sticky bottom-[40px] z-[1001] flex justify-end transition-opacity duration-300 ${
+      className={`fixed bottom-[40px] right-[40px] z-[1001] flex justify-end transition-opacity duration-300 ${
         opacity === 0 ? 'pointer-events-none' : 'pointer-events-auto'
       }`}
       style={{ opacity }}

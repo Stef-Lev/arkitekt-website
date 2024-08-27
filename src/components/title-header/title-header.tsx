@@ -8,13 +8,7 @@ interface Props {
 
 const TitleHeader = ({ title }: Props) => {
   return (
-    <div
-      className={cn(
-        'absolute top-[80px] left-0',
-        'w-full h-[200px]',
-        'bg-black',
-      )}
-    >
+    <div className={cn('relative', 'w-full h-[200px]', 'bg-black')}>
       <Image
         src={`/${title.toLowerCase()}-background.jpg`}
         alt={`${title} page`}

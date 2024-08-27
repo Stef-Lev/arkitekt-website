@@ -36,7 +36,7 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
       </div>
       <ImagesContainer title="Singles" images={images.singles} />
       <ImagesContainer title="Albums" images={images.albums} />
-      <div className="flex flex-col items-center my-20">
+      <div className="flex flex-col items-center my-10">
         <h5 className="text-[18px] mb-8 md:mb-2">Also available on</h5>
         <div
           className={cn(

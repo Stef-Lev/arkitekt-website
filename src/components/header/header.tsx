@@ -47,7 +47,6 @@ const Header = () => {
     <>
       <header
         className={cn(
-          'fixed top-0',
           'bg-[#0a0a0a] text-white',
           'w-full z-40',
           'transition-transform duration-300',

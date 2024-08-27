@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer
       className={cn(
-        'mt-[240px] p-4 h-[240px]',
+        'p-4 h-[240px]',
         'flex justify-center items-center',
         'text-yellow-100 bg-black',
       )}
