@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         mainBlue: '#2f60f7',
+        inputBg: '#1f2128',
+        inputPlaceholder: '#4f5361',
       },
       container: {
         center: true,
