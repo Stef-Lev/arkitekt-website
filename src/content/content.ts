@@ -12,6 +12,7 @@ const content: Content = {
   navbar: {
     items: [
       { value: 'Home', href: '/' },
+      { value: 'About', href: '/about' },
       { value: 'Music', href: '/music' },
       { value: 'Videos', href: '/videos' },
       { value: 'Contact', href: '/contact' },
