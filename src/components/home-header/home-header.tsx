@@ -1,8 +1,10 @@
 'use client';
 import Image from 'next/legacy/image';
 import { cn } from '@/helpers/classnames';
+import content from '@/content/content';
 
 const HomeHeader = () => {
+  const { subtitle } = content.homePage;
   return (
     <div
       className={cn(
@@ -25,7 +27,7 @@ const HomeHeader = () => {
         alt="hero photo"
       />
       <div className="flex flex-col justify-center items-center w-full">
-        <div className="relative aspect-[32/55] w-full max-w-[256px] w-full">
+        <div className="relative aspect-[32/55] w-full max-w-[360px]">
           <Image
             className="z-[1] aspect-[32/55]"
             layout="fill"
@@ -34,7 +36,7 @@ const HomeHeader = () => {
             alt="arkitekt logo"
           />
         </div>
-        <div className="z-[1] text-[60px] text-white">BUILDING URBAN BEATS</div>
+        <p className="z-[1] text-[26px] text-white">{subtitle}</p>
       </div>
     </div>
   );

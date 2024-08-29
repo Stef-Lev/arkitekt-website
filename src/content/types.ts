@@ -13,7 +13,9 @@ export interface Content {
       href: string;
     }[];
   };
-  homePage: {};
+  homePage: {
+    subtitle: string;
+  };
   videosPage: {
     title: string;
     videoIds: string[];

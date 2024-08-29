@@ -18,7 +18,9 @@ const content: Content = {
       { value: 'Contact', href: '/contact' },
     ],
   },
-  homePage: {},
+  homePage: {
+    subtitle: 'BUILDING URBAN BEATS',
+  },
   videosPage: {
     title: 'Videos',
     videoIds: [
