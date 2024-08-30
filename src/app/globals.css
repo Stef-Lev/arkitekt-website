@@ -65,3 +65,14 @@ body {
 .rotate {
   animation: rotate 3s linear infinite;
 }
+
+.dark-metallic-tile {
+  background: linear-gradient(145deg, #2c2c2c, #1f1f1f);
+  border: 1px solid #444;
+  border-radius: 12px;
+}
+
+.dark-metallic-tile:hover {
+  background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+  transform: scale(1.05);
+}

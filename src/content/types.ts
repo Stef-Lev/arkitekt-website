@@ -41,4 +41,7 @@ export interface Content {
       type: string;
     }[];
   };
+  aboutPage: {
+    genres: { name: string; icon: JSX.Element }[];
+  };
 }
