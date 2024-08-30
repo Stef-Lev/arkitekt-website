@@ -3,6 +3,7 @@ import content from '@/content/content';
 import MusicCovers from '@/components/music-covers/music-covers';
 import { getImages } from '@/helpers/get-images';
 import Container from '@/components/container/container';
+import PageWrapper from '@/components/page-wrapper/page-wrapper';
 
 const MusicPage = () => {
   const { title, spotify, platforms } = content.musicPage;
@@ -10,7 +11,7 @@ const MusicPage = () => {
   const images = { singles: getImages('singles'), albums: getImages('albums') };
 
   return (
-    <div className="relative top-[80px]">
+    <PageWrapper>
       <TitleHeader title={title} />
       <div>
         <Container>
@@ -21,7 +22,7 @@ const MusicPage = () => {
           />
         </Container>
       </div>
-    </div>
+    </PageWrapper>
   );
 };
 
