@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer
       className={cn(
-        'p-4 h-[240px]',
+        'p-4 h-[240px] mt-[80px]',
         'flex justify-center items-center',
         'text-white bg-black',
         'relative',

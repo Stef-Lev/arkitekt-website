@@ -11,7 +11,7 @@ import content from '@/content/content';
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [headerStyle, setHeaderStyle] = useState('');
+  const [isVisible, setIsVisible] = useState(true); // State for visibility
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
 
@@ -25,11 +25,14 @@ const Header = () => {
         window.scrollY || document.documentElement.scrollTop;
 
       if (currentScrollTop > lastScrollTop && currentScrollTop > 80) {
-        setHeaderStyle('-translate-y-full');
+        // Scrolling down
+        setIsVisible(false);
       } else {
-        setHeaderStyle('translate-y-0');
+        // Scrolling up
+        setIsVisible(true);
       }
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+
+      setLastScrollTop(currentScrollTop);
     };
 
     window.addEventListener('resize', handleResize);
@@ -48,9 +51,9 @@ const Header = () => {
       <header
         className={cn(
           'bg-[#0a0a0a] text-white',
-          'w-full z-40',
+          'w-full z-40 fixed top-0 left-0', // Updated for fixed positioning
           'transition-transform duration-300',
-          headerStyle,
+          isVisible ? 'translate-y-0' : '-translate-y-full',
         )}
       >
         <div

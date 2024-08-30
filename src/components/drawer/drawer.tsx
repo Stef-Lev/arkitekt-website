@@ -50,7 +50,7 @@ const Drawer = (props: Props) => {
           />
         </div>
 
-        <div className="p-4 text-[30px]">
+        <div className="p-4 text-[28px]">
           <nav>
             <ul>
               {items.map((item) => (

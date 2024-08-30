@@ -3,7 +3,7 @@ import HomeHeader from '@/components/home-header/home-header';
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative top-[80px]">
       <HomeHeader />
       <SpotifyPreview />
     </div>

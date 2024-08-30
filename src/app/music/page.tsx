@@ -10,7 +10,7 @@ const MusicPage = () => {
   const images = { singles: getImages('singles'), albums: getImages('albums') };
 
   return (
-    <>
+    <div className="relative top-[80px]">
       <TitleHeader title={title} />
       <div>
         <Container>
@@ -21,7 +21,7 @@ const MusicPage = () => {
           />
         </Container>
       </div>
-    </>
+    </div>
   );
 };
 

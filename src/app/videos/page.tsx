@@ -8,7 +8,7 @@ const VideosPage = () => {
   const { title, videoIds } = content.videosPage;
 
   return (
-    <div>
+    <div className="relative top-[80px]">
       <TitleHeader title={title} />
       <Container className="min-h-screen">
         <div
