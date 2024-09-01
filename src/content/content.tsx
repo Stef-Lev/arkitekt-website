@@ -116,15 +116,38 @@ const content: Content = {
   },
   aboutPage: {
     genres: [
-      { name: 'UK DRILL', icon: <GiBalaclava size={50} /> },
-      { name: 'BOOM BAP', icon: <PiBeanie size={50} /> },
-      { name: 'TRAP', icon: <GiTrapMask size={50} /> },
-      { name: 'LOFI', icon: <GiCoffeeCup size={50} /> },
-      { name: 'BAILE FUNK', icon: <GiBrazilFlag size={50} /> },
-      { name: 'JERSEY CLUB', icon: <FaHeadphones size={50} /> },
-      { name: 'AFROBEATS', icon: <GiPalmTree size={50} /> },
-      { name: 'REGGAETON', icon: <FaHotjar size={50} /> },
+      { name: 'UK DRILL', id: 'drill', icon: <GiBalaclava size={50} /> },
+      { name: 'BOOM BAP', id: 'boom_bap', icon: <PiBeanie size={50} /> },
+      { name: 'TRAP', id: 'trap', icon: <GiTrapMask size={50} /> },
+      { name: 'LOFI', id: 'lofi', icon: <GiCoffeeCup size={50} /> },
+      {
+        name: 'BRAZILIAN FUNK',
+        id: 'brazilian_funk',
+        icon: <GiBrazilFlag size={50} />,
+      },
+      {
+        name: 'JERSEY CLUB',
+        id: 'jersey_club',
+        icon: <FaHeadphones size={50} />,
+      },
+      { name: 'AFROBEATS', id: 'afrobeats', icon: <GiPalmTree size={50} /> },
+      { name: 'REGGAETON', id: 'reggaeton', icon: <FaHotjar size={50} /> },
     ],
+    playlists: {
+      drill:
+        'https://open.spotify.com/embed/playlist/5ONOkUyLm80BElBvs59mJQ?utm_source=generator',
+      boom_bap:
+        'https://open.spotify.com/embed/playlist/0BeX6oVL9sIDC7TqcAn4GY?utm_source=generator',
+      trap: 'https://open.spotify.com/embed/playlist/79ngt7HgmP1eMQb5atguj5?utm_source=generator',
+      lofi: 'https://open.spotify.com/embed/playlist/0KkXkYDAaG3igYExyRsbLj?utm_source=generator',
+      brazilian_funk:
+        'https://open.spotify.com/embed/playlist/66avrRnDlHnNl1Pkh0IIe8?utm_source=generator',
+      jersey_club:
+        'https://open.spotify.com/embed/playlist/6csCUBpWHenqmygd91hYxL?utm_source=generator',
+      afrobeats:
+        'https://open.spotify.com/embed/playlist/4evQ1ji11pfSK3oFbBSYm5?utm_source=generator',
+      reggaeton: '',
+    },
   },
 };
 export default content;

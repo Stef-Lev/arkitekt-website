@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/legacy/image';
 import { cn } from '@/helpers/classnames';
 
 const SpotifyPreview = () => {
