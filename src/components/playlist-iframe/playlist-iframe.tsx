@@ -1,3 +1,5 @@
+import { cn } from '@/helpers/classnames';
+
 interface Props {
   url: string;
 }
@@ -5,7 +7,13 @@ interface Props {
 const PlaylistIframe = ({ url }: Props) => {
   if (!url) {
     return (
-      <div className="text-white flex justify-center items-center h-full text-[22px] text-center">
+      <div
+        className={cn(
+          'flex justify-center items-center',
+          'h-full',
+          'text-white text-[22px] text-center',
+        )}
+      >
         <p>
           No beats available for this genre at the moment, but there will be in
           the future. Stay tuned!

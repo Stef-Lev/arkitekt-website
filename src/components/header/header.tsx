@@ -51,9 +51,9 @@ const Header = () => {
       <header
         className={cn(
           'bg-[#0a0a0a] text-white',
-          'w-full z-40 fixed top-0 left-0', // Updated for fixed positioning
+          'w-full z-40 fixed top-0 left-0',
           'transition-transform duration-300',
-          isVisible ? 'translate-y-0' : '-translate-y-full',
+          [isVisible, 'translate-y-0', '-translate-y-full'],
         )}
       >
         <div

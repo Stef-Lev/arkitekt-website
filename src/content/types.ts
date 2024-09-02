@@ -42,6 +42,7 @@ export interface Content {
     }[];
   };
   aboutPage: {
+    introText: string;
     genres: { name: string; id: string; icon: JSX.Element }[];
     playlists: Record<string, string>;
   };

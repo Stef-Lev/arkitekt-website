@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import { cn } from '@/helpers/classnames';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import content from '@/content/content';
-// import mediaComponents from '@/helpers/media-components';
 import SocialMedia from '@/components/social-media/social-media';
 
 interface Props {
@@ -15,7 +13,6 @@ interface Props {
 const Drawer = (props: Props) => {
   const { isDrawerOpen, toggleDrawer, items } = props;
   const router = useRouter();
-  const socialUrls = content.drawer.socialUrls;
 
   useEffect(() => {
     if (isDrawerOpen) {

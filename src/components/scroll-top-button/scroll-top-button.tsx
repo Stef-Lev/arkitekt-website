@@ -1,8 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
+import { cn } from '@/helpers/classnames';
 
-const ScrollTopButton: React.FC = () => {
+const ScrollTopButton = () => {
   const [opacity, setOpacity] = useState<number>(0);
   const ScrollStart = 700;
   const ScrollEnd = 900;
@@ -45,14 +46,25 @@ const ScrollTopButton: React.FC = () => {
 
   return (
     <div
-      className={`fixed bottom-[40px] right-[40px] z-[1001] flex justify-end transition-opacity duration-300 ${
-        opacity === 0 ? 'pointer-events-none' : 'pointer-events-auto'
-      }`}
+      className={cn(
+        'fixed',
+        'bottom-[30px] right-[20px]',
+        'flex justify-end',
+        'z-[1001]',
+        'transition-opacity duration-300',
+        'cursor-pointer',
+        [opacity === 0, 'pointer-events-none', 'pointer-events-auto'],
+      )}
       style={{ opacity }}
     >
-      <div className="pr-5">
+      <div>
         <div
-          className="flex justify-center items-center w-[40px] h-[40px] rounded-lg bg-gray-600 text-white hover:bg-gray-400"
+          className={cn(
+            'flex justify-center items-center',
+            'w-[40px] h-[40px]',
+            'rounded-lg text-white',
+            'bg-gray-600 hover:bg-gray-400',
+          )}
           onClick={handleScrollTop}
         >
           <FiArrowUp size="30px" />

@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { RiCloseLargeLine } from 'react-icons/ri';
+import { cn } from '@/helpers/classnames';
 
 interface Props extends PropsWithChildren {
   isOpen: boolean;
@@ -9,8 +10,23 @@ interface Props extends PropsWithChildren {
 const Modal = ({ isOpen, onClose, children }: Props) => {
   if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 ">
-      <div className="bg-[#323232] p-2 md:p-4 rounded-lg shadow-lg w-[92vw] md:w-[550px] lg:w-[640px] h-[430px]">
+    <div
+      className={cn(
+        'fixed z-50',
+        'flex items-center justify-center',
+        'inset-0',
+        'bg-black bg-opacity-50',
+      )}
+    >
+      <div
+        className={cn(
+          'w-[92vw] md:w-[550px] lg:w-[640px]',
+          'h-[430px]',
+          'rounded-lg shadow-lg',
+          'bg-[#323232]',
+          'p-2 md:p-4',
+        )}
+      >
         <div className="flex justify-end items-center text-white">
           <RiCloseLargeLine
             size={20}

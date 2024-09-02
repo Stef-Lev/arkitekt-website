@@ -115,6 +115,8 @@ const content: Content = {
     ],
   },
   aboutPage: {
+    introText:
+      'Arkitekt is a beatmaker and producer hailing from the vibrant streets of Athens, Greece. His sound palette is as diverse as the city itself, blending Hip Hop, Boom Bap, UK Drill, LoFi, Brazilian Funk, and Trap. He even throws in Greek folk remixes for that extra flavor. Arkitekt’s beats aren’t just sounds; they’re crafted to hit hard and leave a lasting impact. Whether you’re looking for a track to vibe to or a beat to rap over, he’s got you covered. Hit play and let the head nodding and feet moving begin—because he’s all about Building Urban Beats.',
     genres: [
       { name: 'UK DRILL', id: 'drill', icon: <GiBalaclava size={50} /> },
       { name: 'BOOM BAP', id: 'boom_bap', icon: <PiBeanie size={50} /> },
