@@ -2,9 +2,9 @@
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import ImagesContainer from './images-container';
-import { cn } from '@/helpers/classnames';
+import Platforms from '../platforms/platforms';
 
-interface Platform {
+export interface Platform {
   name: string;
   height: number;
   width: number;
@@ -24,6 +24,9 @@ interface Props {
 
 const MusicCovers = ({ images, spotify, platforms }: Props) => {
   const router = useRouter();
+  const handleClick = (url: string) => {
+    router.push(url);
+  };
   return (
     <div className="text-white text-center">
       <div className="flex flex-col items-center mb-8">
@@ -34,34 +37,12 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
           alt="spotify logo"
           width={200}
           height={60}
-          onClick={() => router.push(spotify.url)}
+          onClick={() => handleClick(spotify.url)}
         />
       </div>
       <ImagesContainer title="Singles" images={images.singles} />
       <ImagesContainer title="Albums" images={images.albums} />
-      <div className="flex flex-col items-center my-10">
-        <h5 className="text-[18px] mb-8 md:mb-2">Also available on</h5>
-        <div
-          className={cn(
-            'flex items-center',
-            'flex-col md:flex-row',
-            'gap-8 md:gap-5',
-          )}
-        >
-          {platforms.length > 0 &&
-            platforms.map((item) => (
-              <Image
-                className="hover:cursor-pointer"
-                key={item.image}
-                src={item.image}
-                alt={`${item.name} logo`}
-                width={item.width}
-                height={item.height}
-                onClick={() => router.push(item.url)}
-              />
-            ))}
-        </div>
-      </div>
+      <Platforms platforms={platforms} onClick={handleClick} />
     </div>
   );
 };

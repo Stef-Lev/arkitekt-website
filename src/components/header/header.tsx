@@ -9,17 +9,12 @@ import HamburgerButton from '../hamburger-button/hamburger-button';
 import content from '@/content/content';
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [isVisible, setIsVisible] = useState(true); // State for visibility
+  const [isVisible, setIsVisible] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
     const handleScroll = () => {
       const currentScrollTop =
         window.scrollY || document.documentElement.scrollTop;
@@ -35,11 +30,9 @@ const Header = () => {
       setLastScrollTop(currentScrollTop);
     };
 
-    window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollTop]);
@@ -71,38 +64,37 @@ const Header = () => {
             height={110}
             onClick={() => router.push('/')}
           />
-          {isMobile ? (
-            <HamburgerButton
-              isDrawerOpen={isDrawerOpen}
-              onClick={toggleDrawer}
-            />
-          ) : (
-            <div className="flex">
-              {content.navbar.items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    'py-2 px-4',
-                    'block',
-                    'hover:text-mainBlue',
-                    'hover:underline hover:underline-offset-4',
-                  )}
-                >
-                  {item.value}
-                </Link>
-              ))}
-            </div>
-          )}
+
+          <HamburgerButton
+            className="block md:hidden"
+            isDrawerOpen={isDrawerOpen}
+            onClick={toggleDrawer}
+          />
+
+          <div className="hidden md:flex">
+            {content.navbar.items.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  'py-2 px-4',
+                  'block',
+                  'hover:text-mainBlue',
+                  'hover:underline hover:underline-offset-4',
+                )}
+              >
+                {item.value}
+              </Link>
+            ))}
+          </div>
         </div>
       </header>
-      {isMobile && (
-        <Drawer
-          isDrawerOpen={isDrawerOpen}
-          toggleDrawer={toggleDrawer}
-          items={content.navbar.items}
-        />
-      )}
+      <Drawer
+        className="block md:hidden"
+        isDrawerOpen={isDrawerOpen}
+        toggleDrawer={toggleDrawer}
+        items={content.navbar.items}
+      />
     </>
   );
 };

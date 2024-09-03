@@ -1,15 +1,21 @@
 import { cn } from '@/helpers/classnames';
 
 interface Props {
+  className?: string;
   isDrawerOpen: boolean;
   onClick: () => void;
 }
 
-const HamburgerButton = ({ isDrawerOpen, onClick }: Props) => {
+const HamburgerButton = ({ isDrawerOpen, onClick, className }: Props) => {
   return (
     <div
       onClick={onClick}
-      className="flex flex-col justify-center items-center h-full hover:cursor-pointer"
+      className={cn(
+        'flex flex-col',
+        'justify-center items-center',
+        'h-full hover:cursor-pointer',
+        className,
+      )}
     >
       <span
         className={cn(

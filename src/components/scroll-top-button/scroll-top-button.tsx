@@ -9,40 +9,45 @@ const ScrollTopButton = () => {
   const ScrollEnd = 900;
 
   const handleScrollTop = () => {
-    const scrollDuration = 500;
-    const scrollStep = -window.scrollY / (scrollDuration / 15);
+    if (typeof window !== 'undefined') {
+      const scrollDuration = 500;
+      const scrollStep = -window.scrollY / (scrollDuration / 15);
 
-    const smoothScroll = () => {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
-        requestAnimationFrame(smoothScroll);
-      }
-    };
+      const smoothScroll = () => {
+        if (window.scrollY !== 0) {
+          window.scrollBy(0, scrollStep);
+          requestAnimationFrame(smoothScroll);
+        }
+      };
 
-    requestAnimationFrame(smoothScroll);
+      requestAnimationFrame(smoothScroll);
+    }
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
+    if (typeof window !== 'undefined') {
+      // Ensure window is defined
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
 
-      if (scrollY <= ScrollStart) {
-        setOpacity(0);
-      } else if (scrollY >= ScrollEnd) {
-        setOpacity(1);
-      } else {
-        const calculatedOpacity =
-          (scrollY - ScrollStart) / (ScrollEnd - ScrollStart);
-        setOpacity(calculatedOpacity);
-      }
-    };
+        if (scrollY <= ScrollStart) {
+          setOpacity(0);
+        } else if (scrollY >= ScrollEnd) {
+          setOpacity(1);
+        } else {
+          const calculatedOpacity =
+            (scrollY - ScrollStart) / (ScrollEnd - ScrollStart);
+          setOpacity(calculatedOpacity);
+        }
+      };
 
-    window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [opacity]);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
 
   return (
     <div

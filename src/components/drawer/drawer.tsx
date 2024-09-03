@@ -5,13 +5,14 @@ import Image from 'next/image';
 import SocialMedia from '@/components/social-media/social-media';
 
 interface Props {
+  className?: string;
   isDrawerOpen: boolean;
   items: Array<Record<string, string>>;
   toggleDrawer: () => void;
 }
 
 const Drawer = (props: Props) => {
-  const { isDrawerOpen, toggleDrawer, items } = props;
+  const { isDrawerOpen, toggleDrawer, items, className } = props;
   const router = useRouter();
 
   useEffect(() => {
@@ -33,6 +34,7 @@ const Drawer = (props: Props) => {
         'transition-transform duration-300',
         'z-50 w-[85%]',
         [isDrawerOpen, 'translate-x-0', '-translate-x-full'],
+        className,
       )}
     >
       <div className={cn('w-full h-full', 'bg-[#171717] text-white')}>
