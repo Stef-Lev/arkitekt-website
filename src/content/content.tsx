@@ -74,20 +74,32 @@ const content: Content = {
     },
     platforms: [
       {
+        name: 'apple',
         image: '/apple-logo.svg',
         url: 'https://music.apple.com/us/browse',
+        height: 24,
+        width: 100,
       },
       {
+        name: 'amazon',
         image: '/amazon-logo.svg',
         url: 'https://music.amazon.com/',
+        height: 19,
+        width: 100,
       },
       {
+        name: 'tidal',
         image: '/tidal-logo.svg',
         url: 'https://www.tidal.com/',
+        height: 14,
+        width: 100,
       },
       {
+        name: 'deezer',
         image: '/deezer-logo.svg',
         url: 'https://www.deezer.com/',
+        height: 68,
+        width: 100,
       },
     ],
   },

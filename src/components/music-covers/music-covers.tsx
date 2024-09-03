@@ -5,6 +5,9 @@ import ImagesContainer from './images-container';
 import { cn } from '@/helpers/classnames';
 
 interface Platform {
+  name: string;
+  height: number;
+  width: number;
   image: string;
   url: string;
 }
@@ -30,7 +33,7 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
           src={spotify.image}
           alt="spotify logo"
           width={200}
-          height={200}
+          height={60}
           onClick={() => router.push(spotify.url)}
         />
       </div>
@@ -51,9 +54,9 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
                 className="hover:cursor-pointer"
                 key={item.image}
                 src={item.image}
-                alt="spotify logo"
-                width={100}
-                height={50}
+                alt={`${item.name} logo`}
+                width={item.width}
+                height={item.height}
                 onClick={() => router.push(item.url)}
               />
             ))}

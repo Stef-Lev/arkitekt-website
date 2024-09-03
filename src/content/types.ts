@@ -29,8 +29,11 @@ export interface Content {
       url: string;
     };
     platforms: {
+      name: string;
       image: string;
       url: string;
+      height: number;
+      width: number;
     }[];
   };
   contactPage: {
