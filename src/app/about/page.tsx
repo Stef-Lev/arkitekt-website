@@ -19,9 +19,9 @@ const AboutPage = () => {
             )}
           >
             <Image
-              className="ratio-[2/3] rounded-md md:w-[400px]"
-              width={300}
-              height={300}
+              className="rounded-md"
+              width={384}
+              height={576}
               src="/arkitekt.png"
               alt="arkitekt photo"
             />
