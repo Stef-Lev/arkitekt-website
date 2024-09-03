@@ -17,7 +17,7 @@ interface Images {
   albums: string[];
 }
 interface Props {
-  spotify: Platform;
+  spotify: Pick<Platform, 'url' | 'image'>;
   images: Images;
   platforms: Platform[];
 }
