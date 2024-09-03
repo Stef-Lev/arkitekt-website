@@ -4,6 +4,7 @@ import Footer from '@/components/footer/footer';
 import { Roboto_Condensed } from 'next/font/google';
 import './globals.css';
 import ScrollTopButton from '@/components/scroll-top-button/scroll-top-button';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const robotoCon = Roboto_Condensed({ subsets: ['latin'] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-K6FKBZSR" />
       <body className={robotoCon.className}>
         <Header />
         {children}
