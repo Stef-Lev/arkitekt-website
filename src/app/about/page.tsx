@@ -24,6 +24,7 @@ const AboutPage = () => {
               height={576}
               src="/arkitekt.png"
               alt="arkitekt photo"
+              quality={100}
             />
           </div>
           <div
