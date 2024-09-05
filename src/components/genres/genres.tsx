@@ -9,7 +9,13 @@ import Tile from './tile';
 const genres = content.aboutPage.genres;
 const playlists = content.aboutPage.playlists;
 
-const Genres = () => {
+interface Props {
+  title: string;
+  subtitle?: string;
+  isInteractive?: boolean;
+}
+
+const Genres = ({ isInteractive = false, title, subtitle }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedGenre, setSelectedGenre] = useState('');
 
@@ -22,7 +28,12 @@ const Genres = () => {
 
   return (
     <div>
-      <h5 className="p-4 text-center text-white text-[44px]">GENRES</h5>
+      <h5 className={cn('p-4', 'text-center text-white text-[44px]')}>
+        {title}
+      </h5>
+      {subtitle && (
+        <h6 className="p-4 text-center text-white text-[20px]">{subtitle}</h6>
+      )}
       <div
         className={cn(
           'grid grid-cols-2',
@@ -32,7 +43,12 @@ const Genres = () => {
         )}
       >
         {genres.map((genre, index) => (
-          <Tile key={index} genre={genre} onClick={openPlaylist} />
+          <Tile
+            key={index}
+            genre={genre}
+            onClick={openPlaylist}
+            isInteractive={isInteractive}
+          />
         ))}
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal}>

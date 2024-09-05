@@ -15,6 +15,7 @@ export interface Content {
   };
   homePage: {
     subtitle: string;
+    featuredVideosIds: string[];
   };
   videosPage: {
     title: string;

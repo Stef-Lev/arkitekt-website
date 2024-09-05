@@ -29,6 +29,7 @@ const content: Content = {
   },
   homePage: {
     subtitle: 'BUILDING URBAN BEATS',
+    featuredVideosIds: ['ZOSYPqWgLWk', '6yZq_1G6Zcg', 'XrAr5932Bys'],
   },
   videosPage: {
     title: 'Videos',

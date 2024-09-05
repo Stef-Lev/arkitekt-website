@@ -10,7 +10,11 @@ const AboutPage = () => {
     <PageWrapper>
       <Container>
         <AboutSection aboutText={aboutText} />
-        <Genres />
+        <Genres
+          title="GENRES"
+          subtitle="Select a genre and listen to the beats playlist"
+          isInteractive
+        />
       </Container>
     </PageWrapper>
   );

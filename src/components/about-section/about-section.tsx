@@ -23,7 +23,6 @@ const AboutSection = ({ aboutText }: Props) => {
           src="/arkitekt.png"
           alt="arkitekt photo"
           quality={100}
-          priority
         />
       </div>
       <div
