@@ -14,6 +14,7 @@ const TitleHeader = ({ title }: Props) => {
         alt={`${title} page`}
         layout="fill"
         className="z-0 opacity-60 object-center object-cover grayscale"
+        priority
       />
       <div
         className={cn(

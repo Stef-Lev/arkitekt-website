@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Header from '@/components/header/header';
-import Head from 'next/head';
 import Script from 'next/script';
 import Footer from '@/components/footer/footer';
 import { Roboto_Condensed } from 'next/font/google';
@@ -28,7 +27,7 @@ export default function RootLayout({
         data-cbid="a85d79e3-6677-4e63-af5d-927f01bd042a"
         data-blockingmode="auto"
         type="text/javascript"
-      ></Script>
+      />
       <GoogleAnalytics gaId="G-5YCKW8K98N" />
       <body className={robotoCon.className}>
         <Header />
