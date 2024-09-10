@@ -17,6 +17,7 @@ const Modal = ({ isOpen, onClose, children }: Props) => {
         'inset-0',
         'bg-black bg-opacity-50',
       )}
+      onClick={onClose}
     >
       <div
         className={cn(
