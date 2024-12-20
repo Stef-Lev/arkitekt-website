@@ -1,3 +1,11 @@
+export type Genre = {
+  name: string;
+  id: string;
+  coverImagePath: string;
+  playlistUrl: string;
+  icon: JSX.Element;
+};
+
 export interface Content {
   drawer: {
     socialUrls: {
@@ -47,7 +55,6 @@ export interface Content {
   };
   aboutPage: {
     introText: string;
-    genres: { name: string; id: string; icon: JSX.Element }[];
-    playlists: Record<string, string>;
+    genres: Genre[];
   };
 }

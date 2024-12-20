@@ -8,7 +8,10 @@ import PageWrapper from '@/components/page-wrapper/page-wrapper';
 const MusicPage = () => {
   const { title, spotify, platforms } = content.musicPage;
 
-  const images = { singles: getImages('singles'), albums: getImages('albums') };
+  const images = {
+    singles: getImages('musicPage', 'singles'),
+    albums: getImages('musicPage', 'albums'),
+  };
 
   return (
     <PageWrapper>

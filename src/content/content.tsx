@@ -138,38 +138,70 @@ const content: Content = {
     introText:
       'Arkitekt is a beatmaker and producer hailing from the vibrant streets of Athens, Greece. His sound palette is as diverse as the city itself, blending Hip Hop, Boom Bap, UK Drill, LoFi, Afrobeats, Brazilian Funk, and Trap. He even throws in Greek folk remixes for that extra flavor. Arkitekt’s beats aren’t just sounds; they’re crafted to hit hard and leave a lasting impact. Whether you’re looking for a track to vibe to or a beat to rap over, he’s got you covered. From the streets to your speakers, Arkitekt keeps Building Urban Beats for you.',
     genres: [
-      { name: 'UK DRILL', id: 'drill', icon: <GiBalaclava size={50} /> },
-      { name: 'BOOM BAP', id: 'boom_bap', icon: <PiBeanie size={50} /> },
-      { name: 'TRAP', id: 'trap', icon: <GiTrapMask size={50} /> },
-      { name: 'LOFI', id: 'lofi', icon: <GiCoffeeCup size={50} /> },
+      {
+        name: 'UK DRILL',
+        id: 'drill',
+        coverImagePath: '/genres/drill.png',
+        playlistUrl:
+          'https://open.spotify.com/embed/playlist/5ONOkUyLm80BElBvs59mJQ?utm_source=generator',
+        icon: <GiBalaclava size={50} />,
+      },
+      {
+        name: 'BOOM BAP',
+        id: 'boom_bap',
+        coverImagePath: '/genres/boombap.png',
+        playlistUrl:
+          'https://open.spotify.com/embed/playlist/0BeX6oVL9sIDC7TqcAn4GY?utm_source=generator',
+        icon: <PiBeanie size={50} />,
+      },
+      {
+        name: 'TRAP',
+        id: 'trap',
+        coverImagePath: '/genres/trap.png',
+        playlistUrl:
+          'https://open.spotify.com/embed/playlist/79ngt7HgmP1eMQb5atguj5?utm_source=generator',
+        icon: <GiTrapMask size={50} />,
+      },
+      {
+        name: 'LOFI',
+        id: 'lofi',
+        coverImagePath: '/genres/lofi.png',
+        playlistUrl:
+          'https://open.spotify.com/embed/playlist/0KkXkYDAaG3igYExyRsbLj?utm_source=generator',
+        icon: <GiCoffeeCup size={50} />,
+      },
       {
         name: 'BRAZILIAN FUNK',
         id: 'brazilian_funk',
+        coverImagePath: '/genres/brazilian.png',
+        playlistUrl:
+          'https://open.spotify.com/embed/playlist/66avrRnDlHnNl1Pkh0IIe8?utm_source=generator',
         icon: <GiBrazilFlag size={50} />,
       },
       {
         name: 'JERSEY CLUB',
         id: 'jersey_club',
+        coverImagePath: '/genres/jersey.png',
+        playlistUrl:
+          'https://open.spotify.com/embed/playlist/6csCUBpWHenqmygd91hYxL?utm_source=generator',
         icon: <FaHeadphones size={50} />,
       },
-      { name: 'AFROBEATS', id: 'afrobeats', icon: <GiPalmTree size={50} /> },
-      { name: 'REGGAETON', id: 'reggaeton', icon: <FaHotjar size={50} /> },
+      {
+        name: 'AFROBEATS',
+        id: 'afrobeats',
+        coverImagePath: '/genres/afrobeats.png',
+        playlistUrl:
+          'https://open.spotify.com/embed/playlist/4evQ1ji11pfSK3oFbBSYm5?utm_source=generator',
+        icon: <GiPalmTree size={50} />,
+      },
+      {
+        name: 'REGGAETON',
+        id: 'reggaeton',
+        coverImagePath: '',
+        playlistUrl: '',
+        icon: <FaHotjar size={50} />,
+      },
     ],
-    playlists: {
-      drill:
-        'https://open.spotify.com/embed/playlist/5ONOkUyLm80BElBvs59mJQ?utm_source=generator',
-      boom_bap:
-        'https://open.spotify.com/embed/playlist/0BeX6oVL9sIDC7TqcAn4GY?utm_source=generator',
-      trap: 'https://open.spotify.com/embed/playlist/79ngt7HgmP1eMQb5atguj5?utm_source=generator',
-      lofi: 'https://open.spotify.com/embed/playlist/0KkXkYDAaG3igYExyRsbLj?utm_source=generator',
-      brazilian_funk:
-        'https://open.spotify.com/embed/playlist/66avrRnDlHnNl1Pkh0IIe8?utm_source=generator',
-      jersey_club:
-        'https://open.spotify.com/embed/playlist/6csCUBpWHenqmygd91hYxL?utm_source=generator',
-      afrobeats:
-        'https://open.spotify.com/embed/playlist/4evQ1ji11pfSK3oFbBSYm5?utm_source=generator',
-      reggaeton: '',
-    },
   },
 };
 export default content;

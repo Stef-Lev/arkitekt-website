@@ -13,6 +13,7 @@ const AboutPage = () => {
         <Genres
           title="GENRES"
           subtitle="Select a genre and listen to the beats playlist"
+          type="images"
           isInteractive
         />
       </Container>

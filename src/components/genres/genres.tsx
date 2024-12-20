@@ -5,56 +5,79 @@ import { useState } from 'react';
 import PlaylistIframe from '../playlist-iframe/playlist-iframe';
 import { cn } from '@/helpers/classnames';
 import Tile from './tile';
+import GenreCover from './genre-cover';
 
 const genres = content.aboutPage.genres;
-const playlists = content.aboutPage.playlists;
 
 interface Props {
   title: string;
   subtitle?: string;
   isInteractive?: boolean;
+  type?: 'tiles' | 'images';
 }
 
-const Genres = ({ isInteractive = false, title, subtitle }: Props) => {
+const Genres = ({
+  title,
+  subtitle,
+  isInteractive = false,
+  type = 'tiles',
+}: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedGenreUrl, setSelectedGenreUrl] = useState('');
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-  const openPlaylist = (id: string) => {
-    setSelectedGenre(playlists[id]);
+  const openPlaylist = (url: string) => {
+    console.log(url);
+    setSelectedGenreUrl(url);
     openModal();
   };
 
   return (
-    <div>
+    <section id="genres">
       <h5 className={cn('p-4', 'text-center text-white text-[44px]')}>
         {title}
       </h5>
       {subtitle && (
         <h6 className="p-4 text-center text-white text-[20px]">{subtitle}</h6>
       )}
-      <div
-        className={cn(
-          'grid grid-cols-2',
-          'sm:grid-cols-3',
-          'lg:grid-cols-4',
-          'gap-4 p-4',
-        )}
-      >
-        {genres.map((genre, index) => (
-          <Tile
-            key={index}
-            genre={genre}
-            onClick={openPlaylist}
-            isInteractive={isInteractive}
-          />
-        ))}
-      </div>
+      {type === 'tiles' && (
+        <div
+          className={cn(
+            'grid grid-cols-2',
+            'sm:grid-cols-3',
+            'lg:grid-cols-4',
+            'gap-4 p-4',
+          )}
+        >
+          {genres.map((genre, index) => (
+            <Tile
+              key={index}
+              genre={genre}
+              onClick={openPlaylist}
+              isInteractive={isInteractive}
+            />
+          ))}
+        </div>
+      )}
+      {type === 'images' && (
+        <div
+          className={cn(
+            'grid grid-cols-1',
+            'sm:grid-cols-3',
+            'lg:grid-cols-4',
+            'gap-4 p-4',
+          )}
+        >
+          {genres.map((genre) => (
+            <GenreCover key={genre.id} genre={genre} onClick={openPlaylist} />
+          ))}
+        </div>
+      )}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <PlaylistIframe url={selectedGenre} />
+        <PlaylistIframe url={selectedGenreUrl} />
       </Modal>
-    </div>
+    </section>
   );
 };
 
