@@ -28,13 +28,12 @@ const Genres = ({
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   const openPlaylist = (url: string) => {
-    console.log(url);
     setSelectedGenreUrl(url);
     openModal();
   };
 
   return (
-    <section id="genres">
+    <section id="genres" className="pt-[80px]">
       <h5 className={cn('p-4', 'text-center text-white text-[44px]')}>
         {title}
       </h5>
