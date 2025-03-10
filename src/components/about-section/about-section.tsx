@@ -20,7 +20,7 @@ const AboutSection = ({ aboutText }: Props) => {
           className="rounded-md"
           width={384}
           height={576}
-          src="/arkitekt.png"
+          src="/arkitekt_about.jpg"
           alt="arkitekt photo"
           quality={100}
         />
