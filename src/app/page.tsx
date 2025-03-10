@@ -13,7 +13,6 @@ export default function Home() {
       <Container>
         <Genres title="Beats for all tastes and moods" />
       </Container>
-
       <Featured />
     </PageWrapper>
   );

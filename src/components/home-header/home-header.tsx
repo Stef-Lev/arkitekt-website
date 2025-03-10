@@ -17,7 +17,7 @@ const HomeHeader = () => {
       <Image
         src="/main-photo.jpg"
         layout="fill"
-        className="z-0 opacity-60 object-center object-cover grayscale"
+        className="z-0 opacity-60 object-top object-cover grayscale"
         alt="hero photo"
       />
       <div className="flex flex-col justify-center items-center w-full gap-12">
