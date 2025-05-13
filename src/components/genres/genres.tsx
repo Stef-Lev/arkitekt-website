@@ -6,6 +6,7 @@ import PlaylistIframe from '../playlist-iframe/playlist-iframe';
 import { cn } from '@/helpers/classnames';
 import Tile from './tile';
 import GenreCover from './genre-cover';
+import GenreCircle from './genre-circle';
 
 const genres = content.aboutPage.genres;
 
@@ -13,7 +14,7 @@ interface Props {
   title: string;
   subtitle?: string;
   isInteractive?: boolean;
-  type?: 'tiles' | 'images';
+  type?: 'tiles' | 'images' | 'circles';
 }
 
 const Genres = ({
@@ -70,6 +71,20 @@ const Genres = ({
         >
           {genres.map((genre) => (
             <GenreCover key={genre.id} genre={genre} onClick={openPlaylist} />
+          ))}
+        </div>
+      )}
+      {type === 'circles' && (
+        <div
+          className={cn(
+            'grid grid-cols-2',
+            'sm:grid-cols-3',
+            'lg:grid-cols-4',
+            'gap-4 p-4',
+          )}
+        >
+          {genres.map((genre) => (
+            <GenreCircle key={genre.id} genre={genre} />
           ))}
         </div>
       )}

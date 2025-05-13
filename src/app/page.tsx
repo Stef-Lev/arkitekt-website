@@ -11,7 +11,7 @@ export default function Home() {
       <HomeHeader />
       <SpotifyPreview />
       <Container>
-        <Genres title="Beats for all tastes and moods" />
+        <Genres title="Beats for all tastes and moods" type="circles" />
       </Container>
 
       <Featured />

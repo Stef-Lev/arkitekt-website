@@ -47,6 +47,8 @@ const content: Content = {
       'sIu1hAUibNc',
       'l4PdqY4qFCw',
       'cEHDZAPg75E',
+      'YG4MLX-ciNY',
+      'fp-XNKyS8R0',
       '2IP97M6DpYU',
       'VH-F3YbUJ4g',
       'mhjiBJ0JrZA',
@@ -186,6 +188,14 @@ const content: Content = {
         icon: <GiBrazilFlag size={50} />,
       },
       {
+        name: 'G-FUNK',
+        id: 'g_funk',
+        coverImagePath: '/genres/g-funk.png',
+        playlistUrl:
+          'https://open.spotify.com/embed/playlist/7M6hUEuham9vDRh5Ekrb8W?utm_source=generator',
+        icon: <GiBrazilFlag size={50} />,
+      },
+      {
         name: 'JERSEY CLUB',
         id: 'jersey_club',
         coverImagePath: '/genres/jersey.png',
@@ -201,13 +211,13 @@ const content: Content = {
           'https://open.spotify.com/embed/playlist/4evQ1ji11pfSK3oFbBSYm5?utm_source=generator',
         icon: <GiPalmTree size={50} />,
       },
-      {
-        name: 'REGGAETON',
-        id: 'reggaeton',
-        coverImagePath: '',
-        playlistUrl: '',
-        icon: <FaHotjar size={50} />,
-      },
+      // {
+      //   name: 'REGGAETON',
+      //   id: 'reggaeton',
+      //   coverImagePath: '',
+      //   playlistUrl: '',
+      //   icon: <FaHotjar size={50} />,
+      // },
     ],
   },
 };
