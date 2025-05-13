@@ -2,11 +2,19 @@
 import Image from 'next/legacy/image';
 import { cn } from '@/helpers/classnames';
 import content from '@/content/content';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 const HomeHeader = () => {
   const { subtitle } = content.homePage;
+  const isMobile = useIsMobile();
+  const imageSrc = isMobile
+    ? '/main-test_mobile.jpg'
+    : '/main-test_desktop.jpg';
+
   return (
-    <div className={cn('relative h-[400px]', 'flex justify-center')}>
+    <div
+      className={cn('relative h-[calc(100dvh-5rem)]', 'flex justify-center')}
+    >
       <div
         className={cn(
           'absolute top-0 left-0',
@@ -15,12 +23,12 @@ const HomeHeader = () => {
         )}
       ></div>
       <Image
-        src="/main-photo.jpg"
+        src="/main-test.jpg"
         layout="fill"
-        className="z-0 opacity-60 object-top object-cover grayscale"
+        className="z-0 opacity-60 object-center object-cover grayscale"
         alt="hero photo"
       />
-      <div className="flex flex-col justify-center items-center w-full gap-12">
+      <div className="absolute bottom-[calc(100dvh - 30px)] flex flex-col justify-center items-center w-full gap-12">
         <div className="relative aspect-[55/32] w-[300px] md:w-[400px]">
           <Image
             className="z-[1] relative"
@@ -30,9 +38,6 @@ const HomeHeader = () => {
             alt="arkitekt logo"
           />
         </div>
-        <p className="z-[1] text-[20px] md:text-[26px] text-white">
-          {subtitle}
-        </p>
       </div>
     </div>
   );
