@@ -11,11 +11,8 @@ const Featured = () => {
           Music Videos
         </h4>
         <div className="flex justify-center flex-col md:flex-row gap-6">
-          {featuredVideos.map((video) => (
-            <YoutubeIframe
-              key={video}
-              url={`https://www.youtube.com/embed/${video}?si=DXqbVs2baZ3Ydsml`}
-            />
+          {featuredVideos.map((videoId) => (
+            <YoutubeIframe key={videoId} videoId={videoId} />
           ))}
         </div>
       </Container>

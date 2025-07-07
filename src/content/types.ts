@@ -6,6 +6,11 @@ export type Genre = {
   icon: JSX.Element;
 };
 
+export type VideoGroup = {
+  title: string;
+  ids: string[];
+};
+
 export interface Content {
   drawer: {
     socialUrls: {
@@ -27,7 +32,7 @@ export interface Content {
   };
   videosPage: {
     title: string;
-    videoIds: string[];
+    videoGroups: VideoGroup[];
   };
   musicPage: {
     title: string;
