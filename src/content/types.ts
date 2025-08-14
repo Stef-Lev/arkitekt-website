@@ -28,7 +28,12 @@ export interface Content {
   };
   homePage: {
     subtitle: string;
-    featuredVideosIds: string[];
+    featuredVideos: {
+      title: string;
+      linkText: string;
+      linkHref: string;
+      ids: string[];
+    };
   };
   videosPage: {
     title: string;

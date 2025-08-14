@@ -28,12 +28,12 @@ const content: Content = {
   },
   homePage: {
     subtitle: 'BUILDING URBAN BEATS',
-    featuredVideosIds: [
-      'ZOSYPqWgLWk',
-      '6yZq_1G6Zcg',
-      'XrAr5932Bys',
-      '1aq8HzTQKMs',
-    ],
+    featuredVideos: {
+      title: 'Featured videos',
+      linkText: 'Check all videos on my YouTube channel',
+      linkHref: 'https://www.youtube.com/@theArkitektBeats',
+      ids: ['ZOSYPqWgLWk', 'ZP9SDxaFlJc', '-oAWpeiwy7g', 'XrAr5932Bys'],
+    },
   },
   videosPage: {
     title: 'Videos',
