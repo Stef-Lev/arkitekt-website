@@ -111,6 +111,7 @@ const content: Content = {
   },
   musicPage: {
     title: 'Music',
+    subtitle: 'Stream my full collection on',
     albums: 'Albums',
     singles: 'Singles',
     spotify: {
@@ -145,6 +146,15 @@ const content: Content = {
         url: 'https://www.deezer.com/',
         height: 68,
         width: 100,
+      },
+    ],
+    entities: [
+      {
+        id: 'levelup',
+        position: 1,
+        image: '/musicPage/singles/001_levelup.jpg',
+        url: '/musicPage/singles/001_levelup.jpg',
+        genre: 'drill',
       },
     ],
   },

@@ -36,6 +36,7 @@ export interface Content {
   };
   musicPage: {
     title: string;
+    subtitle: string;
     albums: string;
     singles: string;
     spotify: {
@@ -48,6 +49,13 @@ export interface Content {
       url: string;
       height: number;
       width: number;
+    }[];
+    entities: {
+      id: string;
+      position: number;
+      image: string;
+      url: string;
+      genre: string;
     }[];
   };
   contactPage: {

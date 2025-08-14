@@ -1,8 +1,11 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import content from '@/content/content';
 import Image from 'next/image';
 import ImagesContainer from './images-container';
+import NewImagesContainer from './new-images-container';
 import Platforms from '../platforms/platforms';
+import MusicTile from './music-tile';
 
 export interface Platform {
   name: string;
@@ -30,7 +33,7 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
   return (
     <div className="text-white text-center">
       <div className="flex flex-col items-center mb-8">
-        <h3 className="text-[24px] mb-2">Stream my full collection on</h3>
+        <h3 className="text-[24px] mb-2">{content.musicPage.subtitle}</h3>
         <Image
           className="hover:cursor-pointer"
           src={spotify.image}
@@ -42,6 +45,10 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
       </div>
       <ImagesContainer title="Singles" images={images.singles} />
       <ImagesContainer title="Albums" images={images.albums} />
+      <NewImagesContainer
+        title="Singles"
+        entities={content.musicPage.entities}
+      />
       <Platforms platforms={platforms} onClick={handleClick} />
     </div>
   );
