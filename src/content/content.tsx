@@ -152,8 +152,8 @@ const content: Content = {
       {
         id: 'levelup',
         position: 1,
-        image: '/musicPage/singles/001_levelup.jpg',
-        url: '/musicPage/singles/001_levelup.jpg',
+        image: '/musicPage/singles/008_levelup.jpg',
+        trackId: '3sNjfYUI6mKqwxvzN7g9h5',
         genre: 'drill',
       },
     ],

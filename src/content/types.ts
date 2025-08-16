@@ -59,7 +59,7 @@ export interface Content {
       id: string;
       position: number;
       image: string;
-      url: string;
+      trackId: string;
       genre: string;
     }[];
   };
