@@ -2,13 +2,8 @@
 import { cn } from '@/helpers/classnames';
 import { FaHeart } from 'react-icons/fa';
 import SocialMedia from '@/components/social-media/social-media';
-import { useRouter } from 'next/navigation';
 
 const Footer = () => {
-  const router = useRouter();
-  const handleClick = (url: string) => {
-    router.push(url);
-  };
   return (
     <footer
       className={cn(
@@ -31,7 +26,7 @@ const Footer = () => {
             © 2024 Arkitekt. All rights reserved.
           </div>
         </div>
-        <SocialMedia onClick={handleClick} />
+        <SocialMedia />
       </div>
     </footer>
   );

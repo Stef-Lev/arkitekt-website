@@ -65,7 +65,7 @@ const Drawer = (props: Props) => {
             </ul>
           </nav>
         </div>
-        <SocialMedia onClick={handleClick} />
+        <SocialMedia />
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
 import { cn } from '@/helpers/classnames';
 import content from '@/content/content';
 import mediaComponents from '@/helpers/media-components';
+import Link from 'next/link';
 
 interface Props {
   className?: string;
-  onClick: (arg: string) => void;
 }
 
-const SocialMedia = ({ className, onClick }: Props) => {
+const SocialMedia = ({ className }: Props) => {
   const socialUrls = content.drawer.socialUrls;
 
   return (
@@ -21,13 +21,15 @@ const SocialMedia = ({ className, onClick }: Props) => {
       )}
     >
       {['spotify', 'instagram', 'youtube', 'facebook'].map((item) => (
-        <div
+        <Link
           key={item}
           className="hover:text-mainBlue hover:cursor-pointer"
-          onClick={() => onClick(socialUrls[item as keyof typeof socialUrls])}
+          target="_blank"
+          rel="noopener noreferrer"
+          href={socialUrls[item as keyof typeof socialUrls]}
         >
           {mediaComponents[item]}
-        </div>
+        </Link>
       ))}
     </div>
   );
