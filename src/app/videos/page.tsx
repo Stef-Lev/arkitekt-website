@@ -6,15 +6,13 @@ import PageWrapper from '@/components/page-wrapper/page-wrapper';
 import { cn } from '@/helpers/classnames';
 
 const VideosPage = () => {
-  const { title, videoGroups } = content.videosPage;
+  const { title, videoIds } = content.videosPage;
 
   return (
     <PageWrapper>
       <TitleHeader title={title} />
       <Container className="min-h-screen">
-        {videoGroups.map((group, idx) => (
-          <YoutubeSection key={idx} group={group} />
-        ))}
+        <YoutubeSection videoIds={videoIds} />
       </Container>
     </PageWrapper>
   );

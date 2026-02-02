@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Loader from '../loader/loader';
 
 interface Props {
@@ -8,9 +8,13 @@ interface Props {
 const YoutubeIframe = ({ videoId }: Props) => {
   const [loading, setLoading] = useState(true);
 
-  const handleLoad = () => {
-    setLoading(false);
-  };
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div className="relative">
@@ -22,7 +26,6 @@ const YoutubeIframe = ({ videoId }: Props) => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
-        onLoad={handleLoad}
       ></iframe>
     </div>
   );

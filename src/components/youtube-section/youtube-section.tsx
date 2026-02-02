@@ -3,12 +3,11 @@ import { VideoGroup } from '@/content/types';
 import { cn } from '@/helpers/classnames';
 
 interface Props {
-  group: VideoGroup;
+  title?: string;
+  videoIds: string[];
 }
 
-const YoutubeSection = ({ group }: Props) => {
-  const { title, ids } = group;
-
+const YoutubeSection = ({ title, videoIds }: Props) => {
   return (
     <div>
       <div
@@ -18,7 +17,7 @@ const YoutubeSection = ({ group }: Props) => {
           'mt-5',
         )}
       >
-        <h4>{title}</h4>
+        {title && <h4>{title}</h4>}
       </div>
       <div
         className={cn(
@@ -27,7 +26,7 @@ const YoutubeSection = ({ group }: Props) => {
           'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3',
         )}
       >
-        {ids.map((id) => (
+        {videoIds.map((id) => (
           <YoutubeIframe key={id} videoId={id} />
         ))}
       </div>

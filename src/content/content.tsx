@@ -12,7 +12,7 @@ const content: Content = {
     socialUrls: {
       spotify:
         'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=9LW-qf4LTFWW0gHruxKvEA',
-      instagram: 'https://www.instagram.com/stefanos_levendis',
+      instagram: 'https://www.instagram.com/arkitekt_beats',
       youtube: 'https://www.youtube.com/@theArkitektBeats',
       facebook: 'https://www.facebook.com/share/E5n8kQHE5aGn9nGp',
     },
@@ -27,7 +27,7 @@ const content: Content = {
     ],
   },
   homePage: {
-    subtitle: 'BUILDING URBAN BEATS',
+    subtitle: 'Designing the Sound of the Streets',
     featuredVideos: {
       title: 'Featured videos',
       linkText: 'Check all videos on my YouTube channel',
@@ -37,76 +37,16 @@ const content: Content = {
   },
   videosPage: {
     title: 'Videos',
-    videoGroups: [
-      {
-        title: 'Remixes',
-        ids: [
-          '-oAWpeiwy7g',
-          'ZP9SDxaFlJc',
-          '_TOK9XxNlAg',
-          'HTualFAdKEU',
-          '2IP97M6DpYU',
-          'HIH9Z7__CXs',
-          'JnwT3crRHqk',
-        ],
-      },
-      {
-        title: 'Drill',
-        ids: [
-          'LYBIE7ipVj0',
-          'XrAr5932Bys',
-          'kjZxn1bg-zI',
-          'pIdj9AaBJB0',
-          'ZOSYPqWgLWk',
-          'mhjiBJ0JrZA',
-          'YG4MLX-ciNY',
-          'qyclgZuuz2g',
-          'vObom3HPldk',
-          'JtWfN9KcHqE',
-          'hgj4ntGpbnA',
-          'nNOMUKs-ptM',
-          'hwT4W4Un0uQ',
-        ],
-      },
-      {
-        title: 'Boom Bap',
-        ids: [
-          '6ts_xFzQY0U',
-          'GQ9HHQMPrxc',
-          'nJmJFJl21uU',
-          'I1vuHenVB7c',
-          'dphdlAeA6Vo',
-          'gx_OqlqhKzU',
-          '6WeXYEAQuEo',
-        ],
-      },
-      {
-        title: 'Trap',
-        ids: [
-          'unmKskAgymg',
-          'HvY4BOdMydI',
-          'U1EYTP--INE',
-          'lmNMjo9NXeQ',
-          'OXB1KmigQTo',
-          '1aq8HzTQKMs',
-          'E2yiTO0hh2M',
-          '0kAHHIAJ1AQ',
-          'yzSmGPRu9Eo',
-          '0pLgUGSCx7c',
-          '27eTye9yfbU',
-        ],
-      },
-      {
-        title: 'Lofi',
-        ids: ['4o0V74xrDBM', 'tO2vgSD0bMg', 'VH-F3YbUJ4g', 'mXDugfZGu2M'],
-      },
-      {
-        title: 'Brazilian Funk',
-        ids: ['nXHaOAeMSIo', 'AcKgrA1Y3KM', 'WhM0NcFIgic'],
-      },
-      { title: 'G-Funk', ids: ['fp-XNKyS8R0'] },
-      { title: 'Jersey Club', ids: ['cEHDZAPg75E', 'qpsJCFcK0CA'] },
-      { title: 'Afrobeats', ids: ['6yZq_1G6Zcg'] },
+    videoIds: [
+      'ZOSYPqWgLWk',
+      'ZP9SDxaFlJc',
+      '6yZq_1G6Zcg',
+      '-oAWpeiwy7g',
+      '_TOK9XxNlAg',
+      'XrAr5932Bys',
+      'HTualFAdKEU',
+      '2IP97M6DpYU',
+      'hwT4W4Un0uQ',
     ],
   },
   musicPage: {

@@ -7,6 +7,13 @@ interface Props {
   className?: string;
 }
 
+const socialMediaArray = [
+  'spotify',
+  'instagram',
+  'youtube',
+  // 'facebook'
+];
+
 const SocialMedia = ({ className }: Props) => {
   const socialUrls = content.drawer.socialUrls;
 
@@ -20,7 +27,7 @@ const SocialMedia = ({ className }: Props) => {
         className,
       )}
     >
-      {['spotify', 'instagram', 'youtube', 'facebook'].map((item) => (
+      {socialMediaArray.map((item) => (
         <Link
           key={item}
           className="hover:text-mainBlue hover:cursor-pointer"

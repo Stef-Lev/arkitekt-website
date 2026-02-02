@@ -7,7 +7,7 @@ export type Genre = {
 };
 
 export type VideoGroup = {
-  title: string;
+  title?: string;
   ids: string[];
 };
 
@@ -37,7 +37,7 @@ export interface Content {
   };
   videosPage: {
     title: string;
-    videoGroups: VideoGroup[];
+    videoIds: string[];
   };
   musicPage: {
     title: string;
