@@ -2,13 +2,13 @@ import { FormData } from './contact';
 import { cn } from '@/helpers/classnames';
 import { UseFormRegister } from 'react-hook-form';
 
-interface Props {
+type Props = {
   label: string;
   placeholder: string;
   field: 'name' | 'email' | 'subject' | 'message';
   type: string;
   registerFn: UseFormRegister<FormData>;
-}
+};
 
 const FormItem = ({ label, placeholder, field, type, registerFn }: Props) => {
   return (

@@ -1,10 +1,10 @@
 import { cn } from '@/helpers/classnames';
 
-interface Props {
+type Props = {
   className?: string;
   isDrawerOpen: boolean;
   onClick: () => void;
-}
+};
 
 const HamburgerButton = ({ isDrawerOpen, onClick, className }: Props) => {
   return (

@@ -2,9 +2,9 @@
 import { useState, useEffect } from 'react';
 import Loader from '../loader/loader';
 
-interface Props {
+type Props = {
   videoId: string;
-}
+};
 const YoutubeIframe = ({ videoId }: Props) => {
   const [loading, setLoading] = useState(true);
 

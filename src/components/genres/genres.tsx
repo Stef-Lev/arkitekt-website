@@ -10,12 +10,12 @@ import GenreCircle from './genre-circle';
 
 const genres = content.aboutPage.genres;
 
-interface Props {
+type Props = {
   title: string;
   subtitle?: string;
   isInteractive?: boolean;
   type?: 'tiles' | 'images' | 'circles';
-}
+};
 
 const Genres = ({
   title,

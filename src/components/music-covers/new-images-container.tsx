@@ -1,10 +1,10 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { cn } from '@/helpers/classnames';
-import MusicTile from './music-tile';
+// import MusicTile from './music-tile';
 
-interface Props {
+type Props = {
   title: string;
   entities: {
     id: string;
@@ -13,7 +13,7 @@ interface Props {
     url: string;
     genre: string;
   }[];
-}
+};
 
 const NewImagesContainer = ({ title, entities }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -51,9 +51,9 @@ const NewImagesContainer = ({ title, entities }: Props) => {
           'gap-4 mb-10',
         )}
       >
-        {entities.map((entity) => (
+        {/* {entities.map((entity) => (
           <MusicTile key={entity.id} entity={entity} />
-        ))}
+        ))} */}
       </div>
     </div>
   );

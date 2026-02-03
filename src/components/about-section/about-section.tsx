@@ -2,9 +2,9 @@
 import { cn } from '@/helpers/classnames';
 import Image from 'next/image';
 
-interface Props {
+type Props = {
   aboutText: string;
-}
+};
 
 const AboutSection = ({ aboutText }: Props) => {
   return (

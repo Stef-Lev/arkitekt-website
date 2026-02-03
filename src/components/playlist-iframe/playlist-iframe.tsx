@@ -1,8 +1,8 @@
 import { cn } from '@/helpers/classnames';
 
-interface Props {
+type Props = {
   url: string;
-}
+};
 
 const PlaylistIframe = ({ url }: Props) => {
   if (!url) {

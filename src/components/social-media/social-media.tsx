@@ -3,9 +3,9 @@ import content from '@/content/content';
 import mediaComponents from '@/helpers/media-components';
 import Link from 'next/link';
 
-interface Props {
+type Props = {
   className?: string;
-}
+};
 
 const socialMediaArray = [
   'spotify',

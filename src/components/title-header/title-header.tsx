@@ -2,9 +2,9 @@ import Image from 'next/legacy/image';
 import Container from '@/components/container/container';
 import { cn } from '@/helpers/classnames';
 
-interface Props {
+type Props = {
   title: string;
-}
+};
 
 const TitleHeader = ({ title }: Props) => {
   return (

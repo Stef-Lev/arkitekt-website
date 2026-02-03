@@ -1,10 +1,10 @@
 import { cn } from '@/helpers/classnames';
 import Image from 'next/image';
 import { Platform } from '../music-covers/music-covers';
-interface Props {
+type Props = {
   platforms: Platform[];
   onClick: (url: string) => void;
-}
+};
 
 const Platforms = ({ platforms, onClick }: Props) => {
   return (

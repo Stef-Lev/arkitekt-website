@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { Genre } from '@/content/types';
 
-interface Props {
+type Props = {
   genre: Genre;
-}
+};
 
 const GenreCircle = ({ genre }: Props) => {
   if (!genre.coverImagePath || !genre.playlistUrl) {

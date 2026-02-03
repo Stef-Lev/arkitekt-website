@@ -3,10 +3,10 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { cn } from '@/helpers/classnames';
 
-interface Props {
+type Props = {
   title: string;
   images: string[];
-}
+};
 
 const ImagesContainer = ({ title, images }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);

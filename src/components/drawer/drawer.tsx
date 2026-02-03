@@ -4,12 +4,12 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import SocialMedia from '@/components/social-media/social-media';
 
-interface Props {
+type Props = {
   className?: string;
   isDrawerOpen: boolean;
   items: Array<Record<string, string>>;
   toggleDrawer: () => void;
-}
+};
 
 const Drawer = (props: Props) => {
   const { isDrawerOpen, toggleDrawer, items, className } = props;

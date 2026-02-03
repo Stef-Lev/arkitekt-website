@@ -3,9 +3,9 @@ import { useRouter } from 'next/navigation';
 import content from '@/content/content';
 import Image from 'next/image';
 import ImagesContainer from './images-container';
-import NewImagesContainer from './new-images-container';
+// import NewImagesContainer from './new-images-container';
 import Platforms from '../platforms/platforms';
-import MusicTile from './music-tile';
+// import MusicTile from './music-tile';
 
 export interface Platform {
   name: string;
@@ -19,11 +19,11 @@ interface Images {
   singles: string[];
   albums: string[];
 }
-interface Props {
+type Props = {
   spotify: Pick<Platform, 'url' | 'image'>;
   images: Images;
   platforms: Platform[];
-}
+};
 
 const MusicCovers = ({ images, spotify, platforms }: Props) => {
   const router = useRouter();
@@ -45,10 +45,10 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
       </div>
       <ImagesContainer title="Singles" images={images.singles} />
       <ImagesContainer title="Albums" images={images.albums} />
-      <NewImagesContainer
+      {/* <NewImagesContainer
         title="Singles"
         entities={content.musicPage.entities}
-      />
+      /> */}
       <Platforms platforms={platforms} onClick={handleClick} />
     </div>
   );

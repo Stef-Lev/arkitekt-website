@@ -1,9 +1,9 @@
 import { cn } from '@/helpers/classnames';
 
-interface Props {
+type Props = {
   size: number;
   animation?: 'fade' | 'rotate';
-}
+};
 
 const Loader = ({ size, animation = 'fade' }: Props) => {
   return (
