@@ -11,6 +11,14 @@ export type VideoGroup = {
   ids: string[];
 };
 
+export type Entity = {
+  id: string;
+  position: number;
+  image: string;
+  url: string;
+  genre: string;
+};
+
 export interface Content {
   drawer: {
     socialUrls: {
@@ -42,8 +50,6 @@ export interface Content {
   musicPage: {
     title: string;
     subtitle: string;
-    albums: string;
-    singles: string;
     spotify: {
       image: string;
       url: string;
@@ -55,13 +61,8 @@ export interface Content {
       height: number;
       width: number;
     }[];
-    entities: {
-      id: string;
-      position: number;
-      image: string;
-      trackId: string;
-      genre: string;
-    }[];
+    singles: Entity[];
+    albums: Entity[];
   };
   contactPage: {
     formFields: {

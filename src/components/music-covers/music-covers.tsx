@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import content from '@/content/content';
 import Image from 'next/image';
 import ImagesContainer from './images-container';
-// import NewImagesContainer from './new-images-container';
+import NewImagesContainer from './new-images-container';
 import Platforms from '../platforms/platforms';
 // import MusicTile from './music-tile';
 
@@ -27,9 +27,11 @@ type Props = {
 
 const MusicCovers = ({ images, spotify, platforms }: Props) => {
   const router = useRouter();
+
   const handleClick = (url: string) => {
     router.push(url);
   };
+
   return (
     <div className="text-white text-center">
       <div className="flex flex-col items-center mb-8">
@@ -43,12 +45,16 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
           onClick={() => handleClick(spotify.url)}
         />
       </div>
-      <ImagesContainer title="Singles" images={images.singles} />
-      <ImagesContainer title="Albums" images={images.albums} />
-      {/* <NewImagesContainer
+      {/* <ImagesContainer title="Singles" images={images.singles} />
+      <ImagesContainer title="Albums" images={images.albums} /> */}
+      <NewImagesContainer
+        title="Albums and EPs"
+        entities={content.musicPage.albums}
+      />
+      <NewImagesContainer
         title="Singles"
-        entities={content.musicPage.entities}
-      /> */}
+        entities={content.musicPage.singles}
+      />
       <Platforms platforms={platforms} onClick={handleClick} />
     </div>
   );

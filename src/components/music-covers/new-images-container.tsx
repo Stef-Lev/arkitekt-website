@@ -1,8 +1,7 @@
 'use client';
-import { useEffect, useRef } from 'react';
-// import Image from 'next/image';
+import { useEffect, useMemo, useRef } from 'react';
 import { cn } from '@/helpers/classnames';
-// import MusicTile from './music-tile';
+import MusicTile from './music-tile';
 
 type Props = {
   title: string;
@@ -40,6 +39,11 @@ const NewImagesContainer = ({ title, entities }: Props) => {
     return () => observer.disconnect();
   }, []);
 
+  const sortedEntities = useMemo(
+    () => [...entities].sort((a, b) => a.position - b.position),
+    [entities],
+  );
+
   return (
     <div className="flex flex-col items-center">
       <h4 className="text-[32px] pb-4">{title}</h4>
@@ -51,9 +55,9 @@ const NewImagesContainer = ({ title, entities }: Props) => {
           'gap-4 mb-10',
         )}
       >
-        {/* {entities.map((entity) => (
+        {sortedEntities.map((entity) => (
           <MusicTile key={entity.id} entity={entity} />
-        ))} */}
+        ))}
       </div>
     </div>
   );
