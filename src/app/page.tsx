@@ -10,10 +10,9 @@ export default function Home() {
     <PageWrapper>
       <HomeHeader />
       <SpotifyPreview />
-      <Container>
+      {/* <Container>
         <Genres title="Beats for all tastes and moods" type="circles" />
-      </Container>
-
+      </Container> */}
       <Featured />
     </PageWrapper>
   );

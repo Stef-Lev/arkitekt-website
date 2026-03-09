@@ -1,14 +1,20 @@
 'use client';
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
+import { useEffect, useMemo, useRef } from 'react';
 import { cn } from '@/helpers/classnames';
+import MusicTile from './music-tile';
 
 type Props = {
   title: string;
-  images: string[];
+  entities: {
+    id: string;
+    position: number;
+    image: string;
+    url: string;
+    genre: string;
+  }[];
 };
 
-const ImagesContainer = ({ title, images }: Props) => {
+const ImagesContainer = ({ title, entities }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,11 +33,16 @@ const ImagesContainer = ({ title, images }: Props) => {
       },
     );
 
-    const images = containerRef.current?.querySelectorAll('.float-up');
-    images?.forEach((image) => observer.observe(image));
+    const tiles = containerRef.current?.querySelectorAll('.float-up');
+    tiles?.forEach((tile) => observer.observe(tile));
 
     return () => observer.disconnect();
   }, []);
+
+  const sortedEntities = useMemo(
+    () => [...entities].sort((a, b) => a.position - b.position),
+    [entities],
+  );
 
   return (
     <div className="flex flex-col items-center">
@@ -44,18 +55,8 @@ const ImagesContainer = ({ title, images }: Props) => {
           'gap-4 mb-10',
         )}
       >
-        {images.map((image) => (
-          <Image
-            key={image}
-            className={cn(
-              'float-up rounded-lg',
-              'opacity-0 transform translate-y-10 transition duration-700 ease-out',
-            )}
-            src={image}
-            width={300}
-            height={300}
-            alt={image}
-          />
+        {sortedEntities.map((entity) => (
+          <MusicTile key={entity.id} entity={entity} />
         ))}
       </div>
     </div>
