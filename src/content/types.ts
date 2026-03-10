@@ -6,11 +6,6 @@ export type Genre = {
   icon: JSX.Element;
 };
 
-export type VideoGroup = {
-  title?: string;
-  ids: string[];
-};
-
 export type Entity = {
   id: string;
   position: number;
