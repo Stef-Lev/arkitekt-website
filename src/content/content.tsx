@@ -94,6 +94,13 @@ const content: Content = {
         url: 'https://open.spotify.com/album/6S1EALi04j7neizrJ6AjXU?si=kWnw4MJzSSWbH0L4M8tH-w&nd=1&dlsi=4431be80ae6e4212',
         genre: 'drill',
       },
+      {
+        id: 'shadows_on_concrete',
+        position: 2,
+        image: '/musicPage/albums/shadows_on_concrete.jpg',
+        url: 'https://open.spotify.com/album/3jQOVqAHecNi3kQpatBWCt?si=M7rteXqOSfKWEnBZY5eBcg',
+        genre: 'drill',
+      },
     ],
     singles: [
       {
