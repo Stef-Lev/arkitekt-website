@@ -5,8 +5,15 @@ import content from '@/content/content';
 
 const HomeHeader = () => {
   const { subtitle } = content.homePage;
+
   return (
-    <div className={cn('relative h-[400px]', 'flex justify-center')}>
+    <div
+      className={cn(
+        'relative',
+        'h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]',
+        'flex justify-center',
+      )}
+    >
       <div
         className={cn(
           'absolute top-0 left-0',
@@ -20,17 +27,18 @@ const HomeHeader = () => {
         className="z-0 opacity-60 object-center object-cover grayscale"
         alt="hero photo"
       />
+
       <div className="flex flex-col justify-center items-center w-full gap-12">
-        <div className="relative aspect-[55/32] w-[300px] md:w-[400px]">
+        <div className="relative aspect-[55/32] w-[200px] md:w-[300px] lg:w-[400px]">
           <Image
-            className="z-[1] relative"
+            className={cn('z-[1] relative', 'animate-fade-in-logo')}
             layout="fill"
             objectFit="contain"
             src="/arkitekt-logo.png"
             alt="arkitekt logo"
           />
         </div>
-        <p className="z-[1] text-[20px] md:text-[26px] text-white">
+        <p className="z-[1] text-[20px] md:text-[26px] animate-fade-in-logo text-white">
           {subtitle}
         </p>
       </div>
