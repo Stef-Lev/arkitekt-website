@@ -32,13 +32,14 @@ const content: Content = {
       title: 'Featured videos',
       linkText: 'Check all videos on my YouTube channel',
       linkHref: 'https://www.youtube.com/@theArkitektBeats',
-      ids: ['ZOSYPqWgLWk', 'ZP9SDxaFlJc', '-oAWpeiwy7g', 'XrAr5932Bys'],
+      ids: ['ZOSYPqWgLWk', 'yXK5Qdf0Jns', 'ZP9SDxaFlJc', '-oAWpeiwy7g'],
     },
   },
   videosPage: {
     title: 'Videos',
     videoIds: [
       'ZOSYPqWgLWk',
+      'yXK5Qdf0Jns',
       'ZP9SDxaFlJc',
       '6yZq_1G6Zcg',
       '-oAWpeiwy7g',
@@ -46,7 +47,6 @@ const content: Content = {
       'XrAr5932Bys',
       'HTualFAdKEU',
       '2IP97M6DpYU',
-      'hwT4W4Un0uQ',
     ],
   },
   musicPage: {

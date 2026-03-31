@@ -31,14 +31,14 @@ const HomeHeader = () => {
       <div className="flex flex-col justify-center items-center w-full gap-12">
         <div className="relative aspect-[55/32] w-[200px] md:w-[300px] lg:w-[400px]">
           <Image
-            className={cn('z-[1] relative', 'animate-fade-in-logo')}
+            className={cn('z-[1] relative')}
             layout="fill"
             objectFit="contain"
             src="/arkitekt-logo.png"
             alt="arkitekt logo"
           />
         </div>
-        <p className="z-[1] text-[20px] md:text-[26px] animate-fade-in-logo text-white">
+        <p className="z-[1] text-[20px] md:text-[26px] text-white">
           {subtitle}
         </p>
       </div>

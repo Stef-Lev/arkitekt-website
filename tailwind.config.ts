@@ -13,10 +13,6 @@ const config: Config = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
-        'fade-in-logo': {
-          '0%': { filter: 'blur(30px)', opacity: '0' },
-          '100%': { filter: 'blur(0)', opacity: '1' },
-        },
       },
       colors: {
         mainBlue: '#2f60f7',
@@ -36,7 +32,6 @@ const config: Config = {
       },
       animation: {
         'border-animate': 'border-animate 5s linear infinite',
-        'fade-in-logo': 'fade-in-logo 2s ease-out forwards',
       },
     },
   },
