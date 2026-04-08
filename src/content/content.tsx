@@ -275,5 +275,28 @@ const content: Content = {
       // },
     ],
   },
+  linkPage: {
+    profileImage: '/arkitekt_square.png',
+    logoImage: '/website-logo.png',
+    title: 'Arkitekt Beats',
+    sections: {
+      basicInfo: {
+        items: [
+          {
+            title: 'Spotify',
+            subtitle: 'Listen on Spotify',
+            image: '/linkPage/spotify.png',
+            url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=C0o3rTbITEqNGAjHAbxqXQ&nd=1&dlsi=3c61c56a858347f5',
+          },
+          {
+            title: 'Apple Music',
+            subtitle: 'Listen on Apple Music',
+            image: '/linkPage/apple-music.png',
+            url: 'https://music.apple.com/us/browse',
+          },
+        ],
+      },
+    },
+  },
 };
 export default content;

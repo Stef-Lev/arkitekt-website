@@ -14,6 +14,17 @@ export type Entity = {
   genre: string;
 };
 
+export type LinkType = {
+  title?: string;
+  subtitle?: string;
+  image?: string;
+  url: string;
+};
+
+export type SectionType = {
+  title?: string;
+  items: LinkType[];
+};
 export interface Content {
   drawer: {
     socialUrls: {
@@ -70,5 +81,15 @@ export interface Content {
   aboutPage: {
     introText: string;
     genres: Genre[];
+  };
+  linkPage: {
+    profileImage: string;
+    logoImage: string;
+    title: string;
+    sections: {
+      basicInfo?: SectionType;
+      promotion?: SectionType;
+      releases?: SectionType;
+    };
   };
 }
