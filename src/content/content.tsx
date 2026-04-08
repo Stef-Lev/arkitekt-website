@@ -285,13 +285,25 @@ const content: Content = {
           {
             title: 'Spotify',
             subtitle: 'Listen on Spotify',
-            image: '/linkPage/spotify.png',
+            image: '/arkitekt-loader.png',
             url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=C0o3rTbITEqNGAjHAbxqXQ&nd=1&dlsi=3c61c56a858347f5',
           },
           {
             title: 'Apple Music',
             subtitle: 'Listen on Apple Music',
-            image: '/linkPage/apple-music.png',
+            image: '/arkitekt-loader.png',
+            url: 'https://music.apple.com/us/browse',
+          },
+          {
+            title: 'Apple Music',
+            subtitle: 'Listen on Apple Music',
+            image: '/arkitekt-loader.png',
+            url: 'https://music.apple.com/us/browse',
+          },
+          {
+            title: 'Apple Music',
+            subtitle: 'Listen on Apple Music',
+            image: '/arkitekt-loader.png',
             url: 'https://music.apple.com/us/browse',
           },
         ],

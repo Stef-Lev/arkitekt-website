@@ -18,10 +18,7 @@ const LinksPage = () => {
           width={150}
           height={150}
         />
-        <div className="relative h-[60px]">
-          <SocialMedia />
-        </div>
-        <div>
+        <div className="flex flex-col gap-3">
           {items?.map((link, index) => (
             <LinkItem key={index} link={link} />
           ))}

@@ -21,7 +21,7 @@ textarea:-webkit-autofill:focus {
 
 html,
 body {
-  background: #141414;
+  background: #010a19;
   margin: 0;
   padding: 0;
 }
@@ -75,4 +75,13 @@ body {
 .dark-metallic-tile:hover {
   background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
   transform: scale(1.05);
+}
+
+.glass {
+  background: rgba(190, 197, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(190, 197, 255, 0.19);
 }

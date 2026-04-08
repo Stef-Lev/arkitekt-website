@@ -1,5 +1,6 @@
 import type { LinkType } from '@/content/types';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export type Props = {
   link: LinkType;
@@ -7,14 +8,28 @@ export type Props = {
 
 const LinkItem = ({ link }: Props) => {
   return (
-    <div className="rounded-3xl border-solid border-2 border-white">
-      <h3>{link.title}</h3>
-      <p>{link.subtitle}</p>
-      <Image src={link.image || ''} alt="" width={200} height={200} />
-      <a href={link.url} target="_blank" rel="noopener noreferrer">
-        Visit
-      </a>
-    </div>
+    <Link
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border-2 border-solid border-white rounded-3xl flex p-2 gap-2 glass"
+    >
+      <div className="">
+        {link.image && (
+          <Image
+            src={link.image}
+            alt={link.title || ''}
+            width={40}
+            height={40}
+            className="bg-stone-700 rounded-full"
+          />
+        )}
+      </div>
+      <div className="flex-1 text-center text-white flex justify-center items-center font-bold">
+        {link.title}
+      </div>
+      <div className="w-[40px] h-[40px]"></div>
+    </Link>
   );
 };
 
