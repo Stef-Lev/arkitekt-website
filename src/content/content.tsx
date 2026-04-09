@@ -302,7 +302,7 @@ const content: Content = {
           {
             title: 'Stis pikrodafnis ton antho [Remix]',
             image: '/links/bitter_dream.jpg',
-            url: 'https://music.apple.com/us/browse',
+            url: 'https://www.youtube.com/watch?v=HTualFAdKEU',
           },
         ],
       },
@@ -313,7 +313,7 @@ const content: Content = {
           {
             title: 'Spotify',
             image: '/links/spotify_music_logo.png',
-            url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=C0o3rTbITEqNGAjHAbxqXQ&nd=1&dlsi=3c61c56a858347f5',
+            url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=NmShVNXhQ-6GdIbGAuyfJA',
           },
           {
             title: 'Apple Music',
@@ -323,7 +323,7 @@ const content: Content = {
           {
             title: 'Youtube',
             image: '/links/youtube_logo.jpg',
-            url: 'https://www.youtube.com/c/ArkitektBeats',
+            url: 'https://www.youtube.com/@theArkitektBeats',
           },
           {
             title: 'Arkitekt - Official Website',
