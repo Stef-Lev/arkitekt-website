@@ -278,33 +278,57 @@ const content: Content = {
   linkPage: {
     profileImage: '/arkitekt_square.png',
     logoImage: '/website-logo.png',
-    title: 'Arkitekt Beats',
+    title: 'Producer | Trap • Hip Hop • Drill',
     sections: {
+      releases: {
+        title: 'New Album out now!',
+        items: [
+          {
+            title: 'Shadows on Concrete',
+            subtitle: 'Spotify',
+            image: '/links/shadows_on_concrete.jpg',
+            url: 'https://open.spotify.com/album/3jQOVqAHecNi3kQpatBWCt?si=qNj21ysdTFWLk92P6I-lGQ',
+          },
+        ],
+      },
+      promotion: {
+        title: 'Videos',
+        items: [
+          {
+            title: 'Marinella - Ma esy pote [Remix]',
+            image: '/links/ma_esy_pote.jpg',
+            url: 'https://www.youtube.com/watch?v=yXK5Qdf0Jns',
+          },
+          {
+            title: 'Stis pikrodafnis ton antho [Remix]',
+            image: '/links/bitter_dream.jpg',
+            url: 'https://music.apple.com/us/browse',
+          },
+        ],
+      },
+
       basicInfo: {
+        title: 'Check all my beats here',
         items: [
           {
             title: 'Spotify',
-            subtitle: 'Listen on Spotify',
-            image: '/arkitekt-loader.png',
+            image: '/links/spotify_music_logo.png',
             url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=C0o3rTbITEqNGAjHAbxqXQ&nd=1&dlsi=3c61c56a858347f5',
           },
           {
             title: 'Apple Music',
-            subtitle: 'Listen on Apple Music',
-            image: '/arkitekt-loader.png',
-            url: 'https://music.apple.com/us/browse',
+            image: '/links/apple_music.png',
+            url: 'https://music.apple.com/us/artist/arkitekt/196143288',
           },
           {
-            title: 'Apple Music',
-            subtitle: 'Listen on Apple Music',
-            image: '/arkitekt-loader.png',
-            url: 'https://music.apple.com/us/browse',
+            title: 'Youtube',
+            image: '/links/youtube_logo.jpg',
+            url: 'https://www.youtube.com/c/ArkitektBeats',
           },
           {
-            title: 'Apple Music',
-            subtitle: 'Listen on Apple Music',
-            image: '/arkitekt-loader.png',
-            url: 'https://music.apple.com/us/browse',
+            title: 'Arkitekt - Official Website',
+            image: '/links/arkitekt.jpg',
+            url: 'https://www.arkitektbeats.com',
           },
         ],
       },

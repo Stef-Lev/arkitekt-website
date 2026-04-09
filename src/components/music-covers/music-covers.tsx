@@ -6,19 +6,19 @@ import ImagesContainer from './images-container';
 import Platforms from '../platforms/platforms';
 // import MusicTile from './music-tile';
 
-export interface Platform {
+export type Platform = {
   name: string;
   height: number;
   width: number;
   image: string;
   url: string;
-}
+};
 
-interface Images {
+export type Images = {
   singles: string[];
   albums: string[];
-}
-type Props = {
+};
+export type Props = {
   spotify: Pick<Platform, 'url' | 'image'>;
   images: Images;
   platforms: Platform[];

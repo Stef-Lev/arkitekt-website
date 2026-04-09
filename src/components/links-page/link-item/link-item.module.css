@@ -1,0 +1,47 @@
+.link {
+  display: flex;
+  background: rgba(190, 197, 255, 0.19);
+  border-radius: 9999px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(190, 197, 255, 0.19);
+  gap: 8px;
+  padding: 6px;
+}
+
+.linkImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(5, 5, 5);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  line-height: 1;
+  gap: 4px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.subtitle {
+  text-align: center;
+  color: #d2d2d2;
+  font-size: 14px;
+}
+
+.ghostBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}

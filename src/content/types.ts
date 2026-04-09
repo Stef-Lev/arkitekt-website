@@ -15,9 +15,9 @@ export type Entity = {
 };
 
 export type LinkType = {
-  title?: string;
+  title: string;
   subtitle?: string;
-  image?: string;
+  image: string;
   url: string;
 };
 
@@ -25,7 +25,7 @@ export type SectionType = {
   title?: string;
   items: LinkType[];
 };
-export interface Content {
+export type Content = {
   drawer: {
     socialUrls: {
       spotify: string;
@@ -92,4 +92,4 @@ export interface Content {
       releases?: SectionType;
     };
   };
-}
+};
