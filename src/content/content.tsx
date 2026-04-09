@@ -13,7 +13,7 @@ const content: Content = {
       spotify:
         'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=9LW-qf4LTFWW0gHruxKvEA',
       instagram: 'https://www.instagram.com/arkitekt_beats',
-      youtube: 'https://www.youtube.com/@theArkitektBeats',
+      youtube: 'https://m.youtube.com/@theArkitektBeats',
       facebook: 'https://www.facebook.com/share/E5n8kQHE5aGn9nGp',
     },
   },
@@ -31,7 +31,7 @@ const content: Content = {
     featuredVideos: {
       title: 'Featured videos',
       linkText: 'Check all videos on my YouTube channel',
-      linkHref: 'https://www.youtube.com/@theArkitektBeats',
+      linkHref: 'https://m.youtube.com/@theArkitektBeats',
       ids: ['ZOSYPqWgLWk', 'yXK5Qdf0Jns', 'ZP9SDxaFlJc', '-oAWpeiwy7g'],
     },
   },
@@ -297,12 +297,12 @@ const content: Content = {
           {
             title: 'Marinella - Ma esy pote [Remix]',
             image: '/links/ma_esy_pote.jpg',
-            url: 'https://www.youtube.com/watch?v=yXK5Qdf0Jns',
+            url: 'https://youtu.be/yXK5Qdf0Jns',
           },
           {
             title: 'Stis pikrodafnis ton antho [Remix]',
             image: '/links/bitter_dream.jpg',
-            url: 'https://www.youtube.com/watch?v=HTualFAdKEU',
+            url: 'https://youtu.be/HTualFAdKEU',
           },
         ],
       },
@@ -323,7 +323,7 @@ const content: Content = {
           {
             title: 'Youtube',
             image: '/links/youtube_logo.jpg',
-            url: 'https://www.youtube.com/@theArkitektBeats',
+            url: 'https://m.youtube.com/@theArkitektBeats',
           },
           {
             title: 'Arkitekt - Official Website',
