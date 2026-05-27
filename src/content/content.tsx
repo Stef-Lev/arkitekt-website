@@ -101,6 +101,13 @@ const content: Content = {
         url: 'https://open.spotify.com/album/3jQOVqAHecNi3kQpatBWCt?si=M7rteXqOSfKWEnBZY5eBcg',
         genre: 'drill',
       },
+      {
+        id: 'high_stakes',
+        position: 3,
+        image: '/musicPage/albums/high_stakes.jpg',
+        url: 'https://open.spotify.com/album/18MRAa3zMRXfibwlPVLZSR?si=--2M_Q6-TXSZeWTTRCM4eA',
+        genre: 'drill',
+      },
     ],
     singles: [
       {
@@ -284,10 +291,10 @@ const content: Content = {
         title: 'New Album out now!',
         items: [
           {
-            title: 'Shadows on Concrete',
+            title: 'High Stakes',
             subtitle: 'Spotify',
-            image: '/links/shadows_on_concrete.jpg',
-            url: 'https://open.spotify.com/album/3jQOVqAHecNi3kQpatBWCt?si=qNj21ysdTFWLk92P6I-lGQ',
+            image: '/links/high_stakes_cover.jpg',
+            url: 'https://open.spotify.com/album/18MRAa3zMRXfibwlPVLZSR?si=--2M_Q6-TXSZeWTTRCM4eA',
           },
         ],
       },
