@@ -89,23 +89,30 @@ const content: Content = {
     albums: [
       {
         id: 'red_flags_and_roses',
-        position: 1,
+        position: 4,
         image: '/musicPage/albums/red_flags_and_roses.jpg',
         url: 'https://open.spotify.com/album/6S1EALi04j7neizrJ6AjXU?si=kWnw4MJzSSWbH0L4M8tH-w&nd=1&dlsi=4431be80ae6e4212',
         genre: 'drill',
       },
       {
         id: 'shadows_on_concrete',
-        position: 2,
+        position: 3,
         image: '/musicPage/albums/shadows_on_concrete.jpg',
         url: 'https://open.spotify.com/album/3jQOVqAHecNi3kQpatBWCt?si=M7rteXqOSfKWEnBZY5eBcg',
         genre: 'drill',
       },
       {
         id: 'high_stakes',
-        position: 3,
+        position: 2,
         image: '/musicPage/albums/high_stakes.jpg',
         url: 'https://open.spotify.com/album/18MRAa3zMRXfibwlPVLZSR?si=--2M_Q6-TXSZeWTTRCM4eA',
+        genre: 'drill',
+      },
+      {
+        id: 'dual_nature',
+        position: 1,
+        image: '/musicPage/albums/dual_nature.jpg',
+        url: 'https://open.spotify.com/album/1GPMhsTMK21MdaezSfcxDu?si=kKpXDld4TcGUMX6v_3OcVA',
         genre: 'drill',
       },
     ],
@@ -291,10 +298,10 @@ const content: Content = {
         title: 'New Album out now!',
         items: [
           {
-            title: 'High Stakes',
+            title: 'Dual Nature',
             subtitle: 'Spotify',
-            image: '/links/high_stakes_cover.jpg',
-            url: 'https://open.spotify.com/album/18MRAa3zMRXfibwlPVLZSR?si=--2M_Q6-TXSZeWTTRCM4eA',
+            image: '/links/dual_nature_cover.jpg',
+            url: 'https://open.spotify.com/album/1GPMhsTMK21MdaezSfcxDu?si=kKpXDld4TcGUMX6v_3OcVA',
           },
         ],
       },
