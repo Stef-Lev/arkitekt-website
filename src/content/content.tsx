@@ -32,12 +32,13 @@ const content: Content = {
       title: 'Featured videos',
       linkText: 'Check all videos on my YouTube channel',
       linkHref: 'https://m.youtube.com/@theArkitektBeats',
-      ids: ['ZOSYPqWgLWk', 'yXK5Qdf0Jns', 'ZP9SDxaFlJc', '-oAWpeiwy7g'],
+      ids: ['q0ymU1nkOwA', 'yXK5Qdf0Jns', 'ZP9SDxaFlJc', 'ZOSYPqWgLWk'],
     },
   },
   videosPage: {
     title: 'Videos',
     videoIds: [
+      'q0ymU1nkOwA',
       'ZOSYPqWgLWk',
       'yXK5Qdf0Jns',
       'ZP9SDxaFlJc',
@@ -308,6 +309,11 @@ const content: Content = {
       promotion: {
         title: 'Videos',
         items: [
+          {
+            title: 'Imiskoubria - Meth sto volan [Remix]',
+            image: '/links/meth_sto_volan.jpg',
+            url: 'https://youtu.be/q0ymU1nkOwA',
+          },
           {
             title: 'Marinella - Ma esy pote [Remix]',
             image: '/links/ma_esy_pote.jpg',
