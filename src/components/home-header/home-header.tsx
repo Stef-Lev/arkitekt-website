@@ -14,21 +14,19 @@ const HomeHeader = () => {
         'flex justify-center',
       )}
     >
-      <div
-        className={cn(
-          'absolute top-0 left-0',
-          'w-full h-full z-[1]',
-          'bg-mainBlue mix-blend-multiply',
-        )}
-      ></div>
-      <Image
-        src="/main-photo.jpg"
-        layout="fill"
-        className="z-0 opacity-60 object-center object-cover grayscale"
-        alt="hero photo"
+      <video
+        src="/videos/hero_video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+        className="absolute inset-0 z-0 h-full w-full object-center object-cover"
       />
 
-      <div className="flex flex-col justify-center items-center w-full gap-12">
+      <div className="absolute inset-0 z-[1] bg-black/50" aria-hidden="true" />
+
+      <div className="relative z-[2] flex flex-col justify-center items-center w-full gap-12">
         <div className="relative aspect-[55/32] w-[200px] md:w-[300px] lg:w-[400px]">
           <Image
             className={cn('z-[1] relative')}

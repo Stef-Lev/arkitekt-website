@@ -27,7 +27,7 @@ const content: Content = {
     ],
   },
   homePage: {
-    subtitle: 'Designing the Sound of the Streets',
+    subtitle: 'Building beats for the underground.',
     featuredVideos: {
       title: 'Featured videos',
       linkText: 'Check all videos on my YouTube channel',
