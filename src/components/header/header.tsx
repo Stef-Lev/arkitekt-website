@@ -7,6 +7,7 @@ import { cn } from '@/helpers/classnames';
 import Drawer from '../drawer/drawer';
 import HamburgerButton from '../hamburger-button/hamburger-button';
 import content from '@/content/content';
+import styles from './header.module.css';
 
 const Header = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
