@@ -1,0 +1,38 @@
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  margin-block-start: 80px;
+  padding: var(--space-lg);
+  color: white;
+  background-color: black;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.heart {
+  padding-inline: var(--space-sm);
+  color: var(--red);
+}
+
+.copyright {
+  padding-block: var(--space-sm);
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 300;
+}
