@@ -1,0 +1,33 @@
+.section {
+  width: 100%;
+  padding-block-end: 5rem;
+}
+
+.heading {
+  margin-block-end: var(--space-2xl);
+  color: #fff;
+  font-size: 44px;
+  text-align: center;
+}
+
+.videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xl);
+}
+
+.linkRow {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: underline;
+}
+
+@media (--md) {
+  .videos {
+    flex-direction: row;
+  }
+}

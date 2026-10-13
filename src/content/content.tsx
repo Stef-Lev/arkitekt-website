@@ -221,7 +221,7 @@ const content: Content = {
   },
   aboutPage: {
     introText:
-      'Arkitekt is a producer based in Athens focused on hard, dark street production. His main work moves through Drill, Trap, and Boom Bap, driven by heavy drums, dark vocal textures, and orchestral strings. He also experiments with Lo-Fi, Baile Funk, and Afrobeats. At times he pulls from traditional Greek music, remixing and reshaping it into modern rap beats. From the streets to your speakers, Arkitekt designs the sound of the streets for you.',
+      'Straight out of Athens, Arkitekt produces heavy, dark beats rooted in Drill, Trap, and Boom Bap. His sound is driven by pounding drums, 808s, haunting choirs, and orchestral elements, paired with his own live guitar playing. While underground street rap is his main lane, he also loves experimenting—whether that means mixing genres, flipping traditional Greek melodies into modern beats, or dipping into Lo-Fi, Baile Funk, and Afrobeats. From the streets to your speakers, Arkitekt keeps building beats for the underground.',
     genres: [
       {
         name: 'UK DRILL',
