@@ -1,5 +1,5 @@
 import { UseFormRegister } from 'react-hook-form';
-import { FormData } from './contact.types';
+import { FormData } from '../contact/contact.types';
 
 export type Props = {
   label: string;

@@ -2,11 +2,11 @@
 
 import { useForm } from 'react-hook-form';
 import { sendEmail } from '@/helpers/send-email';
-import FormItem from './form-item';
+import FormItem from '../form-item/form-item';
 import content from '@/content/content';
-import { cn } from '@/helpers/classnames';
 import showMessage from '@/helpers/showMessage';
 import { FormData } from './contact.types';
+import styles from './contact.module.css';
 
 const Contact = () => {
   const { handleSubmit, register, reset } = useForm<FormData>();
@@ -25,7 +25,7 @@ const Contact = () => {
   }
 
   return (
-    <form className="text-white" onSubmit={handleSubmit(onSubmit)}>
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       {content.contactPage.formFields.map((form) => (
         <FormItem
           key={form.field}
@@ -36,18 +36,8 @@ const Contact = () => {
           registerFn={register}
         />
       ))}
-      <div className="w-full mt-[30px]">
-        <button
-          className={cn(
-            'text-white text-base font-semibold',
-            'py-3 px-8',
-            'rounded-md outline-none',
-            'w-full',
-            'bg-mainBlue hover:shadow-form',
-          )}
-        >
-          Submit
-        </button>
+      <div className={styles.submitContainer}>
+        <button className={styles.submitButton}>Submit</button>
       </div>
     </form>
   );

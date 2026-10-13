@@ -1,4 +1,4 @@
-import Contact from '@/components/contact/contact';
+import Contact from '@/components/contact-form/contact/contact';
 import TitleHeader from '@/components/title-header/title-header';
 import PageWrapper from '@/components/page-wrapper/page-wrapper';
 

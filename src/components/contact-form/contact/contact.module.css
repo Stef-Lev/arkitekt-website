@@ -1,0 +1,22 @@
+.form {
+  color: white;
+}
+
+.submitContainer {
+  width: 100%;
+  margin-block-start: calc(var(--space-2xl) - var(--space-2xs));
+}
+
+.submitButton {
+  width: 100%;
+  padding-block: var(--space-md);
+  padding-inline: var(--space-2xl);
+  border-radius: var(--radius-md);
+  color: white;
+  background-color: var(--main-blue);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
