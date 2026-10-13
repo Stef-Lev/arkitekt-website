@@ -2,35 +2,23 @@ import { cn } from '@/helpers/classnames';
 import content from '@/content/content';
 import mediaComponents from '@/helpers/media-components';
 import Link from 'next/link';
+import styles from './social-media.module.css';
 
 type Props = {
   className?: string;
 };
 
-const socialMediaArray = [
-  'spotify',
-  'instagram',
-  'youtube',
-  // 'facebook'
-];
+const socialMediaArray = ['spotify', 'instagram', 'youtube'];
 
 const SocialMedia = ({ className }: Props) => {
   const socialUrls = content.drawer.socialUrls;
 
   return (
-    <div
-      className={cn(
-        'absolute bottom-0',
-        'flex justify-center items-center gap-4',
-        'h-[100px] w-full',
-        'p-6',
-        className,
-      )}
-    >
+    <div className={cn(styles.container, className)}>
       {socialMediaArray.map((item) => (
         <Link
           key={item}
-          className="hover:text-mainBlue hover:cursor-pointer"
+          className={styles.link}
           target="_blank"
           rel="noopener noreferrer"
           href={socialUrls[item as keyof typeof socialUrls]}
