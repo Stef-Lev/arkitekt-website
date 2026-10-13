@@ -4,7 +4,7 @@ import Script from 'next/script';
 import Footer from '@/components/footer/footer';
 import { Roboto_Condensed } from 'next/font/google';
 // @ts-ignore
-import './globals.css';
+import '../../styles/globals.css';
 import ScrollTopButton from '@/components/scroll-top-button/scroll-top-button';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="siteLayout">
       <Script
         id="Cookiebot"
         src="https://consent.cookiebot.com/uc.js"
