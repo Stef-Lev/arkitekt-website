@@ -5,7 +5,6 @@ import Image from 'next/image';
 import ImagesContainer from './images-container';
 import Platforms from '../platforms/platforms';
 import { Props } from './music-covers.types';
-// import MusicTile from './music-tile';
 
 const MusicCovers = ({ images, spotify, platforms }: Props) => {
   const router = useRouter();

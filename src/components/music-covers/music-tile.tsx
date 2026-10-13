@@ -1,30 +1,32 @@
 import Image from 'next/image';
 import { cn } from '@/helpers/classnames';
+import SpotifyBadge from './spotify-badge';
 import { Props } from './music-tile.types';
+import styles from './music-tile.module.css';
 
 // Add filters per genre
 
 const MusicTile = ({ entity, className }: Props) => {
   const { image, id, url } = entity;
-  console.log(image, id, url);
 
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn('inline-block', className)}
+      className={cn(styles.link, className)}
+      data-reveal=""
     >
-      <Image
-        className={cn(
-          'float-up rounded-lg cursor-pointer',
-          'opacity-0 transform translate-y-10 transition duration-700 ease-out',
-        )}
-        src={image}
-        width={300}
-        height={300}
-        alt={id}
-      />
+      <span className={styles.artwork}>
+        <Image
+          className={styles.cover}
+          src={image}
+          width={300}
+          height={300}
+          alt={id}
+        />
+      </span>
+      <SpotifyBadge className={styles.badgeVisibility} />
     </a>
   );
 };

@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { cn } from '@/helpers/classnames';
 import MusicTile from './music-tile';
 import { Props } from './images-container.types';
+import styles from './music-tile.module.css';
 
 const ImagesContainer = ({ title, entities }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -12,8 +13,7 @@ const ImagesContainer = ({ title, entities }: Props) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-            entry.target.classList.add('opacity-100', 'translate-y-0');
+            entry.target.classList.add(styles.revealed);
             observer.unobserve(entry.target);
           }
         });
@@ -23,7 +23,7 @@ const ImagesContainer = ({ title, entities }: Props) => {
       },
     );
 
-    const tiles = containerRef.current?.querySelectorAll('.float-up');
+    const tiles = containerRef.current?.querySelectorAll('[data-reveal]');
     tiles?.forEach((tile) => observer.observe(tile));
 
     return () => observer.disconnect();
