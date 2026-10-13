@@ -1,0 +1,10 @@
+import { UseFormRegister } from 'react-hook-form';
+import { FormData } from './contact.types';
+
+export type Props = {
+  label: string;
+  placeholder: string;
+  field: 'name' | 'email' | 'subject' | 'message';
+  type: string;
+  registerFn: UseFormRegister<FormData>;
+};

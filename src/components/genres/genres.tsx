@@ -7,15 +7,9 @@ import { cn } from '@/helpers/classnames';
 import Tile from './tile';
 import GenreCover from './genre-cover';
 import GenreCircle from './genre-circle';
+import { Props } from './genres.types';
 
 const genres = content.aboutPage.genres;
-
-type Props = {
-  title: string;
-  subtitle?: string;
-  isInteractive?: boolean;
-  type?: 'tiles' | 'images' | 'circles';
-};
 
 const Genres = ({
   title,

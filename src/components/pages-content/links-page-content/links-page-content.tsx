@@ -1,12 +1,8 @@
 import LinkProfileImage from '@/components/links-page/link-profile-image/link-profile-image';
 import LinkItem from '@/components/links-page/link-item/link-item';
 import Image from 'next/image';
-import type { Content } from '@/content/types';
+import { Props } from './links-page-content.types';
 import styles from './links-page-content.module.css';
-
-export type Props = {
-  content: Content['linkPage'];
-};
 
 const LinksPageContent = ({ content }: Props) => {
   const { profileImage, logoImage, title, sections } = content;

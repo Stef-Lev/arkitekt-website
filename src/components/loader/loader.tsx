@@ -1,10 +1,6 @@
 import { cn } from '@/helpers/classnames';
+import { Props } from './loader.types';
 import styles from './loader.module.css';
-
-type Props = {
-  size: number;
-  animation?: 'fade' | 'rotate';
-};
 
 const Loader = ({ size, animation = 'fade' }: Props) => {
   return (

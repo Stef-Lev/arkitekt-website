@@ -3,14 +3,8 @@ import { cn } from '@/helpers/classnames';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import SocialMedia from '@/components/social-media/social-media';
+import { Props } from './drawer.types';
 import styles from './drawer.module.css';
-
-type Props = {
-  className?: string;
-  isDrawerOpen: boolean;
-  items: Array<Record<string, string>>;
-  toggleDrawer: () => void;
-};
 
 const Drawer = (props: Props) => {
   const { isDrawerOpen, toggleDrawer, items, className } = props;

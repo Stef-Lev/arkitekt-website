@@ -1,14 +1,5 @@
-import { FormData } from './contact';
 import { cn } from '@/helpers/classnames';
-import { UseFormRegister } from 'react-hook-form';
-
-type Props = {
-  label: string;
-  placeholder: string;
-  field: 'name' | 'email' | 'subject' | 'message';
-  type: string;
-  registerFn: UseFormRegister<FormData>;
-};
+import { Props } from './form-item.types';
 
 const FormItem = ({ label, placeholder, field, type, registerFn }: Props) => {
   return (

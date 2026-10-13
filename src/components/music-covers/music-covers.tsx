@@ -4,25 +4,8 @@ import content from '@/content/content';
 import Image from 'next/image';
 import ImagesContainer from './images-container';
 import Platforms from '../platforms/platforms';
+import { Props } from './music-covers.types';
 // import MusicTile from './music-tile';
-
-export type Platform = {
-  name: string;
-  height: number;
-  width: number;
-  image: string;
-  url: string;
-};
-
-export type Images = {
-  singles: string[];
-  albums: string[];
-};
-export type Props = {
-  spotify: Pick<Platform, 'url' | 'image'>;
-  images: Images;
-  platforms: Platform[];
-};
 
 const MusicCovers = ({ images, spotify, platforms }: Props) => {
   const router = useRouter();

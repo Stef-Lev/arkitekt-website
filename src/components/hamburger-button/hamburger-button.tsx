@@ -1,11 +1,6 @@
 import { cn } from '@/helpers/classnames';
+import { Props } from './hamburger-button.types';
 import styles from './hamburger-button.module.css';
-
-type Props = {
-  className?: string;
-  isDrawerOpen: boolean;
-  onClick: () => void;
-};
 
 const HamburgerButton = ({ isDrawerOpen, onClick, className }: Props) => {
   return (

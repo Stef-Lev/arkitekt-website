@@ -1,10 +1,5 @@
 import { cn } from '@/helpers/classnames';
-
-type Props = {
-  onClick: (id: string) => void;
-  genre: { name: string; id: string; icon: JSX.Element };
-  isInteractive?: boolean;
-};
+import { Props } from './tile.types';
 
 const Tile = ({ onClick, genre, isInteractive = false }: Props) => {
   const handleClick = () => {

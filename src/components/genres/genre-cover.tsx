@@ -1,10 +1,5 @@
 import Image from 'next/image';
-import { Genre } from '@/content/types';
-
-type Props = {
-  genre: Genre;
-  onClick: (id: string) => void;
-};
+import { Props } from './genre-cover.types';
 
 const GenreCover = ({ genre, onClick }: Props) => {
   if (!genre.coverImagePath || !genre.playlistUrl) {

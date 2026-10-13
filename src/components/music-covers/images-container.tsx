@@ -2,17 +2,7 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { cn } from '@/helpers/classnames';
 import MusicTile from './music-tile';
-
-type Props = {
-  title: string;
-  entities: {
-    id: string;
-    position: number;
-    image: string;
-    url: string;
-    genre: string;
-  }[];
-};
+import { Props } from './images-container.types';
 
 const ImagesContainer = ({ title, entities }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);

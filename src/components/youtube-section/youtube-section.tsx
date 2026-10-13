@@ -1,10 +1,6 @@
 import YoutubeIframe from '../youtube-iframe/youtube-iframe';
 import { cn } from '@/helpers/classnames';
-
-type Props = {
-  title?: string;
-  videoIds: string[];
-};
+import { Props } from './youtube-section.types';
 
 const YoutubeSection = ({ title, videoIds }: Props) => {
   return (

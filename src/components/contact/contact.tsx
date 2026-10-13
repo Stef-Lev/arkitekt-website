@@ -6,13 +6,7 @@ import FormItem from './form-item';
 import content from '@/content/content';
 import { cn } from '@/helpers/classnames';
 import showMessage from '@/helpers/showMessage';
-
-export type FormData = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
+import { FormData } from './contact.types';
 
 const Contact = () => {
   const { handleSubmit, register, reset } = useForm<FormData>();

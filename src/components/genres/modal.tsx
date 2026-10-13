@@ -1,11 +1,6 @@
-import { PropsWithChildren } from 'react';
 import { RiCloseLargeLine } from 'react-icons/ri';
 import { cn } from '@/helpers/classnames';
-
-interface Props extends PropsWithChildren {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import { Props } from './modal.types';
 
 const Modal = ({ isOpen, onClose, children }: Props) => {
   if (!isOpen) return null;

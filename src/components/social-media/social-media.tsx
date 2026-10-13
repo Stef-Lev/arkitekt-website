@@ -2,11 +2,8 @@ import { cn } from '@/helpers/classnames';
 import content from '@/content/content';
 import mediaComponents from '@/helpers/media-components';
 import Link from 'next/link';
+import { Props } from './social-media.types';
 import styles from './social-media.module.css';
-
-type Props = {
-  className?: string;
-};
 
 const socialMediaArray = ['spotify', 'instagram', 'youtube'];
 

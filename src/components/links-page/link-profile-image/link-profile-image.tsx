@@ -1,10 +1,5 @@
 import Image from 'next/image';
-
-export type Props = {
-  imageSrc?: string;
-  width?: number;
-  height?: number;
-};
+import { Props } from './link-profile-image.types';
 
 const LinkProfileImage = ({ imageSrc, width = 120, height = 120 }: Props) => {
   if (!imageSrc) {

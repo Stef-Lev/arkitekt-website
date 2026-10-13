@@ -1,10 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Loader from '../loader/loader';
+import { Props } from './youtube-iframe.types';
 
-type Props = {
-  videoId: string;
-};
 const YoutubeIframe = ({ videoId }: Props) => {
   const [loading, setLoading] = useState(true);
 

@@ -1,16 +1,6 @@
 import Image from 'next/image';
 import { cn } from '@/helpers/classnames';
-
-type Props = {
-  className?: string;
-  entity: {
-    id: string;
-    position: number;
-    image: string;
-    url: string;
-    genre: string;
-  };
-};
+import { Props } from './music-tile.types';
 
 // Add filters per genre
 

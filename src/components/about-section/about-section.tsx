@@ -1,10 +1,7 @@
 'use client';
 import { cn } from '@/helpers/classnames';
 import Image from 'next/image';
-
-type Props = {
-  aboutText: string;
-};
+import { Props } from './about-section.types';
 
 const AboutSection = ({ aboutText }: Props) => {
   return (

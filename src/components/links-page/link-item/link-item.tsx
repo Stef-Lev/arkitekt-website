@@ -1,12 +1,8 @@
-import type { LinkType } from '@/content/types';
 import Image from 'next/image';
 import { FaChevronRight } from 'react-icons/fa';
 import Link from 'next/link';
+import { Props } from './link-item.types';
 import styles from './link-item.module.css';
-
-export type Props = {
-  link: LinkType;
-};
 
 const LinkItem = ({ link }: Props) => {
   return (
