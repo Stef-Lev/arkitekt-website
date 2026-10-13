@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
 import { cn } from '@/helpers/classnames';
+import styles from './scroll-top-button.module.css';
 
 const ScrollTopButton = () => {
   const [opacity, setOpacity] = useState<number>(0);
@@ -51,27 +52,15 @@ const ScrollTopButton = () => {
 
   return (
     <div
-      className={cn(
-        'fixed',
-        'bottom-[30px] right-[20px]',
-        'flex justify-end',
-        'z-[1001]',
-        'transition-opacity duration-300',
-        'cursor-pointer',
-        [opacity === 0, 'pointer-events-none', 'pointer-events-auto'],
-      )}
+      className={cn(styles.container, [
+        opacity === 0,
+        styles.hidden,
+        styles.visible,
+      ])}
       style={{ opacity }}
     >
       <div>
-        <div
-          className={cn(
-            'flex justify-center items-center',
-            'w-[40px] h-[40px]',
-            'rounded-lg text-white',
-            'bg-gray-600 hover:bg-gray-400',
-          )}
-          onClick={handleScrollTop}
-        >
+        <div className={styles.button} onClick={handleScrollTop}>
           <FiArrowUp size="30px" />
         </div>
       </div>

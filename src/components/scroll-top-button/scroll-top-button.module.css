@@ -1,0 +1,33 @@
+.container {
+  position: fixed;
+  inset-block-end: 30px;
+  inset-inline-end: 20px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1001;
+  cursor: pointer;
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hidden {
+  pointer-events: none;
+}
+
+.visible {
+  pointer-events: auto;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-3xl);
+  height: var(--space-3xl);
+  border-radius: var(--radius-lg);
+  color: white;
+  background-color: #4b5563;
+}
+
+.button:hover {
+  background-color: #9ca3af;
+}
