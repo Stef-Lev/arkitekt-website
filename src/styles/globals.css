@@ -2,3 +2,30 @@
 @import '../styles/tokens.css';
 @import '../styles/media.css';
 @import '../styles/colors.css';
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media (--sm) {
+    max-width: 640px;
+  }
+
+  @media (--md) {
+    max-width: 768px;
+  }
+
+  @media (--lg) {
+    max-width: 1024px;
+  }
+
+  @media (--xl) {
+    max-width: 1280px;
+  }
+
+  @media (--2xl) {
+    max-width: 1536px;
+  }
+}
