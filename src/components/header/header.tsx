@@ -67,11 +67,7 @@ const Header = () => {
             onClick={() => router.push('/')}
           />
 
-          <HamburgerButton
-            className={styles.mobileOnly}
-            isDrawerOpen={isDrawerOpen}
-            onClick={toggleDrawer}
-          />
+          <HamburgerButton isDrawerOpen={isDrawerOpen} onClick={toggleDrawer} />
 
           <div className={styles.navigation}>
             {content.navbar.items.map((item) => (

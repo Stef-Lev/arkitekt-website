@@ -1,4 +1,5 @@
 import { cn } from '@/helpers/classnames';
+import styles from './hamburger-button.module.css';
 
 type Props = {
   className?: string;
@@ -8,38 +9,27 @@ type Props = {
 
 const HamburgerButton = ({ isDrawerOpen, onClick, className }: Props) => {
   return (
-    <div
-      onClick={onClick}
-      className={cn(
-        'flex flex-col',
-        'justify-center items-center',
-        'h-full hover:cursor-pointer',
-        className,
-      )}
-    >
+    <div onClick={onClick} className={cn(styles.container, className)}>
       <span
-        className={cn(
-          'block bg-white',
-          'transition-all duration-300 ease-out',
-          'h-0.5 w-6 rounded-sm',
-          [isDrawerOpen, 'rotate-45 translate-y-1', '-translate-y-0.5'],
-        )}
+        className={cn(styles.line, styles.topLine, [
+          isDrawerOpen,
+          styles.open,
+          styles.closed,
+        ])}
       ></span>
       <span
-        className={cn(
-          'block bg-white',
-          'transition-all duration-300 ease-out',
-          'h-0.5 w-6 rounded-sm my-0.5',
-          [isDrawerOpen, 'opacity-0', 'opacity-100'],
-        )}
+        className={cn(styles.line, styles.middleLine, [
+          isDrawerOpen,
+          styles.hidden,
+          styles.visible,
+        ])}
       ></span>
       <span
-        className={cn(
-          'block bg-white',
-          'transition-all duration-300 ease-out',
-          'h-0.5 w-6 rounded-sm',
-          [isDrawerOpen, '-rotate-45 -translate-y-1', 'translate-y-0.5'],
-        )}
+        className={cn(styles.line, styles.bottomLine, [
+          isDrawerOpen,
+          styles.open,
+          styles.closed,
+        ])}
       ></span>
     </div>
   );
