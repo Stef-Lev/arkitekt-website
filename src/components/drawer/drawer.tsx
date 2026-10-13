@@ -3,6 +3,7 @@ import { cn } from '@/helpers/classnames';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import SocialMedia from '@/components/social-media/social-media';
+import styles from './drawer.module.css';
 
 type Props = {
   className?: string;
@@ -16,11 +17,11 @@ const Drawer = (props: Props) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (isDrawerOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
+    document.body.classList.toggle('overflow-hidden', isDrawerOpen);
+
+    return () => {
       document.body.classList.remove('overflow-hidden');
-    }
+    };
   }, [isDrawerOpen]);
 
   const handleClick = (href: string) => {
@@ -30,32 +31,30 @@ const Drawer = (props: Props) => {
   return (
     <div
       className={cn(
-        'fixed inset-0',
-        'transition-transform duration-300',
-        'z-50 w-[85%]',
-        [isDrawerOpen, 'translate-x-0', '-translate-x-full'],
+        styles.drawer,
+        [isDrawerOpen, styles.open, styles.closed],
         className,
       )}
     >
-      <div className={cn('w-full h-full', 'bg-[#171717] text-white')}>
-        <div className="flex items-center h-20 px-[1rem]">
+      <div className={styles.panel}>
+        <div className={styles.header}>
           <Image
             src="/website-logo.png"
             alt="arkitekt logo"
-            className="aspect-[256/110] hover:cursor-pointer"
+            className={styles.logo}
             width={120}
             height={110}
             onClick={() => handleClick('/')}
           />
         </div>
 
-        <div className="p-4 text-[28px]">
+        <div className={styles.navigation}>
           <nav>
             <ul>
               {items.map((item) => (
                 <li key={item.href}>
                   <div
-                    className="block py-2 hover:cursor-pointer hover:text-mainBlue"
+                    className={styles.navigationLink}
                     onClick={() => handleClick(item.href)}
                   >
                     {item.value}
