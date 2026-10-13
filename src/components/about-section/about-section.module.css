@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: var(--space-xl);
+  padding: var(--space-lg);
+}
+
+.imageFrame {
+  display: flex;
+  flex: 35%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.image {
+  border-radius: var(--radius-md);
+}
+
+.copy {
+  flex: 65%;
+  height: 100%;
+  color: #fff;
+  font-size: 22px;
+}
+
+@media (--md) {
+  .imageFrame {
+    flex: 45%;
+  }
+
+  .copy {
+    flex: 55%;
+  }
+}
+
+@media (--lg) {
+  .container {
+    flex-direction: row;
+  }
+
+  .imageFrame {
+    flex: 35%;
+  }
+
+  .copy {
+    flex: 65%;
+    font-size: 30px;
+  }
+}

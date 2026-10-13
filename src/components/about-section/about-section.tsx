@@ -1,20 +1,14 @@
 'use client';
-import { cn } from '@/helpers/classnames';
 import Image from 'next/image';
 import { Props } from './about-section.types';
+import styles from './about-section.module.css';
 
 const AboutSection = ({ aboutText }: Props) => {
   return (
-    <div className={cn('flex flex-col lg:flex-row', 'h-full p-4 gap-6')}>
-      <div
-        className={cn(
-          'flex justify-center items-center',
-          'flex-[35%] md:flex-[45%] lg:flex-[35%]',
-          'h-full',
-        )}
-      >
+    <div className={styles.container}>
+      <div className={styles.imageFrame}>
         <Image
-          className="rounded-md"
+          className={styles.image}
           width={3000}
           height={3000}
           src="/about-test.jpg"
@@ -22,13 +16,7 @@ const AboutSection = ({ aboutText }: Props) => {
           quality={100}
         />
       </div>
-      <div
-        className={cn(
-          'flex-[65%] md:flex-[55%] lg:flex-[65%]',
-          'h-full text-white',
-          'text-[22px] lg:text-[30px]',
-        )}
-      >
+      <div className={styles.copy}>
         <p>{aboutText}</p>
       </div>
     </div>
