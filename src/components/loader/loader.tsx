@@ -1,4 +1,5 @@
 import { cn } from '@/helpers/classnames';
+import styles from './loader.module.css';
 
 type Props = {
   size: number;
@@ -7,9 +8,9 @@ type Props = {
 
 const Loader = ({ size, animation = 'fade' }: Props) => {
   return (
-    <div className="absolute inset-0 flex items-center justify-center">
+    <div className={styles.overlay}>
       <div
-        className={cn('loader', [animation === 'fade', 'fade', 'rotate'])}
+        className={cn(styles.loader, [animation === 'fade', 'fade', 'rotate'])}
         style={{ width: size, height: size }}
       ></div>
     </div>

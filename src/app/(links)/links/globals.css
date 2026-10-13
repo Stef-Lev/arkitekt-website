@@ -27,46 +27,6 @@ body {
   padding: 0;
 }
 
-.loader {
-  background-image: url('/arkitekt-loader.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
-
-@keyframes fade-scale {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.fade {
-  animation: fade-scale 1.5s ease-in-out infinite;
-}
-
-.rotate {
-  animation: rotate 3s linear infinite;
-}
-
 .dark-metallic-tile {
   background: linear-gradient(145deg, #2c2c2c, #1f1f1f);
   border: 1px solid #444;
