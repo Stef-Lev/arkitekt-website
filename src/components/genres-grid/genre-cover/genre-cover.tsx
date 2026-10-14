@@ -8,14 +8,15 @@ const GenreCover = ({ genre, onClick }: Props) => {
   }
 
   return (
-    <Image
-      className={styles.cover}
-      alt={genre.name}
-      src={genre.coverImagePath}
-      width={350}
-      height={350}
-      onClick={() => onClick(genre.playlistUrl)}
-    />
+    <span className={styles.artwork} onClick={() => onClick(genre.playlistUrl)}>
+      <Image
+        className={styles.cover}
+        alt={genre.name}
+        src={genre.coverImagePath}
+        width={350}
+        height={350}
+      />
+    </span>
   );
 };
 

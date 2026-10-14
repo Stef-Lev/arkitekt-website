@@ -1,11 +1,55 @@
-.cover {
+.artwork {
+  position: relative;
+  display: block;
+  justify-self: center;
+  max-inline-size: 100%;
+  overflow: hidden;
   cursor: pointer;
   transition:
     transform 300ms ease-in-out,
     filter 300ms ease-in-out;
 
+  &::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      112deg,
+      transparent 18%,
+      rgb(255 255 255 / 4%) 36%,
+      rgb(255 255 255 / 30%) 48%,
+      rgb(255 255 255 / 10%) 55%,
+      transparent 72%
+    );
+    content: '';
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-125%) skewX(-18deg);
+  }
+
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
     filter: contrast(1.5);
+
+    &::after {
+      animation: sheen 500ms ease-out;
+    }
+  }
+}
+
+.cover {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+@keyframes sheen {
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(125%) skewX(-18deg);
   }
 }
