@@ -1,16 +1,10 @@
-import { cn } from '@/helpers/classnames';
 import { Props } from './playlist-iframe.types';
+import styles from './playlist-iframe.module.css';
 
 const PlaylistIframe = ({ url }: Props) => {
   if (!url) {
     return (
-      <div
-        className={cn(
-          'flex justify-center items-center',
-          'h-full',
-          'text-white text-[22px] text-center',
-        )}
-      >
+      <div className={styles.empty}>
         <p>
           No beats available for this genre at the moment, but there will be in
           the future. Stay tuned!
@@ -19,9 +13,9 @@ const PlaylistIframe = ({ url }: Props) => {
     );
   }
   return (
-    <div className="py-2 md:py-3">
+    <div className={styles.wrapper}>
       <iframe
-        className="w-full h-[360px]"
+        className={styles.iframe}
         src={url}
         allowFullScreen={true}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

@@ -1,0 +1,22 @@
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100%;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+}
+
+.wrapper {
+  padding-block: var(--space-sm);
+
+  @media (--md) {
+    padding-block: var(--space-md);
+  }
+}
+
+.iframe {
+  inline-size: 100%;
+  block-size: 360px;
+}
