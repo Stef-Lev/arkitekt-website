@@ -3,10 +3,6 @@
 @import '../styles/media.css';
 @import '../styles/colors.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
