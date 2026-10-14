@@ -1,0 +1,33 @@
+.header {
+  position: relative;
+  inline-size: 100%;
+  block-size: 200px;
+  background-color: #000;
+}
+
+.image {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background-color: #2f60f7;
+  mix-blend-mode: multiply;
+}
+
+.container {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100%;
+  color: #fff;
+  font-size: 50px;
+}

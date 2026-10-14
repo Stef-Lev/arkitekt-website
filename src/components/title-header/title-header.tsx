@@ -1,31 +1,19 @@
 import Image from 'next/legacy/image';
 import Container from '@/components/container/container';
-import { cn } from '@/helpers/classnames';
 import { Props } from './title-header.types';
+import styles from './title-header.module.css';
 
 const TitleHeader = ({ title }: Props) => {
   return (
-    <div className={cn('relative', 'w-full h-[200px]', 'bg-black')}>
+    <div className={styles.header}>
       <Image
         src={`/${title.toLowerCase()}-background.jpg`}
         alt={`${title} page`}
         layout="fill"
-        className="z-0 opacity-60 object-center object-cover grayscale"
+        className={styles.image}
       />
-      <div
-        className={cn(
-          'absolute inset-0 z-10',
-          'bg-mainBlue',
-          'mix-blend-multiply',
-        )}
-      />
-      <Container
-        className={cn(
-          'flex items-center justify-center',
-          'text-white text-[50px]',
-          'h-full relative z-20',
-        )}
-      >
+      <div className={styles.overlay} />
+      <Container className={styles.container}>
         <h2>{title}</h2>
       </Container>
     </div>
