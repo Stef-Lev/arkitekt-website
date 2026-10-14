@@ -68,7 +68,10 @@
 .link:hover .artwork,
 .link:focus-visible .artwork {
   transform: perspective(900px) rotateX(7deg) scale(1.025);
-  box-shadow: 0 14px 24px rgb(0 0 0 / 25%);
+  box-shadow:
+    0 20px 22px -10px rgb(0 0 0 / 95%),
+    0 12px 12px -6px rgb(0 0 0 / 80%),
+    0 18px 30px -12px color-mix(in srgb, var(--main-blue) 55%, transparent);
 }
 
 .link:hover .artwork::after,
