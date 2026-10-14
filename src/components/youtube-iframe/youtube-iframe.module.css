@@ -1,0 +1,9 @@
+.wrapper {
+  position: relative;
+}
+
+.iframe {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-xl);
+}
