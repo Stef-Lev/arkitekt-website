@@ -17,7 +17,7 @@
   position: absolute;
   inset: 0;
   z-index: 10;
-  background-color: #2f60f7;
+  background-color: var(--main-blue);
   mix-blend-mode: multiply;
 }
 

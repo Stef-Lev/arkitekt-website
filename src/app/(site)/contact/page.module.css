@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  inline-size: 100%;
+  padding-block: var(--space-2xl);
+}
+
+.form {
+  inline-size: 90%;
+
+  @media (--md) {
+    inline-size: 678px;
+  }
+}
