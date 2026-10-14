@@ -1,4 +1,4 @@
-import { Platform } from '../music-covers/music-covers.types';
+import { Platform } from '../music-page-covers/music-covers/music-covers.types';
 
 export type Props = {
   platforms: Platform[];

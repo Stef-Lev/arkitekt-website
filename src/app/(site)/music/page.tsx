@@ -1,6 +1,6 @@
 import TitleHeader from '@/components/title-header/title-header';
 import content from '@/content/content';
-import MusicCovers from '@/components/music-covers/music-covers';
+import MusicCovers from '@/components/music-page-covers/music-covers/music-covers';
 import { getImages } from '@/helpers/get-images';
 import Container from '@/components/container/container';
 import PageWrapper from '@/components/page-wrapper/page-wrapper';

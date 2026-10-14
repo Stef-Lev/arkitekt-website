@@ -1,0 +1,7 @@
+.wrapper {
+  inline-size: 120px;
+  block-size: 120px;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Props } from './link-profile-image.types';
+import styles from './link-profile-image.module.css';
 
 const LinkProfileImage = ({ imageSrc, width = 120, height = 120 }: Props) => {
   if (!imageSrc) {
@@ -7,7 +8,7 @@ const LinkProfileImage = ({ imageSrc, width = 120, height = 120 }: Props) => {
   }
 
   return (
-    <div className="rounded-full overflow-hidden w-[120px] h-[120px] mx-auto">
+    <div className={styles.wrapper}>
       <Image src={imageSrc} alt="" width={width} height={height} />
     </div>
   );

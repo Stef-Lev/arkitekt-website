@@ -2,9 +2,10 @@
 import { useRouter } from 'next/navigation';
 import content from '@/content/content';
 import Image from 'next/image';
-import ImagesContainer from './images-container';
-import Platforms from '../platforms/platforms';
+import ImagesContainer from '../images-container/images-container';
+import Platforms from '../../platforms/platforms';
 import { Props } from './music-covers.types';
+import styles from './music-covers.module.css';
 
 const MusicCovers = ({ images, spotify, platforms }: Props) => {
   const router = useRouter();
@@ -14,11 +15,11 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
   };
 
   return (
-    <div className="text-white text-center">
-      <div className="flex flex-col items-center mb-8">
-        <h3 className="text-[24px] mb-2">{content.musicPage.subtitle}</h3>
+    <div className={styles.wrapper}>
+      <div className={styles.header}>
+        <h3 className={styles.subtitle}>{content.musicPage.subtitle}</h3>
         <Image
-          className="hover:cursor-pointer"
+          className={styles.spotifyLogo}
           src={spotify.image}
           alt="spotify logo"
           width={200}
