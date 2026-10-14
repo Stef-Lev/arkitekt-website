@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import content from '@/content/content';
 import styles from './home-header.module.css';
 
@@ -23,8 +23,10 @@ const HomeHeader = () => {
       <div className={styles.content}>
         <div className={styles.logo}>
           <Image
-            layout="fill"
-            objectFit="contain"
+            fill
+            sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 200px"
+            priority
+            style={{ objectFit: 'contain' }}
             src="/arkitekt-logo.png"
             alt="arkitekt logo"
           />

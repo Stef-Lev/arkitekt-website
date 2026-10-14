@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 * {
@@ -28,8 +30,23 @@ svg {
   max-width: 100%;
 }
 
-ul[role='list'],
-ol[role='list'] {
+img,
+video {
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ol {
   list-style: none;
 }
 
