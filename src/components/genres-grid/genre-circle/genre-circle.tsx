@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Props } from './genre-circle.types';
+import styles from './genre-circle.module.css';
 
 const GenreCircle = ({ genre }: Props) => {
   if (!genre.coverImagePath || !genre.playlistUrl) {
@@ -7,9 +8,9 @@ const GenreCircle = ({ genre }: Props) => {
   }
 
   return (
-    <div className="flex items-center justify-center">
+    <div className={styles.wrapper}>
       <Image
-        className="rounded-full"
+        className={styles.image}
         alt={genre.name}
         src={genre.coverImagePath}
         width={150}

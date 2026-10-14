@@ -1,0 +1,44 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+.dialog {
+  inline-size: 92vw;
+  block-size: 430px;
+  padding: var(--space-sm);
+  border-radius: var(--radius-lg);
+  background-color: #323232;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  @media (--md) {
+    inline-size: 550px;
+    padding: var(--space-lg);
+  }
+
+  @media (--lg) {
+    inline-size: 640px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.content {
+  block-size: 100%;
+}
