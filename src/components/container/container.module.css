@@ -1,3 +1,29 @@
+.container {
+  inline-size: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+
+  @media (--sm) {
+    max-inline-size: 640px;
+  }
+
+  @media (--md) {
+    max-inline-size: 768px;
+  }
+
+  @media (--lg) {
+    max-inline-size: 1024px;
+  }
+
+  @media (--xl) {
+    max-inline-size: 1280px;
+  }
+
+  @media (--2xl) {
+    max-inline-size: 1536px;
+  }
+}
+
 .verticalPadding {
   padding-block: var(--space-md);
 }

@@ -11,10 +11,10 @@ const Drawer = (props: Props) => {
   const router = useRouter();
 
   useEffect(() => {
-    document.body.classList.toggle('overflow-hidden', isDrawerOpen);
+    document.body.style.overflow = isDrawerOpen ? 'hidden' : '';
 
     return () => {
-      document.body.classList.remove('overflow-hidden');
+      document.body.style.overflow = '';
     };
   }, [isDrawerOpen]);
 

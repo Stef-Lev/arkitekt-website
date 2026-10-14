@@ -14,6 +14,7 @@
 }
 
 .inner {
+  composes: container from '../container/container.module.css';
   display: flex;
   align-items: center;
   justify-content: space-between;

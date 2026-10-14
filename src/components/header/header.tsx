@@ -57,7 +57,7 @@ const Header = () => {
   return (
     <>
       <header className={cn(styles.header, [!isVisible, styles.hidden])}>
-        <div className={cn('container', styles.inner)}>
+        <div className={styles.inner}>
           <Image
             src="/website-logo.png"
             alt="arkitekt logo"
