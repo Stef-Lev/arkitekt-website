@@ -1,11 +1,12 @@
 import Contact from '@/components/contact-form/contact/contact';
 import TitleHeader from '@/components/title-header/title-header';
 import PageWrapper from '@/components/page-wrapper/page-wrapper';
+import content from '@/content/content';
 
 const ContactPage = () => {
   return (
     <PageWrapper>
-      <TitleHeader title="Contact" />
+      <TitleHeader title={content.contactPage.title} />
       <div className="flex justify-center w-full py-8">
         <div className="w-[90%] md:w-[678px]">
           <Contact />

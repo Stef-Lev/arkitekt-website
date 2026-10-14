@@ -1,3 +1,4 @@
+import content from '@/content/content';
 import { Props } from './playlist-iframe.types';
 import styles from './playlist-iframe.module.css';
 
@@ -5,10 +6,7 @@ const PlaylistIframe = ({ url }: Props) => {
   if (!url) {
     return (
       <div className={styles.empty}>
-        <p>
-          No beats available for this genre at the moment, but there will be in
-          the future. Stay tuned!
-        </p>
+        <p>{content.aboutPage.noPlaylistMessage}</p>
       </div>
     );
   }

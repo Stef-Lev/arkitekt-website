@@ -26,6 +26,11 @@ const content: Content = {
       { value: 'Contact', href: '/contact' },
     ],
   },
+  footer: {
+    madeWith: 'Made with',
+    madeBy: 'by Arkitekt',
+    copyright: '© 2026 Arkitekt. All rights reserved.',
+  },
   homePage: {
     subtitle: 'Building beats for the underground.',
     featuredVideos: {
@@ -52,6 +57,10 @@ const content: Content = {
   musicPage: {
     title: 'Music',
     subtitle: 'Stream my full collection on',
+    albumsTitle: 'Albums and EPs',
+    singlesTitle: 'Singles',
+    platformsTitle: 'Also available on',
+    spotifyBadgeText: 'Listen on Spotify',
     spotify: {
       image: '/Spotify_logo_with_text.svg.png',
       url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=C0o3rTbITEqNGAjHAbxqXQ&nd=1&dlsi=3c61c56a858347f5',
@@ -197,6 +206,10 @@ const content: Content = {
     ],
   },
   contactPage: {
+    title: 'Contact',
+    submitLabel: 'Submit',
+    successMessage: 'Message was sent to Arkitekt',
+    errorMessage: 'Something went wrong. Message was not sent',
     formFields: [
       { label: 'Name', field: 'name', placeholder: 'Full Name', type: 'text' },
       {
@@ -220,6 +233,10 @@ const content: Content = {
     ],
   },
   aboutPage: {
+    genresTitle: 'GENRES',
+    genresSubtitle: 'Select a genre and listen to the beats playlist',
+    noPlaylistMessage:
+      'No beats available for this genre at the moment, but there will be in the future. Stay tuned!',
     introText:
       'Straight out of Athens, Arkitekt produces heavy, dark beats rooted in Drill, Trap, and Boom Bap. His sound is driven by pounding drums, 808s, haunting choirs, and orchestral elements, paired with his own live guitar playing. While underground street rap is his main lane, he also loves experimenting—whether that means mixing genres, flipping traditional Greek melodies into modern beats, or dipping into Lo-Fi, Baile Funk, and Afrobeats. From the streets to your speakers, Arkitekt keeps building beats for the underground.',
     genres: [

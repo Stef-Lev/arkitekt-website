@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import content from '@/content/content';
 import { Props } from './platforms.types';
 import styles from './platforms.module.css';
 
 const Platforms = ({ platforms, onClick }: Props) => {
   return (
     <div className={styles.wrapper}>
-      <h5 className={styles.title}>Also available on</h5>
+      <h5 className={styles.title}>{content.musicPage.platformsTitle}</h5>
       <div className={styles.list}>
         {platforms.length > 0 &&
           platforms.map((item) => (

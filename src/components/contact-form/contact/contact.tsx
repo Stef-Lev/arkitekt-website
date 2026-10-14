@@ -14,11 +14,11 @@ const Contact = () => {
   function onSubmit(data: FormData) {
     sendEmail(data)
       .then(() => {
-        showMessage('Message was sent to Arkitekt', { type: 'info' });
+        showMessage(content.contactPage.successMessage, { type: 'info' });
         reset();
       })
       .catch(() =>
-        showMessage('Something went wrong. Message was not sent', {
+        showMessage(content.contactPage.errorMessage, {
           type: 'error',
         }),
       );
@@ -37,7 +37,9 @@ const Contact = () => {
         />
       ))}
       <div className={styles.submitContainer}>
-        <button className={styles.submitButton}>Submit</button>
+        <button className={styles.submitButton}>
+          {content.contactPage.submitLabel}
+        </button>
       </div>
     </form>
   );

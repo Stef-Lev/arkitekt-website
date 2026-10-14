@@ -28,10 +28,13 @@ const MusicCovers = ({ images, spotify, platforms }: Props) => {
         />
       </div>
       <ImagesContainer
-        title="Albums and EPs"
+        title={content.musicPage.albumsTitle}
         entities={content.musicPage.albums}
       />
-      <ImagesContainer title="Singles" entities={content.musicPage.singles} />
+      <ImagesContainer
+        title={content.musicPage.singlesTitle}
+        entities={content.musicPage.singles}
+      />
       <Platforms platforms={platforms} onClick={handleClick} />
     </div>
   );

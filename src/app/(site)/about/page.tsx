@@ -11,8 +11,8 @@ const AboutPage = () => {
       <Container>
         <AboutSection aboutText={aboutText} />
         <Genres
-          title="GENRES"
-          subtitle="Select a genre and listen to the beats playlist"
+          title={content.aboutPage.genresTitle}
+          subtitle={content.aboutPage.genresSubtitle}
           type="images"
           isInteractive
         />

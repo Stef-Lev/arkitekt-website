@@ -40,6 +40,11 @@ export type Content = {
       href: string;
     }[];
   };
+  footer: {
+    madeWith: string;
+    madeBy: string;
+    copyright: string;
+  };
   homePage: {
     subtitle: string;
     featuredVideos: {
@@ -56,6 +61,10 @@ export type Content = {
   musicPage: {
     title: string;
     subtitle: string;
+    albumsTitle: string;
+    singlesTitle: string;
+    platformsTitle: string;
+    spotifyBadgeText: string;
     spotify: {
       image: string;
       url: string;
@@ -71,6 +80,10 @@ export type Content = {
     albums: Entity[];
   };
   contactPage: {
+    title: string;
+    submitLabel: string;
+    successMessage: string;
+    errorMessage: string;
     formFields: {
       label: string;
       field: 'name' | 'email' | 'subject' | 'message';
@@ -79,6 +92,9 @@ export type Content = {
     }[];
   };
   aboutPage: {
+    genresTitle: string;
+    genresSubtitle: string;
+    noPlaylistMessage: string;
     introText: string;
     genres: Genre[];
   };
