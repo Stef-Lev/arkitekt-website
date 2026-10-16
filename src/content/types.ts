@@ -49,6 +49,14 @@ export type Content = {
   };
   homePage: {
     subtitle: string;
+    releaseAnnouncement: {
+      enabled: boolean;
+      label: string;
+      title: string;
+      description: string;
+      image: string;
+      href: string;
+    };
     featuredVideos: {
       title: string;
       linkText: string;
