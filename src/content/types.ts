@@ -1,9 +1,11 @@
+import type React from 'react';
+
 export type Genre = {
   name: string;
   id: string;
   coverImagePath: string;
   playlistUrl: string;
-  icon: JSX.Element;
+  icon: React.JSX.Element;
 };
 
 export type Entity = {
