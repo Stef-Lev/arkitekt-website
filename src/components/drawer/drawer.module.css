@@ -46,5 +46,5 @@
 }
 
 .navigationLink:hover {
-  color: var(--main-blue);
+  color: var(--brand-primary);
 }

@@ -38,10 +38,11 @@
     }
 
     &:hover {
-      border-color: var(--main-blue);
+      border-color: var(--brand-primary);
       box-shadow:
-        0 0 0 1px var(--main-blue),
-        0 12px 32px -8px color-mix(in srgb, var(--main-blue) 60%, transparent);
+        0 0 0 1px var(--brand-primary),
+        0 12px 32px -8px
+          color-mix(in srgb, var(--brand-primary) 60%, transparent);
       transform: translateY(-6px);
 
       &::before {
@@ -50,7 +51,7 @@
       }
 
       .icon {
-        color: var(--main-blue);
+        color: var(--brand-primary);
         transform: scale(1.15) rotate(-6deg);
       }
     }

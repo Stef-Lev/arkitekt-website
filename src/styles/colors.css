@@ -1,7 +1,8 @@
 html {
   --text-primary: #dbe6ec;
   --text-secondary: #94a3b8;
-  --main-blue: #9f4daa;
+  --brand-primary: #9f4daa;
+  --brand-secondary: rgb(27, 13, 29);
   --red: #ef4444;
   --input-bg: #1f2128;
   --input-placeholder: #4f5361;
