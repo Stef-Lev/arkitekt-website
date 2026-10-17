@@ -1,12 +1,13 @@
 'use client';
 import Image from 'next/image';
+import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
 import { Props } from './about-section.types';
 import styles from './about-section.module.css';
 
 const AboutSection = ({ aboutText }: Props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.imageFrame}>
+      <FadeInEffect variant="image" className={styles.imageFrame}>
         <Image
           className={styles.image}
           width={3000}
@@ -15,10 +16,10 @@ const AboutSection = ({ aboutText }: Props) => {
           alt="arkitekt photo"
           quality={100}
         />
-      </div>
-      <div className={styles.copy}>
+      </FadeInEffect>
+      <FadeInEffect variant="text" className={styles.copy}>
         <p>{aboutText}</p>
-      </div>
+      </FadeInEffect>
     </div>
   );
 };

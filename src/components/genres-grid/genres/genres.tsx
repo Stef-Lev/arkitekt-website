@@ -5,6 +5,7 @@ import Modal from '../modal/modal';
 import PlaylistIframe from '../../playlist-iframe/playlist-iframe';
 import GenreCover from '../genre-cover/genre-cover';
 import RevealEffect from '@/components/reveal-effect/reveal-effect';
+import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
 import { Props } from './genres.types';
 import styles from './genres.module.css';
 
@@ -22,8 +23,10 @@ const Genres = ({ title, subtitle }: Props) => {
 
   return (
     <section id="genres" className={styles.section}>
-      <h5 className={styles.title}>{title}</h5>
-      {subtitle && <h6 className={styles.subtitle}>{subtitle}</h6>}
+      <FadeInEffect variant="text">
+        <h5 className={styles.title}>{title}</h5>
+        {subtitle && <h6 className={styles.subtitle}>{subtitle}</h6>}
+      </FadeInEffect>
       <div className={styles.grid}>
         {genres.map((genre) => (
           <RevealEffect

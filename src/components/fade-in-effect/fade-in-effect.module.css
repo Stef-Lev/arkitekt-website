@@ -1,0 +1,56 @@
+.image {
+  animation: image-enter 1000ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.text {
+  animation: text-enter 1000ms cubic-bezier(0.2, 0.7, 0.2, 1) 150ms both;
+}
+
+.fade {
+  animation: fade-in 700ms ease-out both;
+}
+
+@keyframes image-enter {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes text-enter {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image,
+  .text {
+    animation: fade-in 700ms ease-out both;
+  }
+
+  .text {
+    animation-delay: 100ms;
+  }
+}

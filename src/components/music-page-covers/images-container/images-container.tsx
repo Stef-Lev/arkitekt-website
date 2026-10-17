@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import MusicTile from '../music-tile/music-tile';
+import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
 import { Props } from './images-container.types';
 import styles from './images-container.module.css';
 
@@ -11,7 +12,9 @@ const ImagesContainer = ({ title, entities }: Props) => {
 
   return (
     <div className={styles.wrapper}>
-      <h4 className={styles.title}>{title}</h4>
+      <FadeInEffect variant="text">
+        <h4 className={styles.title}>{title}</h4>
+      </FadeInEffect>
       <div className={styles.list}>
         {sortedEntities.map((entity) => (
           <MusicTile key={entity.id} entity={entity} />

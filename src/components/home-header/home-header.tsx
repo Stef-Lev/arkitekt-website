@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
 import content from '@/content/content';
 import styles from './home-header.module.css';
 
@@ -22,16 +23,20 @@ const HomeHeader = () => {
 
       <div className={styles.content}>
         <div className={styles.logo}>
-          <Image
-            fill
-            sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 200px"
-            priority
-            style={{ objectFit: 'contain' }}
-            src="/arkitekt-logo.png"
-            alt="arkitekt logo"
-          />
+          <FadeInEffect variant="image">
+            <Image
+              fill
+              sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 200px"
+              priority
+              style={{ objectFit: 'contain' }}
+              src="/arkitekt-logo.png"
+              alt="arkitekt logo"
+            />
+          </FadeInEffect>
         </div>
-        <p className={styles.subtitle}>{subtitle}</p>
+        <FadeInEffect variant="text">
+          <p className={styles.subtitle}>{subtitle}</p>
+        </FadeInEffect>
       </div>
     </div>
   );
