@@ -56,15 +56,19 @@ const Drawer = (props: Props) => {
     };
   }, [isDrawerOpen]);
 
-  if (!isDrawerOpen) return null;
-
   return (
     <div
       id="mobile-navigation"
       role="dialog"
       aria-modal="true"
       aria-label="Site navigation"
-      className={cn(styles.drawer, styles.open, className)}
+      aria-hidden={!isDrawerOpen}
+      inert={!isDrawerOpen}
+      className={cn(
+        styles.drawer,
+        [isDrawerOpen, styles.open, styles.closed],
+        className,
+      )}
     >
       <div className={styles.panel} ref={panelRef}>
         <div className={styles.header}>
