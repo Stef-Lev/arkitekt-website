@@ -6,7 +6,7 @@ export type Platform = {
   url: string;
 };
 
-export type Images = {
+type Images = {
   singles: string[];
   albums: string[];
 };

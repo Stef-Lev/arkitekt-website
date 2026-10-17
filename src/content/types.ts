@@ -8,7 +8,7 @@ export type Genre = {
   icon: React.JSX.Element;
 };
 
-export type Entity = {
+type Entity = {
   id: string;
   position: number;
   image: string;
@@ -23,7 +23,7 @@ export type LinkType = {
   url: string;
 };
 
-export type SectionType = {
+type SectionType = {
   title?: string;
   items: LinkType[];
 };
