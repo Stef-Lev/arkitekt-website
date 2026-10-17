@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import LinkProfileImage from '@/components/links-page/link-profile-image/link-profile-image';
 import LinkItem from '@/components/links-page/link-item/link-item';
-import Image from 'next/image';
 import { Props } from './links-page-content.types';
 import styles from './links-page-content.module.css';
 

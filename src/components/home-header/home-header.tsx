@@ -7,6 +7,7 @@ import styles from './home-header.module.css';
 const HomeHeader = () => {
   const { subtitle } = content.homePage;
 
+  // TODO: add new header images (redesign)
   return (
     <div className={styles.homeHeader}>
       <video

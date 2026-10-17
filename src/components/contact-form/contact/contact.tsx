@@ -3,9 +3,9 @@
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import { sendEmail } from '@/helpers/send-email';
+import showMessage from '@/helpers/showMessage';
 import FormItem from '../form-item/form-item';
 import content from '@/content/content';
-import showMessage from '@/helpers/showMessage';
 import { FormData } from './contact.types';
 import styles from './contact.module.css';
 

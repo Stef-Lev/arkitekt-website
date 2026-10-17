@@ -1,11 +1,11 @@
 'use client';
-import content from '@/content/content';
 import { useState } from 'react';
+import RevealEffect from '@/components/reveal-effect/reveal-effect';
+import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
 import Modal from '../modal/modal';
 import PlaylistIframe from '../../playlist-iframe/playlist-iframe';
 import GenreCover from '../genre-cover/genre-cover';
-import RevealEffect from '@/components/reveal-effect/reveal-effect';
-import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
+import content from '@/content/content';
 import { Props } from './genres.types';
 import styles from './genres.module.css';
 

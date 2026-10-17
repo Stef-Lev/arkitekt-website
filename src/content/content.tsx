@@ -1,4 +1,3 @@
-import { Content } from './types';
 import { GiBalaclava } from 'react-icons/gi';
 import { GiCoffeeCup } from 'react-icons/gi';
 import { PiBeanie } from 'react-icons/pi';
@@ -6,6 +5,7 @@ import { GiTrapMask } from 'react-icons/gi';
 import { GiPalmTree } from 'react-icons/gi';
 import { FaHeadphones } from 'react-icons/fa';
 import { GiBrazilFlag } from 'react-icons/gi';
+import { Content } from './types';
 
 const content: Content = {
   drawer: {

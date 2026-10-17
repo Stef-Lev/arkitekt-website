@@ -1,8 +1,8 @@
 import PageWrapper from '@/components/page-wrapper/page-wrapper';
 import Container from '@/components/container/container';
 import Genres from '@/components/genres-grid/genres/genres';
-import content from '@/content/content';
 import AboutSection from '@/components/about-section/about-section';
+import content from '@/content/content';
 
 const AboutPage = () => {
   const aboutText = content.aboutPage.introText;

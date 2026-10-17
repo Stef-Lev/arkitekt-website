@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import Header from '@/components/header/header';
 import Script from 'next/script';
-import Footer from '@/components/footer/footer';
 import { Roboto_Condensed } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import Header from '@/components/header/header';
 // @ts-ignore
 import '../../styles/globals.css';
+import Footer from '@/components/footer/footer';
 import ScrollTopButton from '@/components/scroll-top-button/scroll-top-button';
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 const robotoCon = Roboto_Condensed({ subsets: ['latin'] });
 

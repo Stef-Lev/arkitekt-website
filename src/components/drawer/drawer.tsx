@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { cn } from '@/helpers/classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { cn } from '@/helpers/classnames';
 import SocialMedia from '@/components/social-media/social-media';
 import { Props } from './drawer.types';
 import styles from './drawer.module.css';

@@ -1,7 +1,7 @@
-import { cn } from '@/helpers/classnames';
-import content from '@/content/content';
-import mediaComponents from '@/helpers/media-components';
 import Link from 'next/link';
+import { cn } from '@/helpers/classnames';
+import mediaComponents from '@/helpers/media-components';
+import content from '@/content/content';
 import { Props } from './social-media.types';
 import styles from './social-media.module.css';
 

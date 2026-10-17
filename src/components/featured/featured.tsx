@@ -1,9 +1,9 @@
 import Image from 'next/image';
+import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
 import YoutubeIframe from '../youtube-iframe/youtube-iframe';
 import RevealEffect from '../reveal-effect/reveal-effect';
-import content from '@/content/content';
 import Container from '../container/container';
-import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
+import content from '@/content/content';
 import styles from './featured.module.css';
 
 const Featured = () => {

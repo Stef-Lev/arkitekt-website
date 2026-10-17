@@ -1,5 +1,5 @@
-import content from '@/content/content';
 import LinksPageContent from '@/components/pages-content/links-page-content/links-page-content';
+import content from '@/content/content';
 
 const pageContent = content.linkPage;
 

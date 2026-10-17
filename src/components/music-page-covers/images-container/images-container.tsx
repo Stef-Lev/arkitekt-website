@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import MusicTile from '../music-tile/music-tile';
 import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
+import MusicTile from '../music-tile/music-tile';
 import { Props } from './images-container.types';
 import styles from './images-container.module.css';
 

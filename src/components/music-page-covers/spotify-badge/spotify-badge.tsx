@@ -1,8 +1,8 @@
 import { FaSpotify } from 'react-icons/fa';
 import { cn } from '@/helpers/classnames';
 import content from '@/content/content';
-import styles from './spotify-badge.module.css';
 import { Props } from './spotify-badge.types';
+import styles from './spotify-badge.module.css';
 
 const SpotifyBadge = ({ className }: Props) => (
   <span className={cn(styles.badge, className)}>

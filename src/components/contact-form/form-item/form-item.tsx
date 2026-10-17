@@ -1,7 +1,6 @@
+import content from '@/content/content';
 import { Props } from './form-item.types';
 import styles from './form-item.module.css';
-
-import content from '@/content/content';
 
 const FormItem = ({
   label,

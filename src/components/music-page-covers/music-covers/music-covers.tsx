@@ -1,10 +1,10 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import content from '@/content/content';
 import Image from 'next/image';
+import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
 import ImagesContainer from '../images-container/images-container';
 import Platforms from '../../platforms/platforms';
-import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
+import content from '@/content/content';
 import { Props } from './music-covers.types';
 import styles from './music-covers.module.css';
 
