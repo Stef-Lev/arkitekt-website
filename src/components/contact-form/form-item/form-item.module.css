@@ -40,6 +40,25 @@
     0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
+.required {
+  color: var(--brand-primary);
+}
+
+.invalid {
+  border-color: #f87171;
+}
+
+.error {
+  margin-block-start: var(--space-xs);
+  color: #f87171;
+  font-size: var(--font-size-base);
+}
+
+.field:disabled,
+.textarea:disabled {
+  opacity: 0.6;
+}
+
 .textarea {
   height: 150px;
   resize: none;

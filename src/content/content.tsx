@@ -216,7 +216,11 @@ const content: Content = {
   contactPage: {
     title: 'Contact',
     submitLabel: 'Submit',
-    successMessage: 'Message was sent to Arkitekt',
+    sendingLabel: 'Sending...',
+    requiredMessage: 'This field is required',
+    invalidEmailMessage: 'Enter a valid email address',
+    messageTooShortMessage: 'Message must be at least 10 characters',
+    successMessage: 'Message was sent to Arkitekt!',
     errorMessage: 'Something went wrong. Message was not sent',
     formFields: [
       { label: 'Name', field: 'name', placeholder: 'Full Name', type: 'text' },

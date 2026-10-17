@@ -92,6 +92,10 @@ export type Content = {
   contactPage: {
     title: string;
     submitLabel: string;
+    sendingLabel: string;
+    requiredMessage: string;
+    invalidEmailMessage: string;
+    messageTooShortMessage: string;
     successMessage: string;
     errorMessage: string;
     formFields: {

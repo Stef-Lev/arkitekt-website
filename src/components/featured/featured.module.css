@@ -21,9 +21,34 @@
   display: flex;
   justify-content: center;
   margin-block-start: 20px;
+}
+
+.channelCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-md);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: var(--radius-xl);
+  background: rgb(255 255 255 / 5%);
   color: #fff;
-  text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.channelCard:hover {
+  background: rgb(255 255 255 / 10%);
+}
+
+.channelImage {
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.channelText {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
 }
 
 @media (--md) {

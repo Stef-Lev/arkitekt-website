@@ -6,7 +6,7 @@ const showMessage = (message: string, options: ToastOptions = {}) => {
     autoClose: 2000,
     hideProgressBar: true,
     closeButton: false,
-    theme: 'light',
+    theme: 'dark',
   };
   toast(message, { ...options, ...toastOptions });
 };

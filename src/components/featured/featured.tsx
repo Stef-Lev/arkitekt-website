@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import YoutubeIframe from '../youtube-iframe/youtube-iframe';
 import content from '@/content/content';
 import Container from '../container/container';
@@ -16,7 +17,21 @@ const Featured = () => {
           ))}
         </div>
         <div className={styles.linkRow}>
-          <a href={linkHref}>{linkText}</a>
+          <a
+            href={linkHref}
+            className={styles.channelCard}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.channelImage}
+              src="/links/arkitekt.jpg"
+              alt=""
+              width={64}
+              height={64}
+            />
+            <span className={styles.channelText}>{linkText}</span>
+          </a>
         </div>
       </Container>
     </div>
