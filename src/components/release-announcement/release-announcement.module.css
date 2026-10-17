@@ -42,7 +42,7 @@
 
 .description {
   margin: 6px 0 0;
-  color: #c8cbd0;
+  color: var(--subtitle);
   font-size: 15px;
 }
 
@@ -76,7 +76,7 @@
   border: 0;
   border-radius: 4px;
   background: transparent;
-  color: #c8cbd0;
+  color: var(--subtitle);
   cursor: pointer;
   transition:
     background-color 180ms ease,

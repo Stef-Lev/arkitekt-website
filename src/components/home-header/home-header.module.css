@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  gap: 3rem;
+  gap: var(--space-xl);
 }
 
 .logo {
@@ -40,7 +40,7 @@
 }
 
 .subtitle {
-  color: white;
+  color: var(--subtitle);
   font-size: 20px;
 }
 
