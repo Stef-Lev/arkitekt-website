@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/helpers/classnames';
 import Drawer from '../drawer/drawer';
 import HamburgerButton from '../hamburger-button/hamburger-button';
@@ -13,7 +13,7 @@ const Header = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,14 +58,15 @@ const Header = () => {
     <>
       <header className={cn(styles.header, [!isVisible, styles.hidden])}>
         <div className={styles.inner}>
-          <Image
-            src="/website-logo.png"
-            alt="arkitekt logo"
-            className={styles.logo}
-            width={120}
-            height={110}
-            onClick={() => router.push('/')}
-          />
+          <Link href="/" aria-label="Home">
+            <Image
+              src="/website-logo.png"
+              alt="arkitekt logo"
+              className={styles.logo}
+              width={120}
+              height={110}
+            />
+          </Link>
 
           <HamburgerButton isDrawerOpen={isDrawerOpen} onClick={toggleDrawer} />
 
@@ -74,7 +75,11 @@ const Header = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className={styles.navigationLink}
+                className={cn(styles.navigationLink, [
+                  pathname === item.href,
+                  styles.active,
+                ])}
+                aria-current={pathname === item.href ? 'page' : undefined}
               >
                 {item.value}
               </Link>

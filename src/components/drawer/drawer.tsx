@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { cn } from '@/helpers/classnames';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import SocialMedia from '@/components/social-media/social-media';
 import { Props } from './drawer.types';
@@ -8,51 +9,92 @@ import styles from './drawer.module.css';
 
 const Drawer = (props: Props) => {
   const { isDrawerOpen, toggleDrawer, items, className } = props;
-  const router = useRouter();
+  const pathname = usePathname();
+  const panelRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef(toggleDrawer);
 
   useEffect(() => {
-    document.body.style.overflow = isDrawerOpen ? 'hidden' : '';
+    toggleRef.current = toggleDrawer;
+  }, [toggleDrawer]);
+
+  useEffect(() => {
+    if (!isDrawerOpen) return;
+
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    document.body.style.overflow = 'hidden';
+    panelRef.current?.querySelector<HTMLElement>('a')?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        toggleRef.current();
+        return;
+      }
+      if (event.key !== 'Tab' || !panelRef.current) return;
+
+      const focusable = panelRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled])',
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
       document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleKeyDown);
+      previouslyFocused?.focus();
     };
   }, [isDrawerOpen]);
 
-  const handleClick = (href: string) => {
-    router.push(href);
-    toggleDrawer();
-  };
+  if (!isDrawerOpen) return null;
+
   return (
     <div
-      className={cn(
-        styles.drawer,
-        [isDrawerOpen, styles.open, styles.closed],
-        className,
-      )}
+      id="mobile-navigation"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Site navigation"
+      className={cn(styles.drawer, styles.open, className)}
     >
-      <div className={styles.panel}>
+      <div className={styles.panel} ref={panelRef}>
         <div className={styles.header}>
-          <Image
-            src="/website-logo.png"
-            alt="arkitekt logo"
-            className={styles.logo}
-            width={120}
-            height={110}
-            onClick={() => handleClick('/')}
-          />
+          <Link href="/" aria-label="Home" onClick={toggleDrawer}>
+            <Image
+              src="/website-logo.png"
+              alt="arkitekt logo"
+              className={styles.logo}
+              width={120}
+              height={110}
+            />
+          </Link>
         </div>
 
         <div className={styles.navigation}>
-          <nav>
+          <nav aria-label="Main">
             <ul>
               {items.map((item) => (
                 <li key={item.href}>
-                  <div
-                    className={styles.navigationLink}
-                    onClick={() => handleClick(item.href)}
+                  <Link
+                    href={item.href}
+                    className={cn(styles.navigationLink, [
+                      pathname === item.href,
+                      styles.active,
+                    ])}
+                    aria-current={pathname === item.href ? 'page' : undefined}
+                    onClick={toggleDrawer}
                   >
                     {item.value}
-                  </div>
+                  </Link>
                 </li>
               ))}
             </ul>

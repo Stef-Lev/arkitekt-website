@@ -36,10 +36,17 @@
   padding-inline: var(--space-lg);
 }
 
-.navigationLink:hover {
+.navigationLink:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.navigationLink.active {
   color: var(--brand-primary);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+}
+
+.navigationLink:hover {
+  color: var(--link-highlight);
 }
 
 @media (--md) {

@@ -4,7 +4,14 @@ import styles from './hamburger-button.module.css';
 
 const HamburgerButton = ({ isDrawerOpen, onClick, className }: Props) => {
   return (
-    <div onClick={onClick} className={cn(styles.container, className)}>
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(styles.container, className)}
+      aria-label={isDrawerOpen ? 'Close menu' : 'Open menu'}
+      aria-expanded={isDrawerOpen}
+      aria-controls="mobile-navigation"
+    >
       <span
         className={cn(styles.line, styles.topLine, [
           isDrawerOpen,
@@ -26,7 +33,7 @@ const HamburgerButton = ({ isDrawerOpen, onClick, className }: Props) => {
           styles.closed,
         ])}
       ></span>
-    </div>
+    </button>
   );
 };
 

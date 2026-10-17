@@ -45,6 +45,15 @@
   cursor: pointer;
 }
 
-.navigationLink:hover {
+.navigationLink.active {
   color: var(--brand-primary);
+}
+
+.navigationLink:hover {
+  color: var(--link-highlight);
+}
+
+.navigationLink:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 4px;
 }
