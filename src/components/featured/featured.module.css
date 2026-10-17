@@ -25,16 +25,16 @@
 .linkRow {
   display: flex;
   justify-content: center;
-  margin-block-start: 20px;
+  margin-block-start: var(--space-3xl);
 }
 
 .channelCard {
   display: flex;
   align-items: center;
   gap: var(--space-lg);
-  padding: var(--space-md);
+  padding: var(--space-sm);
   border: 1px solid rgb(255 255 255 / 12%);
-  border-radius: var(--radius-xl);
+  border-radius: 50px;
   background: rgb(255 255 255 / 5%);
   color: #fff;
   text-decoration: none;
@@ -46,6 +46,8 @@
 }
 
 .channelImage {
+  inline-size: 50px;
+  block-size: 50px;
   border-radius: var(--radius-full);
   object-fit: cover;
 }
@@ -54,6 +56,7 @@
   display: flex;
   flex-direction: column;
   text-align: start;
+  padding-inline-end: var(--space-md);
 }
 
 @media (--md) {
