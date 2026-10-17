@@ -44,8 +44,8 @@
   transform: translateX(-125%) skewX(-18deg);
 }
 
-.root:hover .content,
-.root:focus-within .content {
+.interactive:hover .content,
+.interactive:focus-within .content {
   transform: perspective(900px) rotateX(7deg) scale(1.025);
   box-shadow:
     0 20px 22px -10px rgb(0 0 0 / 95%),
@@ -53,8 +53,8 @@
     0 18px 30px -12px color-mix(in srgb, #000000 50%, transparent);
 }
 
-.root:hover .content::after,
-.root:focus-within .content::after {
+.interactive:hover .content::after,
+.interactive:focus-within .content::after {
   animation: sheen 650ms ease-out;
 }
 

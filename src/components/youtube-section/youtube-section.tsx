@@ -9,7 +9,7 @@ const YoutubeSection = ({ title, videoIds }: Props) => {
       <div className={styles.title}>{title && <h4>{title}</h4>}</div>
       <div className={styles.grid}>
         {videoIds.map((id) => (
-          <RevealEffect key={id}>
+          <RevealEffect key={id} hoverEffect={false}>
             <YoutubeIframe videoId={id} />
           </RevealEffect>
         ))}

@@ -4,7 +4,7 @@ import { cn } from '@/helpers/classnames';
 import { Props } from './reveal-effect.types';
 import styles from './reveal-effect.module.css';
 
-const RevealEffect = ({ children, className }: Props) => {
+const RevealEffect = ({ children, className, hoverEffect = true }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -26,7 +26,10 @@ const RevealEffect = ({ children, className }: Props) => {
   }, []);
 
   return (
-    <div ref={ref} className={cn(styles.root, className)}>
+    <div
+      ref={ref}
+      className={cn(styles.root, [hoverEffect, styles.interactive], className)}
+    >
       <div className={styles.content}>{children}</div>
     </div>
   );
