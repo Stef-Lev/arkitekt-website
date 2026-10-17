@@ -16,7 +16,7 @@
 
 .content {
   position: relative;
-  overflow: hidden;
+  overflow: var(--reveal-content-overflow, hidden);
   border-radius: var(--reveal-radius, var(--radius-xl));
   transform: perspective(900px) rotateX(0) scale(1);
   transform-origin: center 45%;

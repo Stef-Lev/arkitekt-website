@@ -13,8 +13,6 @@ const AboutPage = () => {
         <Genres
           title={content.aboutPage.genresTitle}
           subtitle={content.aboutPage.genresSubtitle}
-          type="images"
-          isInteractive
         />
       </Container>
     </PageWrapper>
