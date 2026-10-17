@@ -25,9 +25,9 @@
   height: var(--space-3xl);
   border-radius: var(--radius-lg);
   color: var(--main-text);
-  background-color: #4b5563;
+  background-color: var(--neutral-600);
 }
 
 .button:hover {
-  background-color: #9ca3af;
+  background-color: var(--neutral-400);
 }

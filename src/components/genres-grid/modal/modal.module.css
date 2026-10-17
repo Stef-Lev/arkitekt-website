@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(0 0 0 / 0.5);
+  background-color: var(--black-overlay-50);
 }
 
 .dialog {
@@ -13,7 +13,7 @@
   block-size: 430px;
   padding: var(--space-sm);
   border-radius: var(--radius-lg);
-  background-color: #323232;
+  background-color: var(--surface-modal);
   box-shadow:
     0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);

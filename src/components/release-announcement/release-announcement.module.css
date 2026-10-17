@@ -1,7 +1,11 @@
 .announcement {
   color: var(--main-text);
-  background: linear-gradient(105deg, #171719 0%, #111820 100%);
-  border-block: 1px solid rgb(255 255 255 / 12%);
+  background: linear-gradient(
+    105deg,
+    var(--release-gradient-start) 0%,
+    var(--release-gradient-end) 100%
+  );
+  border-block: 1px solid var(--white-border-12);
 }
 
 .inner {
@@ -11,14 +15,15 @@
   gap: 20px;
   width: min(100%, 1200px);
   margin-inline: auto;
-  padding: 22px 24px;
+  padding: calc(var(--space-lg) + var(--space-xs) + var(--space-2xs))
+    var(--space-xl);
 }
 
 .cover {
   display: block;
   width: 96px;
   height: 96px;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   object-fit: cover;
 }
 
@@ -28,22 +33,22 @@
 
 .label {
   margin: 0 0 5px;
-  color: #f18c72;
-  font-size: 12px;
-  font-weight: 700;
+  color: var(--release-accent);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
 }
 
 .title {
   margin: 0;
-  font-size: 24px;
+  font-size: var(--font-size-2xl);
   line-height: 1.15;
 }
 
 .description {
   margin: 6px 0 0;
   color: var(--subtitle);
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .listenLink {
@@ -53,10 +58,10 @@
   gap: 9px;
   min-height: 44px;
   padding-inline: 16px;
-  border-radius: 4px;
-  background: #1ed760;
-  color: #08110b;
-  font-weight: 700;
+  border-radius: var(--radius-default);
+  background: var(--spotify-green);
+  color: var(--spotify-text-contrast);
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
   white-space: nowrap;
   transition: background-color 180ms ease;
@@ -64,7 +69,7 @@
 
 .listenLink:hover,
 .listenLink:focus-visible {
-  background: #32e574;
+  background: var(--spotify-green-hover);
 }
 
 .dismissButton {
@@ -74,7 +79,7 @@
   height: 36px;
   padding: 0;
   border: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-default);
   background: transparent;
   color: var(--subtitle);
   cursor: pointer;
@@ -85,7 +90,7 @@
 
 .dismissButton:hover,
 .dismissButton:focus-visible {
-  background: rgb(255 255 255 / 10%);
+  background: var(--white-overlay-10);
   color: var(--main-text);
 }
 
@@ -93,8 +98,8 @@
   .inner {
     grid-template-rows: auto auto;
     grid-template-columns: 64px minmax(0, 1fr) 36px;
-    gap: 12px 14px;
-    padding: 18px 16px;
+    gap: var(--space-md) 14px;
+    padding: calc(var(--space-lg) + var(--space-2xs)) var(--space-lg);
   }
 
   .cover {
@@ -111,11 +116,11 @@
   }
 
   .title {
-    font-size: 20px;
+    font-size: var(--font-size-xl);
   }
 
   .description {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
   }
 
   .listenLink {
@@ -125,8 +130,8 @@
     min-height: 44px;
     justify-self: stretch;
     margin-block-start: 0;
-    padding-inline: 16px;
-    font-size: 14px;
+    padding-inline: var(--space-lg);
+    font-size: var(--font-size-sm);
   }
 
   .dismissButton {

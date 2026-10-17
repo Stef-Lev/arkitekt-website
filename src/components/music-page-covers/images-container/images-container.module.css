@@ -6,7 +6,7 @@
 
 .title {
   padding-block-end: var(--space-lg);
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .list {

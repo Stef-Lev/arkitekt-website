@@ -5,7 +5,7 @@
   inset-inline-start: 0;
   width: 100%;
   color: var(--main-text);
-  background-color: #0a0a0a;
+  background-color: var(--surface-header);
   transition: transform 300ms;
 }
 

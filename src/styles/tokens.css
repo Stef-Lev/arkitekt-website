@@ -8,29 +8,33 @@
   --space-2xl: 32px;
   --space-3xl: 40px;
   --space-4xl: 56px;
-  --font-size-xs: 0.75rem;
-  --line-height-xs: 1rem;
-  --font-size-sm: 0.875rem;
-  --line-height-sm: 1.25rem;
-  --font-size-base: 1rem;
-  --line-height-base: 1.5rem;
-  --font-size-lg: 1.125rem;
-  --line-height-lg: 1.75rem;
-  --font-size-xl: 1.25rem;
-  --line-height-xl: 1.75rem;
-  --font-size-2xl: 1.5rem;
-  --line-height-2xl: 2rem;
-  --font-size-3xl: 1.875rem;
-  --line-height-3xl: 2.25rem;
-  --font-size-4xl: 2.25rem;
-  --line-height-4xl: 2.5rem;
-  --font-size-5xl: 3rem;
-  --line-height-5xl: 1;
+  --space-5xl: 80px;
 
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+
+  --line-height-xs: 1rem;
+  --line-height-sm: 1.25rem;
+  --line-height-base: 1.5rem;
+  --line-height-lg: 1.75rem;
+  --line-height-xl: 1.75rem;
+  --line-height-2xl: 2rem;
+  --line-height-3xl: 2.25rem;
+  --line-height-4xl: 2.5rem;
+  --line-height-5xl: 1;
 
   --radius-none: 0;
   --radius-sm: 0.125rem;

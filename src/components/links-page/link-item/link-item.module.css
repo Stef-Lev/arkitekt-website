@@ -1,20 +1,20 @@
 .link {
   display: flex;
-  background: rgba(190, 197, 255, 0.19);
-  border-radius: 9999px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: var(--glass-tint);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 30px var(--glass-shadow);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(190, 197, 255, 0.19);
-  gap: 8px;
-  padding: 6px;
+  border: 1px solid var(--glass-tint);
+  gap: var(--space-sm);
+  padding: calc(var(--space-xs) + var(--space-2xs));
 }
 
 .linkImage {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background-color: rgb(5, 5, 5);
+  border-radius: var(--radius-rounded);
+  background-color: var(--surface-link-image);
 }
 
 .info {
@@ -22,20 +22,20 @@
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  line-height: 1;
-  gap: 4px;
+  line-height: var(--line-height-5xl);
+  gap: var(--space-xs);
 }
 
 .title {
   text-align: center;
   color: var(--main-text);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }
 
 .subtitle {
   text-align: center;
   color: var(--main-text);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 }
 
 .ghostBox {

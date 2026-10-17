@@ -1,12 +1,12 @@
 .section {
   width: 100%;
-  padding-block-end: 5rem;
+  padding-block-end: var(--space-5xl);
 }
 
 .heading {
   margin-block-end: var(--space-2xl);
   color: var(--main-text);
-  font-size: 44px;
+  font-size: 2.75rem;
   text-align: center;
 }
 
@@ -33,16 +33,16 @@
   align-items: center;
   gap: var(--space-lg);
   padding: var(--space-sm);
-  border: 1px solid rgb(255 255 255 / 12%);
-  border-radius: 50px;
-  background: rgb(255 255 255 / 5%);
+  border: 1px solid var(--white-border-12);
+  border-radius: var(--radius-full);
+  background: var(--white-overlay-05);
   color: var(--main-text);
   text-decoration: none;
   transition: background 0.2s;
 }
 
 .channelCard:hover {
-  background: rgb(255 255 255 / 10%);
+  background: var(--white-overlay-10);
 }
 
 .channelImage {

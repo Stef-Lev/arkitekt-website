@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-block-start: 2rem;
+  padding-block-start: var(--space-2xl);
   padding-block-end: 6rem;
   color: var(--main-text);
 }
@@ -23,8 +23,8 @@
   justify-content: center;
   align-items: center;
   color: var(--main-text);
-  font-size: 18px;
-  margin-block-end: 24px;
+  font-size: var(--font-size-lg);
+  margin-block-end: var(--space-xl);
 }
 
 .logoImage {
@@ -33,19 +33,19 @@
 }
 
 .section {
-  margin-block-end: 12px;
+  margin-block-end: var(--space-md);
 }
 
 .sectionTitle {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-block-end: 10px;
-  font-size: 16px;
+  margin-block-end: calc(var(--space-sm) + var(--space-2xs));
+  font-size: var(--font-size-base);
 }
 
 .sectionList {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-md);
 }

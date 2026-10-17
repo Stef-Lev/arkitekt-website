@@ -10,4 +10,37 @@ html {
   --link-highlight: #d67afd;
   --input-bg: #1f2128;
   --input-placeholder: #4f5361;
+
+  --text-input: #d1d5db;
+  --text-muted: #6b7280;
+  --form-error: #f87171;
+  --surface-drawer: #0f0f0f;
+  --surface-header: #0a0a0a;
+  --surface-modal: #323232;
+  --surface-link-image: rgb(5 5 5);
+  --surface-autofill: #1f2937;
+  --surface-gradient-mid: #141414;
+  --surface-gradient-end: #2c142f;
+  --release-gradient-start: #171719;
+  --release-gradient-end: #111820;
+  --release-accent: #f18c72;
+  --youtube-red: #f00;
+  --spotify-green: #1ed760;
+  --spotify-green-hover: #32e574;
+  --spotify-text: #101010;
+  --spotify-text-contrast: #08110b;
+  --neutral-600: #4b5563;
+  --neutral-400: #9ca3af;
+  --black: #000;
+  --white: #fff;
+  --home-overlay: rgb(18 9 19 / 70%);
+  --black-overlay-50: rgb(0 0 0 / 50%);
+  --black-overlay-70: rgb(0 0 0 / 70%);
+  --black-shadow-10: rgb(0 0 0 / 10%);
+  --black-shadow-32: rgb(0 0 0 / 32%);
+  --glass-tint: rgb(190 197 255 / 19%);
+  --glass-shadow: rgb(0 0 0 / 10%);
+  --white-overlay-05: rgb(255 255 255 / 5%);
+  --white-overlay-10: rgb(255 255 255 / 10%);
+  --white-border-12: rgb(255 255 255 / 12%);
 }

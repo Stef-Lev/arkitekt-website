@@ -9,9 +9,9 @@
   padding-block: var(--space-xs);
   padding-inline: var(--space-md);
   border-radius: var(--radius-full);
-  background-color: #1ed760;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 32%);
-  color: #101010;
+  background-color: var(--spotify-green);
+  box-shadow: 0 4px 12px var(--black-shadow-32);
+  color: var(--spotify-text);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
   font-weight: var(--font-weight-semibold);

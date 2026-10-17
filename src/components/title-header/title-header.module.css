@@ -2,7 +2,7 @@
   position: relative;
   inline-size: 100%;
   block-size: 200px;
-  background-color: #000;
+  background-color: var(--black);
 }
 
 .image {
@@ -29,5 +29,5 @@
   justify-content: center;
   block-size: 100%;
   color: var(--main-text);
-  font-size: 50px;
+  font-size: 3.125rem;
 }

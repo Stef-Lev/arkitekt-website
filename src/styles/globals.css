@@ -9,21 +9,31 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px #1f2937 inset !important;
-  box-shadow: 0 0 0 1000px #1f2937 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--surface-autofill) inset !important;
+  box-shadow: 0 0 0 1000px var(--surface-autofill) inset !important;
   -webkit-text-fill-color: var(--main-text) !important;
   text-fill-color: var(--main-text) !important;
-  border-radius: 6px !important;
+  border-radius: var(--radius-md) !important;
 }
 
 html.siteLayout,
 html.siteLayout body {
-  background: linear-gradient(160deg, #000000 0%, #141414 52%, #2c142f 100%);
+  background: linear-gradient(
+    160deg,
+    var(--black) 0%,
+    var(--surface-gradient-mid) 52%,
+    var(--surface-gradient-end) 100%
+  );
 }
 
 html.linksLayout,
 html.linksLayout body {
-  background: linear-gradient(160deg, #000000 0%, #141414 52%, #2c142f 100%);
+  background: linear-gradient(
+    160deg,
+    var(--black) 0%,
+    var(--surface-gradient-mid) 52%,
+    var(--surface-gradient-end) 100%
+  );
 }
 
 @keyframes fade-scale {
@@ -62,8 +72,8 @@ html.linksLayout body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
   @media (--sm) {
     max-width: 640px;
   }

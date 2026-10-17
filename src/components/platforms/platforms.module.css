@@ -7,7 +7,7 @@
 
 .title {
   margin-block-end: var(--space-2xl);
-  font-size: 18px;
+  font-size: var(--font-size-lg);
 
   @media (--md) {
     margin-block-end: var(--space-sm);

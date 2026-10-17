@@ -19,7 +19,7 @@
   position: absolute;
   z-index: 1;
   inset: 0;
-  background-color: rgba(18, 9, 19, 0.7);
+  background-color: var(--home-overlay);
 }
 
 .content {
@@ -41,7 +41,7 @@
 
 .subtitle {
   color: var(--subtitle);
-  font-size: 20px;
+  font-size: var(--font-size-xl);
 }
 
 @media (--sm) {
@@ -60,7 +60,7 @@
   }
 
   .subtitle {
-    font-size: 26px;
+    font-size: 1.625rem;
   }
 }
 

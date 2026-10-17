@@ -17,7 +17,7 @@
   padding-inline: var(--space-xl);
   border: 1px solid var(--input-bg);
   border-radius: var(--radius-md);
-  color: #d1d5db;
+  color: var(--text-input);
   background-color: var(--input-bg);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
@@ -45,12 +45,12 @@
 }
 
 .invalid {
-  border-color: #f87171;
+  border-color: var(--form-error);
 }
 
 .error {
   margin-block-start: var(--space-xs);
-  color: #f87171;
+  color: var(--form-error);
   font-size: var(--font-size-base);
 }
 
