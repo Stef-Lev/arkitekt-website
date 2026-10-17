@@ -28,13 +28,13 @@
 
 .title {
   text-align: center;
-  color: white;
+  color: var(--main-text);
   font-weight: bold;
 }
 
 .subtitle {
   text-align: center;
-  color: #d2d2d2;
+  color: var(--main-text);
   font-size: 14px;
 }
 

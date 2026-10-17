@@ -5,14 +5,14 @@
 .title {
   padding: var(--space-lg);
   text-align: center;
-  color: #fff;
+  color: var(--main-text);
   font-size: 44px;
 }
 
 .subtitle {
   padding: var(--space-lg);
   text-align: center;
-  color: #fff;
+  color: var(--subtitle);
   font-size: 20px;
 }
 

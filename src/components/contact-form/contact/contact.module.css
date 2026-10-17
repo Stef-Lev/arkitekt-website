@@ -1,5 +1,5 @@
 .form {
-  color: white;
+  color: var(--main-text);
 }
 
 .submitContainer {
@@ -12,7 +12,7 @@
   padding-block: var(--space-md);
   padding-inline: var(--space-2xl);
   border-radius: var(--radius-md);
-  color: white;
+  color: var(--main-text);
   background-color: var(--brand-primary);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);

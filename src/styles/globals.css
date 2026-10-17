@@ -11,8 +11,8 @@ textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px #1f2937 inset !important;
   box-shadow: 0 0 0 1000px #1f2937 inset !important;
-  -webkit-text-fill-color: #e5e7eb !important;
-  text-fill-color: #e5e7eb !important;
+  -webkit-text-fill-color: var(--main-text) !important;
+  text-fill-color: var(--main-text) !important;
   border-radius: 6px !important;
 }
 

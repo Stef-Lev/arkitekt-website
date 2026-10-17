@@ -4,7 +4,7 @@
   width: 100%;
   padding-block-start: 2rem;
   padding-block-end: 6rem;
-  color: white;
+  color: var(--main-text);
 }
 
 .container {
@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d2d2d2;
+  color: var(--main-text);
   font-size: 18px;
   margin-block-end: 24px;
 }

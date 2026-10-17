@@ -1,5 +1,5 @@
 .announcement {
-  color: #fff;
+  color: var(--main-text);
   background: linear-gradient(105deg, #171719 0%, #111820 100%);
   border-block: 1px solid rgb(255 255 255 / 12%);
 }
@@ -86,7 +86,7 @@
 .dismissButton:hover,
 .dismissButton:focus-visible {
   background: rgb(255 255 255 / 10%);
-  color: #fff;
+  color: var(--main-text);
 }
 
 @media (max-width: 640px) {

@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  color: #fff;
+  color: var(--main-text);
 }
 
 .close {
