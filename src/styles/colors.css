@@ -2,10 +2,10 @@ html {
   --text-primary: #dbe6ec;
   --text-secondary: #94a3b8;
   /* TODO: change primary brand color (redesign) */
-  --brand-primary: #9f4daa;
+  --brand-primary: #884daa;
   --brand-secondary: rgb(27, 13, 29);
   --red: #ef4444;
-  --link-highlight: #ed7afd;
+  --link-highlight: #d67afd;
   --input-bg: #1f2128;
   --input-placeholder: #4f5361;
 }

@@ -8,6 +8,7 @@ const AboutSection = ({ aboutText }: Props) => {
   return (
     <div className={styles.container}>
       <FadeInEffect variant="image" className={styles.imageFrame}>
+        {/* TODO: change about page photo (redesign) */}
         <Image
           className={styles.image}
           width={3000}
