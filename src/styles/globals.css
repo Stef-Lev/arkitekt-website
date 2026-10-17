@@ -23,7 +23,7 @@ html.siteLayout body {
 
 html.linksLayout,
 html.linksLayout body {
-  background: linear-gradient(180deg, #010a19 0%, #1e2d49 100%);
+  background: linear-gradient(160deg, #000000 0%, #141414 52%, #2c142f 100%);
 }
 
 @keyframes fade-scale {
