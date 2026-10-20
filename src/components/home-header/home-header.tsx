@@ -24,16 +24,16 @@ const HomeHeader = () => {
 
       <div className={styles.content}>
         <div className={styles.logo}>
-          <FadeInEffect variant="image">
-            <Image
-              fill
-              sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 200px"
-              priority
-              style={{ objectFit: 'contain' }}
-              src="/arkitekt-logo.png"
-              alt="arkitekt logo"
-            />
-          </FadeInEffect>
+          {/* <FadeInEffect variant="image"> */}
+          <Image
+            fill
+            sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 200px"
+            priority
+            style={{ objectFit: 'contain' }}
+            src="/arkitekt-logo.png"
+            alt="arkitekt logo"
+          />
+          {/* </FadeInEffect> */}
         </div>
         <FadeInEffect variant="text">
           <p className={styles.subtitle}>{subtitle}</p>
