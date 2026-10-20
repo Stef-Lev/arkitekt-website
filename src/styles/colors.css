@@ -2,7 +2,6 @@ html {
   --main-text: #eaeaea;
   --text-primary: var(--main-text);
   --text-secondary: #94a3b8;
-  /* TODO: change primary brand color (redesign) */
   --brand-primary: #884daa;
   --brand-secondary: rgb(27, 13, 29);
   --red: #ef4444;

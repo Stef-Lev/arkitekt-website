@@ -1,10 +1,3 @@
-import { GiBalaclava } from 'react-icons/gi';
-import { GiCoffeeCup } from 'react-icons/gi';
-import { PiBeanie } from 'react-icons/pi';
-import { GiTrapMask } from 'react-icons/gi';
-import { GiPalmTree } from 'react-icons/gi';
-import { FaHeadphones } from 'react-icons/fa';
-import { GiBrazilFlag } from 'react-icons/gi';
 import { Content } from './types';
 
 const content: Content = {
@@ -261,7 +254,6 @@ const content: Content = {
         coverImagePath: '/genres/drill.png',
         playlistUrl:
           'https://open.spotify.com/embed/playlist/5ONOkUyLm80BElBvs59mJQ?utm_source=generator',
-        icon: <GiBalaclava size={50} />,
       },
       {
         name: 'BOOM BAP',
@@ -269,7 +261,6 @@ const content: Content = {
         coverImagePath: '/genres/boombap.png',
         playlistUrl:
           'https://open.spotify.com/embed/playlist/0BeX6oVL9sIDC7TqcAn4GY?utm_source=generator',
-        icon: <PiBeanie size={50} />,
       },
       {
         name: 'TRAP',
@@ -277,7 +268,6 @@ const content: Content = {
         coverImagePath: '/genres/trap.png',
         playlistUrl:
           'https://open.spotify.com/embed/playlist/79ngt7HgmP1eMQb5atguj5?utm_source=generator',
-        icon: <GiTrapMask size={50} />,
       },
       {
         name: 'LOFI',
@@ -285,7 +275,6 @@ const content: Content = {
         coverImagePath: '/genres/lofi.png',
         playlistUrl:
           'https://open.spotify.com/embed/playlist/0KkXkYDAaG3igYExyRsbLj?utm_source=generator',
-        icon: <GiCoffeeCup size={50} />,
       },
       {
         name: 'BRAZILIAN FUNK',
@@ -293,7 +282,6 @@ const content: Content = {
         coverImagePath: '/genres/brazilian.png',
         playlistUrl:
           'https://open.spotify.com/embed/playlist/66avrRnDlHnNl1Pkh0IIe8?utm_source=generator',
-        icon: <GiBrazilFlag size={50} />,
       },
       {
         name: 'G-FUNK',
@@ -301,7 +289,6 @@ const content: Content = {
         coverImagePath: '/genres/g-funk.png',
         playlistUrl:
           'https://open.spotify.com/embed/playlist/7M6hUEuham9vDRh5Ekrb8W?utm_source=generator',
-        icon: <GiBrazilFlag size={50} />,
       },
       {
         name: 'JERSEY CLUB',
@@ -309,7 +296,6 @@ const content: Content = {
         coverImagePath: '/genres/jersey.png',
         playlistUrl:
           'https://open.spotify.com/embed/playlist/6csCUBpWHenqmygd91hYxL?utm_source=generator',
-        icon: <FaHeadphones size={50} />,
       },
       {
         name: 'AFROBEATS',
@@ -317,14 +303,12 @@ const content: Content = {
         coverImagePath: '/genres/afrobeats.png',
         playlistUrl:
           'https://open.spotify.com/embed/playlist/4evQ1ji11pfSK3oFbBSYm5?utm_source=generator',
-        icon: <GiPalmTree size={50} />,
       },
       // {
       //   name: 'REGGAETON',
       //   id: 'reggaeton',
-      //   coverImagePath: '',
+      //   coverImagePath: '/genres/reggaeton.png',
       //   playlistUrl: '',
-      //   icon: <FaHotjar size={50} />,
       // },
     ],
   },
