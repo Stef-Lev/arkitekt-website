@@ -329,7 +329,7 @@ const content: Content = {
     ],
   },
   linkPage: {
-    profileImage: '/arkitekt_square.png',
+    profileImage: '/about.jpg',
     logoImage: '/website-logo.png',
     title: 'Producer | Trap • Hip Hop • Drill',
     sections: {
