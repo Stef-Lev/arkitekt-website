@@ -13,7 +13,7 @@ const AboutSection = ({ aboutText }: Props) => {
           className={styles.image}
           width={3000}
           height={3000}
-          src="/about-test.jpg"
+          src="/about.jpg"
           alt="arkitekt photo"
           quality={100}
         />
