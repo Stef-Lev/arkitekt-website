@@ -19,7 +19,7 @@ const HomeHeader = () => {
         aria-hidden="true"
         className={styles.video}
       />
-
+
       <div className={styles.overlay} aria-hidden="true" />
 
       <div className={styles.content}>

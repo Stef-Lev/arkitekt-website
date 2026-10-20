@@ -9,7 +9,7 @@
 }
 
 .dialog {
-  inline-size: 92vw;
+  inline-size: 85vw;
   block-size: 430px;
   padding: var(--space-sm);
   border-radius: var(--radius-lg);

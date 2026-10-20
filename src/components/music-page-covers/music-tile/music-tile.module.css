@@ -13,17 +13,18 @@
 
 .badgeVisibility {
   opacity: 0;
-  transform: translateY(-4px);
+  transform: perspective(400px) rotateX(90deg);
+  transform-origin: bottom center;
   transition:
-    opacity 180ms ease,
-    transform 180ms ease;
+    opacity 300ms ease,
+    transform 300ms ease;
   pointer-events: none;
 }
 
 .link:hover .badgeVisibility,
 .link:focus-visible .badgeVisibility {
   opacity: 1;
-  transform: translateY(0);
+  transform: perspective(400px) rotateX(15deg);
 }
 
 @media (hover: none) {

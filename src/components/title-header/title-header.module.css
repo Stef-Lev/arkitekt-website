@@ -3,6 +3,13 @@
   inline-size: 100%;
   block-size: 200px;
   background-color: var(--black);
+
+  @media (--md) {
+    block-size: 300px;
+  }
+  @media (--lg) {
+    block-size: 400px;
+  }
 }
 
 .image {

@@ -1,7 +1,7 @@
 .badge {
   position: absolute;
   z-index: 2;
-  inset-block-start: var(--space-md);
+  inset-block-end: var(--space-md);
   inset-inline-start: var(--space-md);
   display: inline-flex;
   align-items: center;
@@ -10,7 +10,7 @@
   padding-inline: var(--space-md);
   border-radius: var(--radius-full);
   background-color: var(--spotify-green);
-  box-shadow: 0 4px 12px var(--black-shadow-32);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 60%);
   color: var(--spotify-text);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);

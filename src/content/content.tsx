@@ -71,7 +71,7 @@ const content: Content = {
     albumsTitle: 'Albums and EPs',
     singlesTitle: 'Singles',
     platformsTitle: 'Also available on',
-    spotifyBadgeText: 'Listen on Spotify',
+    spotifyBadgeText: 'Listen',
     spotify: {
       image: '/Spotify_logo_with_text.svg.png',
       url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=C0o3rTbITEqNGAjHAbxqXQ&nd=1&dlsi=3c61c56a858347f5',

@@ -1,4 +1,5 @@
 .wrapper {
+  margin-block: 20px;
   display: flex;
   justify-content: center;
   inline-size: 100%;

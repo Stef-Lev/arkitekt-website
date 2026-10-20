@@ -4,6 +4,7 @@ import { getImages } from '@/helpers/get-images';
 import Container from '@/components/container/container';
 import PageWrapper from '@/components/page-wrapper/page-wrapper';
 import content from '@/content/content';
+import styles from './page.module.css';
 
 const MusicPage = () => {
   const { title, spotify, platforms } = content.musicPage;
@@ -16,7 +17,7 @@ const MusicPage = () => {
   return (
     <PageWrapper>
       <TitleHeader title={title} />
-      <div>
+      <div className={styles.wrapper}>
         <Container>
           <MusicCovers
             images={images}
