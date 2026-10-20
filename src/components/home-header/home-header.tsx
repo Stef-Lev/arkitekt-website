@@ -7,7 +7,6 @@ import styles from './home-header.module.css';
 const HomeHeader = () => {
   const { subtitle } = content.homePage;
 
-  // TODO: add new header images (redesign)
   return (
     <div className={styles.homeHeader}>
       <video
@@ -19,12 +18,11 @@ const HomeHeader = () => {
         aria-hidden="true"
         className={styles.video}
       />
-
+
       <div className={styles.overlay} aria-hidden="true" />
 
       <div className={styles.content}>
         <div className={styles.logo}>
-          {/* <FadeInEffect variant="image"> */}
           <Image
             fill
             sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 200px"
@@ -33,7 +31,6 @@ const HomeHeader = () => {
             src="/arkitekt-logo.png"
             alt="arkitekt logo"
           />
-          {/* </FadeInEffect> */}
         </div>
         <FadeInEffect variant="text">
           <p className={styles.subtitle}>{subtitle}</p>
