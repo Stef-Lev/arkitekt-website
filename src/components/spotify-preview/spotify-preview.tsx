@@ -5,6 +5,7 @@ const SpotifyPreview = () => {
     <div className={styles.wrapper}>
       <iframe
         className={styles.embed}
+        title="Arkitekt on Spotify"
         src="https://open.spotify.com/embed/artist/4K9zGLF4CT5HYDNQ9pT3Y8?utm_source=generator&theme=0"
         allowFullScreen={true}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

@@ -36,6 +36,9 @@
 }
 
 .close {
+  display: flex;
+  padding: 0;
+  color: inherit;
   cursor: pointer;
 }
 

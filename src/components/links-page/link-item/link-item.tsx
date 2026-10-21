@@ -14,7 +14,7 @@ const LinkItem = ({ link }: Props) => {
     >
       <Image
         src={link.image}
-        alt={link.title}
+        alt=""
         width={40}
         height={40}
         className={styles.linkImage}

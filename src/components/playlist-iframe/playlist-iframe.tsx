@@ -14,6 +14,7 @@ const PlaylistIframe = ({ url }: Props) => {
     <div className={styles.wrapper}>
       <iframe
         className={styles.iframe}
+        title="Genre playlist"
         src={url}
         allowFullScreen={true}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

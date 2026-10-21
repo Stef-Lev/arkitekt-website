@@ -60,9 +60,14 @@ const ScrollTopButton = () => {
       style={{ opacity }}
     >
       <div>
-        <div className={styles.button} onClick={handleScrollTop}>
-          <FiArrowUp size="30px" />
-        </div>
+        <button
+          type="button"
+          className={styles.button}
+          onClick={handleScrollTop}
+          aria-label="Scroll to top"
+        >
+          <FiArrowUp size="30px" aria-hidden="true" />
+        </button>
       </div>
     </div>
   );

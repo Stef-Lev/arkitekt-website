@@ -17,6 +17,7 @@ const SocialMedia = () => {
           target="_blank"
           rel="noopener noreferrer"
           href={socialUrls[item as keyof typeof socialUrls]}
+          aria-label={item}
         >
           {mediaComponents[item]}
         </Link>

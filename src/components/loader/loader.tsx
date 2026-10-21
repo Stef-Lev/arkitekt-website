@@ -4,7 +4,7 @@ import styles from './loader.module.css';
 
 const Loader = ({ size, animation = 'fade' }: Props) => {
   return (
-    <div className={styles.overlay}>
+    <div className={styles.overlay} role="status" aria-label="Loading">
       <div
         className={cn(styles.loader, [animation === 'fade', 'fade', 'rotate'])}
         style={{ width: size, height: size }}
