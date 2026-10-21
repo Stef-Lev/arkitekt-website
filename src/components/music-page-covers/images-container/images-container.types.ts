@@ -5,6 +5,5 @@ export type Props = {
     position: number;
     image: string;
     url: string;
-    genre: string;
   }[];
 };

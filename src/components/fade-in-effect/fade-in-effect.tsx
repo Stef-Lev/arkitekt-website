@@ -5,7 +5,6 @@ import styles from './fade-in-effect.module.css';
 const variantStyles = {
   image: styles.image,
   text: styles.text,
-  fade: styles.fade,
 };
 
 const FadeInEffect = ({ children, variant, className }: Props) => (

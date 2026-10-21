@@ -1,6 +1,5 @@
 import TitleHeader from '@/components/title-header/title-header';
 import MusicCovers from '@/components/music-page-covers/music-covers/music-covers';
-import { getImages } from '@/helpers/get-images';
 import Container from '@/components/container/container';
 import PageWrapper from '@/components/page-wrapper/page-wrapper';
 import content from '@/content/content';
@@ -9,21 +8,12 @@ import styles from './page.module.css';
 const MusicPage = () => {
   const { title, spotify, platforms } = content.musicPage;
 
-  const images = {
-    singles: getImages('musicPage', 'singles'),
-    albums: getImages('musicPage', 'albums'),
-  };
-
   return (
     <PageWrapper>
       <TitleHeader title={title} />
       <div className={styles.wrapper}>
         <Container>
-          <MusicCovers
-            images={images}
-            spotify={spotify}
-            platforms={platforms}
-          />
+          <MusicCovers spotify={spotify} platforms={platforms} />
         </Container>
       </div>
     </PageWrapper>

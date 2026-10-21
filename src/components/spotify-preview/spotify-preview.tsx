@@ -1,4 +1,3 @@
-'use client';
 import styles from './spotify-preview.module.css';
 
 const SpotifyPreview = () => {

@@ -1,12 +1,10 @@
-'use client';
 import Image from 'next/image';
-import { cn } from '@/helpers/classnames';
 import RevealEffect from '@/components/reveal-effect/reveal-effect';
 import SpotifyBadge from '../spotify-badge/spotify-badge';
 import { Props } from './music-tile.types';
 import styles from './music-tile.module.css';
 
-const MusicTile = ({ entity, className }: Props) => {
+const MusicTile = ({ entity }: Props) => {
   const { image, id, url } = entity;
 
   return (
@@ -14,7 +12,7 @@ const MusicTile = ({ entity, className }: Props) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn(styles.link, className)}
+      className={styles.link}
     >
       <RevealEffect className={styles.reveal}>
         <Image

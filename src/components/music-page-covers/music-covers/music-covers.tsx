@@ -8,7 +8,7 @@ import content from '@/content/content';
 import { Props } from './music-covers.types';
 import styles from './music-covers.module.css';
 
-const MusicCovers = ({ images, spotify, platforms }: Props) => {
+const MusicCovers = ({ spotify, platforms }: Props) => {
   const router = useRouter();
 
   const handleClick = (url: string) => {

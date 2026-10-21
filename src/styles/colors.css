@@ -1,9 +1,6 @@
 html {
   --main-text: #eaeaea;
-  --text-primary: var(--main-text);
-  --text-secondary: #94a3b8;
   --brand-primary: #884daa;
-  --brand-secondary: rgb(27, 13, 29);
   --red: #ef4444;
   --subtitle: #b3b5ba;
   --link-highlight: #d67afd;
@@ -35,8 +32,6 @@ html {
   --home-overlay: rgb(18 9 19 / 70%);
   --black-overlay-50: rgb(0 0 0 / 50%);
   --black-overlay-70: rgb(0 0 0 / 70%);
-  --black-shadow-10: rgb(0 0 0 / 10%);
-  --black-shadow-32: rgb(0 0 0 / 32%);
   --glass-tint: rgb(190 197 255 / 19%);
   --glass-shadow: rgb(0 0 0 / 10%);
   --white-overlay-05: rgb(255 255 255 / 5%);

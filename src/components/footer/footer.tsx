@@ -1,4 +1,3 @@
-'use client';
 import { FaHeart } from 'react-icons/fa';
 import SocialMedia from '@/components/social-media/social-media';
 import content from '@/content/content';

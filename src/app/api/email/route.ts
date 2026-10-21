@@ -8,13 +8,15 @@ const botMessagePattern = /^[a-f0-9]{20,}$/i;
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, name, message, company } = await request.json();
+    const { email, name, subject, message, company } = await request.json();
     if (company) {
       return NextResponse.json({ error: 'Bot detected' }, { status: 400 });
     }
     if (
       !name?.trim() ||
       !email?.trim() ||
+      typeof subject !== 'string' ||
+      !subject.trim() ||
       !message?.trim() ||
       !emailRegex.test(email) ||
       message.length < 10
@@ -42,7 +44,7 @@ export async function POST(request: NextRequest) {
       from: process.env.MY_EMAIL,
       to: process.env.MY_EMAIL,
       cc: email,
-      subject: `Message from ${name} (${email})`,
+      subject: `${subject.trim()} - Message from ${name} (${email})`,
       text: message,
     };
 

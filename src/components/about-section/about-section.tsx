@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
 import { Props } from './about-section.types';

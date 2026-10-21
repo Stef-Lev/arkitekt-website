@@ -2,12 +2,12 @@ import { cn } from '@/helpers/classnames';
 import { Props } from './hamburger-button.types';
 import styles from './hamburger-button.module.css';
 
-const HamburgerButton = ({ isDrawerOpen, onClick, className }: Props) => {
+const HamburgerButton = ({ isDrawerOpen, onClick }: Props) => {
   return (
     <button
       type="button"
       onClick={onClick}
-      className={cn(styles.container, className)}
+      className={styles.container}
       aria-label={isDrawerOpen ? 'Close menu' : 'Open menu'}
       aria-expanded={isDrawerOpen}
       aria-controls="mobile-navigation"

@@ -10,7 +10,6 @@ type Entity = {
   position: number;
   image: string;
   url: string;
-  genre: string;
 };
 
 export type LinkType = {
@@ -30,7 +29,6 @@ export type Content = {
       spotify: string;
       instagram: string;
       youtube: string;
-      facebook: string;
     };
   };
   navbar: {
