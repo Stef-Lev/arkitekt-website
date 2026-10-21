@@ -326,9 +326,9 @@ const content: Content = {
             url: 'https://youtu.be/yXK5Qdf0Jns',
           },
           {
-            title: 'Stis pikrodafnis ton antho [Remix]',
-            image: '/links/bitter_dream.jpg',
-            url: 'https://youtu.be/HTualFAdKEU',
+            title: 'Star Wars Imperial March [Remix]',
+            image: '/links/imperial_march.jpg',
+            url: 'https://youtu.be/ZP9SDxaFlJc',
           },
         ],
       },
@@ -337,14 +337,14 @@ const content: Content = {
         title: 'Check all my beats here',
         items: [
           {
+            title: 'Arkitekt - Official Website',
+            image: '/links/arkitekt.jpg',
+            url: 'https://www.arkitektbeats.com',
+          },
+          {
             title: 'Spotify',
             image: '/links/spotify_music_logo.png',
             url: 'https://open.spotify.com/artist/4K9zGLF4CT5HYDNQ9pT3Y8?si=NmShVNXhQ-6GdIbGAuyfJA',
-          },
-          {
-            title: 'Apple Music',
-            image: '/links/apple_music.png',
-            url: 'https://music.apple.com/us/artist/arkitekt/196143288',
           },
           {
             title: 'Youtube',
@@ -352,9 +352,9 @@ const content: Content = {
             url: 'https://m.youtube.com/@theArkitektBeats',
           },
           {
-            title: 'Arkitekt - Official Website',
-            image: '/links/arkitekt.jpg',
-            url: 'https://www.arkitektbeats.com',
+            title: 'Apple Music',
+            image: '/links/apple_music.png',
+            url: 'https://music.apple.com/us/artist/arkitekt/196143288',
           },
         ],
       },
