@@ -72,10 +72,8 @@
   height: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .scrollMouse path {
-    animation: scroll-wheel 1.8s ease-in-out infinite;
-  }
+.scrollMouse path {
+  animation: scroll-wheel 1.8s ease-in-out infinite;
 }
 
 @keyframes scroll-wheel {

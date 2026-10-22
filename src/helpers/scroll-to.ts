@@ -12,10 +12,7 @@ export const scrollTo = (target: number, duration = 500) => {
   );
   const destination = Math.min(Math.max(0, target), maxScroll);
 
-  if (
-    duration <= 0 ||
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  ) {
+  if (duration <= 0) {
     window.scrollTo({ top: destination, behavior: 'instant' });
     return;
   }
