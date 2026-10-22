@@ -3,6 +3,8 @@
   inline-size: 100%;
   block-size: 200px;
   background-color: var(--black);
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
 
   @media (--md) {
     block-size: 300px;
