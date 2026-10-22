@@ -10,13 +10,12 @@
 
 .inner {
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr) auto 36px;
+  grid-template-columns: 96px minmax(0, 1fr) auto;
   align-items: center;
   gap: 20px;
   width: min(100%, 1200px);
   margin-inline: auto;
-  padding: calc(var(--space-lg) + var(--space-xs) + var(--space-2xs))
-    var(--space-xl);
+  padding: var(--space-lg);
 }
 
 .cover {
@@ -72,34 +71,12 @@
   background: var(--spotify-green-hover);
 }
 
-.dismissButton {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  border: 0;
-  border-radius: var(--radius-default);
-  background: transparent;
-  color: var(--subtitle);
-  cursor: pointer;
-  transition:
-    background-color 180ms ease,
-    color 180ms ease;
-}
-
-.dismissButton:hover,
-.dismissButton:focus-visible {
-  background: var(--white-overlay-10);
-  color: var(--main-text);
-}
-
 @media (max-width: 640px) {
   .inner {
     grid-template-rows: auto auto;
-    grid-template-columns: 64px minmax(0, 1fr) 36px;
+    grid-template-columns: 64px minmax(0, 1fr);
     gap: var(--space-md) 14px;
-    padding: calc(var(--space-lg) + var(--space-2xs)) var(--space-lg);
+    padding: var(--space-lg);
   }
 
   .cover {
@@ -133,17 +110,10 @@
     padding-inline: var(--space-lg);
     font-size: var(--font-size-sm);
   }
-
-  .dismissButton {
-    grid-column: 3;
-    grid-row: 1;
-    align-self: start;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .listenLink,
-  .dismissButton {
+  .listenLink {
     transition: none;
   }
 }

@@ -12,7 +12,13 @@
 
 .subtitle {
   margin-block-end: var(--space-sm);
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
+}
+
+@media (--md) {
+  .subtitle {
+    font-size: var(--font-size-2xl);
+  }
 }
 
 .spotifyLogo {

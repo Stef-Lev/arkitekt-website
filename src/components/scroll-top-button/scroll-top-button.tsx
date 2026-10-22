@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
 import { cn } from '@/helpers/classnames';
+import { scrollTo } from '@/helpers/scroll-to';
 import styles from './scroll-top-button.module.css';
 
 const ScrollTopButton = () => {
@@ -10,19 +11,7 @@ const ScrollTopButton = () => {
   const ScrollEnd = 900;
 
   const handleScrollTop = () => {
-    if (typeof window !== 'undefined') {
-      const scrollDuration = 500;
-      const scrollStep = -window.scrollY / (scrollDuration / 15);
-
-      const smoothScroll = () => {
-        if (window.scrollY !== 0) {
-          window.scrollBy(0, scrollStep);
-          requestAnimationFrame(smoothScroll);
-        }
-      };
-
-      requestAnimationFrame(smoothScroll);
-    }
+    scrollTo(0);
   };
 
   useEffect(() => {

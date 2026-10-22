@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it } from 'vitest';
 import ReleaseAnnouncement from './release-announcement';
 import content from '@/content/content';
@@ -20,23 +19,21 @@ describe('ReleaseAnnouncement', () => {
     ).toHaveAttribute('href', href);
   });
 
-  it('should not render when already dismissed in this session', () => {
+  it('should remain visible despite a previous session dismissal', () => {
     window.sessionStorage.setItem(
       `release-announcement-dismissed:${href}`,
       'true',
     );
     render(<ReleaseAnnouncement />);
 
-    expect(screen.queryByRole('region')).not.toBeInTheDocument();
+    expect(screen.getByRole('region', { name: title })).toBeInTheDocument();
   });
 
-  it('should hide the announcement when dismissed', async () => {
+  it('should not offer a dismiss button', () => {
     render(<ReleaseAnnouncement />);
 
-    await userEvent.click(
-      screen.getByRole('button', { name: 'Dismiss release announcement' }),
-    );
-
-    expect(screen.queryByRole('region')).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: 'Dismiss release announcement' }),
+    ).not.toBeInTheDocument();
   });
 });

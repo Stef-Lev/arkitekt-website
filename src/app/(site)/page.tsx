@@ -8,9 +8,11 @@ export default function Home() {
   return (
     <PageWrapper>
       <HomeHeader />
-      <ReleaseAnnouncement />
-      <SpotifyPreview />
-      <Featured />
+      <div id="home-content">
+        <ReleaseAnnouncement />
+        <SpotifyPreview />
+        <Featured />
+      </div>
     </PageWrapper>
   );
 }

@@ -2,7 +2,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 400px;
+  height: calc(100vh - var(--space-5xl));
+  height: calc(100svh - var(--space-5xl));
 }
 
 .video {
@@ -31,6 +32,8 @@
   justify-content: center;
   width: 100%;
   gap: var(--space-xl);
+  padding: var(--space-xl) var(--space-lg) var(--space-5xl);
+  text-align: center;
 }
 
 .logo {
@@ -44,17 +47,62 @@
   font-size: var(--font-size-xl);
 }
 
-@media (--sm) {
-  .homeHeader {
-    height: 500px;
+.scrollIndicator {
+  position: absolute;
+  z-index: 3;
+  inset-block-end: max(var(--space-xl), env(safe-area-inset-bottom));
+  inset-inline-start: 50%;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 60px var(--line-height-xs);
+  gap: var(--space-sm);
+  width: 44px;
+  height: calc(60px + var(--space-sm) + var(--line-height-xs));
+  color: var(--subtitle);
+  transform: translateX(-50%);
+}
+
+.scrollLabel {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.scrollMouse {
+  width: 44px;
+  height: 60px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scrollMouse path {
+    animation: scroll-wheel 1.8s ease-in-out infinite;
   }
 }
 
-@media (--md) {
-  .homeHeader {
-    height: 600px;
+@keyframes scroll-wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
   }
+  25% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
 
+.scrollIndicator:hover {
+  color: var(--brand-primary);
+}
+
+.scrollIndicator:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+@media (--md) {
   .logo {
     width: 300px;
   }
@@ -65,10 +113,6 @@
 }
 
 @media (--lg) {
-  .homeHeader {
-    height: 700px;
-  }
-
   .logo {
     width: 400px;
   }

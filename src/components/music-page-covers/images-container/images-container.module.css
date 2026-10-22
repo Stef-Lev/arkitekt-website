@@ -6,7 +6,13 @@
 
 .title {
   padding-block-end: var(--space-lg);
-  font-size: 2rem;
+  font-size: var(--font-size-3xl);
+}
+
+@media (--md) {
+  .title {
+    font-size: 2rem;
+  }
 }
 
 .list {

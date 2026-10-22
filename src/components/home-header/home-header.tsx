@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import FadeInEffect from '@/components/fade-in-effect/fade-in-effect';
+import HeroScrollLink from './hero-scroll-link';
 import content from '@/content/content';
 import styles from './home-header.module.css';
 
@@ -35,6 +36,8 @@ const HomeHeader = () => {
           <p className={styles.subtitle}>{subtitle}</p>
         </FadeInEffect>
       </div>
+
+      <HeroScrollLink />
     </div>
   );
 };
