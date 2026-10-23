@@ -44,7 +44,7 @@ const content: Content = {
           image: '/musicPage/albums/great_drift.jpg',
           imageAlt: 'The Great Drift album cover',
           cta: {
-            label: 'Listen',
+            label: 'Listen on Spotify',
             href: 'https://open.spotify.com/album/6z7KuJR3n5KVaTuyeaDUl3?si=Jj_5lflUS7mlXSeNHGHUug',
           },
         },
@@ -55,7 +55,7 @@ const content: Content = {
           image: '/links/meth_sto_volan.jpg',
           imageAlt: 'Imiskoubria - Meth sto volan [Remix] thumbnail',
           cta: {
-            label: 'Watch',
+            label: 'Watch on Youtube',
             href: 'https://youtu.be/q0ymU1nkOwA',
           },
         },
@@ -66,7 +66,7 @@ const content: Content = {
           image: '/links/ma_esy_pote.jpg',
           imageAlt: 'Marinella - Ma esy pote [Remix] thumbnail',
           cta: {
-            label: 'Watch',
+            label: 'Watch on Youtube',
             href: 'https://youtu.be/yXK5Qdf0Jns',
           },
         },
