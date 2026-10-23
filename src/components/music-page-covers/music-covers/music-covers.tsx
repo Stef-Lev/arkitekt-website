@@ -17,6 +17,14 @@ const MusicCovers = ({ spotify, platforms }: Props) => {
 
   return (
     <div className={styles.wrapper}>
+      <ImagesContainer
+        title={content.musicPage.albumsTitle}
+        entities={content.musicPage.albums}
+      />
+      <ImagesContainer
+        title={content.musicPage.singlesTitle}
+        entities={content.musicPage.singles}
+      />
       <div className={styles.header}>
         <FadeInEffect variant="text">
           <h3 className={styles.subtitle}>{content.musicPage.subtitle}</h3>
@@ -32,14 +40,6 @@ const MusicCovers = ({ spotify, platforms }: Props) => {
           />
         </FadeInEffect>
       </div>
-      <ImagesContainer
-        title={content.musicPage.albumsTitle}
-        entities={content.musicPage.albums}
-      />
-      <ImagesContainer
-        title={content.musicPage.singlesTitle}
-        entities={content.musicPage.singles}
-      />
       <Platforms platforms={platforms} onClick={handleClick} />
     </div>
   );

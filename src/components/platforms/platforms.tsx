@@ -14,14 +14,16 @@ const Platforms = ({ platforms, onClick }: Props) => {
         {platforms.length > 0 &&
           platforms.map((item) => (
             <FadeInEffect variant="image" key={item.image}>
-              <Image
-                className={styles.logo}
-                src={item.image}
-                alt={`${item.name} logo`}
-                width={item.width}
-                height={item.height}
-                onClick={() => onClick(item.url)}
-              />
+              <div className={styles.slot}>
+                <Image
+                  className={styles.logo}
+                  src={item.image}
+                  alt={`${item.name} logo`}
+                  width={item.width}
+                  height={item.height}
+                  onClick={() => onClick(item.url)}
+                />
+              </div>
             </FadeInEffect>
           ))}
       </div>

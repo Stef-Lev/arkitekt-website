@@ -33,6 +33,46 @@ const content: Content = {
       image: '/musicPage/albums/great_drift.jpg',
       href: 'https://open.spotify.com/album/6z7KuJR3n5KVaTuyeaDUl3?si=Jj_5lflUS7mlXSeNHGHUug',
     },
+    spotifyPreview: {
+      title: 'Music player',
+    },
+    latestUpdates: {
+      slides: [
+        {
+          id: 'great-drift',
+          title: 'The Great Drift is out!',
+          subtitle: 'Stream it now on all platforms.',
+          image: '/musicPage/albums/great_drift.jpg',
+          imageAlt: 'The Great Drift album cover',
+          cta: {
+            label: 'Listen',
+            href: 'https://open.spotify.com/album/6z7KuJR3n5KVaTuyeaDUl3?si=Jj_5lflUS7mlXSeNHGHUug',
+          },
+        },
+        {
+          id: 'latest-video',
+          title: 'Meth sto volan [Remix]',
+          subtitle: 'A remix of a legendary Imiskoubria track.',
+          image: '/links/meth_sto_volan.jpg',
+          imageAlt: 'Imiskoubria - Meth sto volan [Remix] thumbnail',
+          cta: {
+            label: 'Watch',
+            href: 'https://youtu.be/q0ymU1nkOwA',
+          },
+        },
+        {
+          id: 'marinella-remix',
+          title: 'Ma esy pote [Remix]',
+          subtitle: 'A farewell to a great Greek singer.',
+          image: '/links/ma_esy_pote.jpg',
+          imageAlt: 'Marinella - Ma esy pote [Remix] thumbnail',
+          cta: {
+            label: 'Watch',
+            href: 'https://youtu.be/yXK5Qdf0Jns',
+          },
+        },
+      ],
+    },
     featuredVideos: {
       title: 'Featured videos',
       linkText: 'Check all videos on my YouTube channel',
@@ -62,7 +102,7 @@ const content: Content = {
     subtitle: 'Stream my full collection on',
     albumsTitle: 'Albums and EPs',
     singlesTitle: 'Singles',
-    platformsTitle: 'Also available on',
+    platformsTitle: 'And also on other platforms',
     spotifyBadgeText: 'Listen',
     spotify: {
       image: '/Spotify_logo_with_text.svg.png',
@@ -230,7 +270,7 @@ const content: Content = {
     noPlaylistMessage:
       'No beats available for this genre at the moment, but there will be in the future. Stay tuned!',
     introText:
-      'Straight out of Athens, Arkitekt produces heavy, dark beats rooted in Drill, Trap, and Boom Bap. His sound is driven by pounding drums, 808s, haunting choirs, and orchestral elements, paired with his own live guitar playing. While underground street rap is his main lane, he also loves experimenting—whether that means mixing genres, flipping traditional Greek melodies into modern beats, or dipping into Lo-Fi, Baile Funk, and Afrobeats. From the streets to your speakers, Arkitekt keeps building beats for the underground.',
+      'Straight out of Athens, Arkitekt mostly produces dark beats inside the sphere of Drill, Trap, and Boom Bap. His sound is driven by hard-hitting drums, heavy 808s, choirs, and other orchestral elements, frequently adding his own live guitar playing. While the underground is his main lane, he also loves experimenting—whether that means mixing genres, flipping traditional Greek melodies into modern beats, or trying Lo-Fi, Baile Funk, and Afrobeats. From the streets to your speakers, Arkitekt keeps building beats for the underground.',
     genres: [
       {
         name: 'UK DRILL',

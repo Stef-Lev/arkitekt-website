@@ -52,6 +52,19 @@ export type Content = {
       image: string;
       href: string;
     };
+    spotifyPreview: {
+      title: string;
+    };
+    latestUpdates: {
+      slides: {
+        id: string;
+        title: string;
+        subtitle: string;
+        image: string;
+        imageAlt: string;
+        cta?: { label: string; href: string };
+      }[];
+    };
     featuredVideos: {
       title: string;
       linkText: string;

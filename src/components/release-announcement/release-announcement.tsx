@@ -1,12 +1,37 @@
+'use client';
+
+import { useSyncExternalStore } from 'react';
 import Image from 'next/image';
-import { FaSpotify } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
 import content from '@/content/content';
 import styles from './release-announcement.module.css';
 
+const listeners = new Set<() => void>();
+
+const subscribe = (listener: () => void) => {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+};
+
 const ReleaseAnnouncement = () => {
   const announcement = content.homePage.releaseAnnouncement;
+  const storageKey = `release-announcement-dismissed:${announcement.href}`;
 
-  if (!announcement.enabled) {
+  // Server snapshot is "dismissed" so the banner never flashes before hydration
+  const dismissed = useSyncExternalStore(
+    subscribe,
+    () => window.sessionStorage.getItem(storageKey) === 'true',
+    () => true,
+  );
+
+  const dismiss = () => {
+    window.sessionStorage.setItem(storageKey, 'true');
+    listeners.forEach((listener) => listener());
+  };
+
+  if (!announcement.enabled || dismissed) {
     return null;
   }
 
@@ -20,8 +45,8 @@ const ReleaseAnnouncement = () => {
           className={styles.cover}
           src={announcement.image}
           alt={`${announcement.title} cover`}
-          width={96}
-          height={96}
+          width={56}
+          height={56}
         />
         <div className={styles.copy}>
           <p className={styles.label}>{announcement.label}</p>
@@ -30,15 +55,14 @@ const ReleaseAnnouncement = () => {
           </h2>
           <p className={styles.description}>{announcement.description}</p>
         </div>
-        <a
-          className={styles.listenLink}
-          href={announcement.href}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
+          className={styles.close}
+          aria-label="Dismiss release announcement"
+          onClick={dismiss}
         >
-          <FaSpotify aria-hidden="true" />
-          <span>Listen on Spotify</span>
-        </a>
+          <IoClose aria-hidden="true" />
+        </button>
       </div>
     </section>
   );
