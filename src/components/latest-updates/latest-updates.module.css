@@ -28,15 +28,8 @@
   flex: 0 0 85%;
   min-inline-size: 0;
   padding-inline: var(--space-md);
-  opacity: 0.75;
-  filter: brightness(0.4);
-  transform: scale(0.9);
   position: relative;
-  z-index: 1;
-  transition:
-    opacity 0.5s,
-    filter 0.5s,
-    transform 0.5s;
+  /* Removed transitions and transforms here so Embla loop jumps are instant and glitch-free */
 }
 
 .active {
@@ -62,6 +55,25 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
+
+  /* Visual states and transitions are now handled here on the card */
+  opacity: 0.75;
+  filter: brightness(0.4);
+  transform: scale(0.9);
+  z-index: 1;
+  backface-visibility: hidden;
+  transition:
+    opacity 0.5s,
+    filter 0.5s,
+    transform 0.5s;
+}
+
+/* When the slide is active, animate the card's visual state and boost its z-index */
+.slide.active .card {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+  z-index: 10;
 }
 
 .card > :not(.glass) {
