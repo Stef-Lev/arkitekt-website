@@ -27,9 +27,8 @@ const content: Content = {
     subtitle: 'Building beats for the underground.',
     releaseAnnouncement: {
       enabled: true,
-      label: 'Latest release',
       title: 'The Great Drift',
-      description: 'Out now on all platforms.',
+      description: 'The latest release is now out on all platforms.',
       image: '/musicPage/albums/great_drift.jpg',
       href: 'https://open.spotify.com/album/6z7KuJR3n5KVaTuyeaDUl3?si=Jj_5lflUS7mlXSeNHGHUug',
     },

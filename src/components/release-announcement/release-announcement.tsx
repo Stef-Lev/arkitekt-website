@@ -49,7 +49,6 @@ const ReleaseAnnouncement = () => {
           height={56}
         />
         <div className={styles.copy}>
-          <p className={styles.label}>{announcement.label}</p>
           <h2 className={styles.title} id="release-announcement-title">
             {announcement.title}
           </h2>

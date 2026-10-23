@@ -46,7 +46,6 @@ export type Content = {
     subtitle: string;
     releaseAnnouncement: {
       enabled: boolean;
-      label: string;
       title: string;
       description: string;
       image: string;
